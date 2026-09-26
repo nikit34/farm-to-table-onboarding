@@ -28,18 +28,15 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:inherit}
-html,body{background:#111412;color:#E6EBE7;font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html,body{background:#FAF8F3;color:#1D2920;font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 
-.page-head{max-width:1320px;margin:0 auto;padding:44px 32px 4px}
-.page-head h1{font-family:var(--serif);font-weight:600;font-size:36px;letter-spacing:-.3px;color:#F4F1E8}
-.page-head p{margin-top:12px;max-width:860px;color:#A9B4AC;font-size:15.5px;line-height:1.6}
-.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-.tbtn{padding:11px 16px;border-radius:12px;background:#1E2420;color:#E6EBE7;font:600 14px/1 var(--sans);box-shadow:inset 0 0 0 1px #313933}
-.tbtn.on{background:#E6EBE7;color:#111412}
+.page-head{max-width:1320px;margin:0 auto;padding:40px 32px 0}
+.page-head h1{font-family:var(--serif);font-weight:600;font-size:36px;letter-spacing:-.3px;color:#1D2920}
+.page-head p{margin-top:12px;max-width:900px;color:#56635A;font-size:15.5px;line-height:1.6}
 
 .shot{width:417px;display:flex;flex-direction:column;align-items:center}
-.shot-label{align-self:flex-start;margin:0 0 14px 14px;color:#9FB0A4;font:600 12.5px/1 var(--sans);letter-spacing:1.4px;text-transform:uppercase}
-.frame{width:417px;height:876px;padding:12px;border-radius:66px;background:#0B0C0B;box-shadow:inset 0 0 0 1.5px #3B403C,0 50px 90px -30px rgba(0,0,0,.75)}
+.shot-label{align-self:flex-start;margin:0 0 14px 14px;color:#8B958E;font:600 12.5px/1 var(--sans);letter-spacing:1.4px;text-transform:uppercase}
+.frame{width:417px;height:876px;padding:12px;border-radius:66px;background:#0B0C0B;box-shadow:inset 0 0 0 1.5px #3B403C,0 44px 80px -44px rgba(45,50,30,.55)}
 .phone{position:relative;width:393px;height:852px;border-radius:54px;overflow:hidden;background:var(--cream);color:var(--ink);isolation:isolate}
 .island{position:absolute;z-index:90;top:11px;left:134.5px;width:124px;height:36px;border-radius:18px;background:#000}
 .homebar{position:absolute;z-index:90;bottom:8px;left:127px;width:139px;height:5px;border-radius:3px;background:#141714}
@@ -47,9 +44,9 @@ html,body{background:#111412;color:#E6EBE7;font-family:var(--sans);-webkit-font-
 .sb .ic{display:flex;align-items:center;gap:6px}
 .sb svg{display:block;fill:currentColor}
 
-.note{width:393px;margin-top:24px;color:#C4CEC7;font-size:14px;line-height:1.6}
+.note{width:393px;margin-top:24px;color:#4E5B53;font-size:14px;line-height:1.6}
 .note p+p{margin-top:9px}
-.note b{color:#EEF2EE;font-weight:650}
+.note b{color:#1D2920;font-weight:650}
 
 .map{position:absolute;overflow:hidden}
 .map svg{display:block;width:100%;height:100%}
@@ -179,16 +176,16 @@ html,body{background:#111412;color:#E6EBE7;font-family:var(--sans);-webkit-font-
 .map.low{top:0;left:0;right:0;height:400px}
 .notify{position:absolute;z-index:21;left:0;right:0;bottom:118px;display:flex;align-items:center;justify-content:center;gap:7px;color:var(--g700);font:650 15.5px/1 var(--sans)}
 .notify svg{width:16px;height:16px;fill:currentColor}
-.card{padding:26px 28px;border-radius:22px;background:#181D19;box-shadow:inset 0 0 0 1px #262E28}
-.card h2{font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:-.2px;color:#F4F1E8}
-.card p,.card li{margin-top:12px;color:#C4CEC7;font-size:15px;line-height:1.62}
+.card{padding:26px 28px;border-radius:22px;background:#FFFFFF;box-shadow:0 0 0 1px #E8E2D6,0 18px 40px -34px rgba(60,50,20,.35)}
+.card h2{font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:-.2px;color:#1D2920}
+.card p,.card li{margin-top:12px;color:#4E5B53;font-size:15px;line-height:1.62}
 .card ul{list-style:none}
 .card li{position:relative;padding-left:18px}
-.card li:before{content:"";position:absolute;left:2px;top:10px;width:6px;height:6px;border-radius:3px;background:#5E8F6C}
-.card b{color:#EEF2EE;font-weight:650}
-.card a{color:#9BD1A9;text-decoration:underline;text-decoration-color:rgba(155,209,169,.4);text-underline-offset:3px}
+.card li:before{content:"";position:absolute;left:2px;top:10px;width:6px;height:6px;border-radius:3px;background:#8DBA98}
+.card b{color:#1D2920;font-weight:650}
+.card a{color:#256039;text-decoration:underline;text-decoration-color:rgba(37,96,57,.35);text-underline-offset:3px}
 .card .prompt{margin-top:18px}
-.prompt{margin-top:14px;padding:16px 18px;border-radius:14px;background:#111412;box-shadow:inset 0 0 0 1px #2A322C;color:#DDE4DE;font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap}
+.prompt{margin-top:14px;padding:16px 18px;border-radius:14px;background:#F6F3EC;box-shadow:inset 0 0 0 1px #E8E2D6;color:#2F3A33;font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap}
 
 body.shotmode{background:var(--cream)}
 body.shotmode .page-head,body.shotmode .note,body.shotmode .shot-label,body.shotmode .extra,body.shotmode .island{display:none}
@@ -202,33 +199,29 @@ body.overview .pulse{animation:none;opacity:.16}
 @media (max-width:980px){.extra{grid-template-columns:1fr}}
 @media (max-width:560px){.page-head{padding:28px 16px 0}.page-head h1{font-size:28px}.extra{padding:0 16px 50px}.card{padding:22px 20px}}
 @media (max-width:500px){.shot{width:100%}.shot-label{margin:0 0 12px 16px}.frame{width:393px;height:852px;padding:0;border-radius:0;background:none;box-shadow:none}.phone{border-radius:26px}.island{display:none}.note{width:100%;padding:0 16px}}
-.brief{margin-top:22px;max-width:980px;padding:20px 22px;border-radius:18px;background:#181D19;box-shadow:inset 0 0 0 1px #262E28}
-.brief h3{color:#9FB0A4;font:700 12px/1 var(--sans);letter-spacing:1.3px;text-transform:uppercase}
-.brief p{margin-top:10px;max-width:none;color:#C9D2CB;font-size:15px;line-height:1.62}
-.brief b{color:#EEF2EE;font-weight:650}
-.brief a{color:#9BD1A9;text-underline-offset:3px}
-.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.toc a{padding:8px 11px;border-radius:10px;background:#1B211D;color:#C4CEC7;font:600 13px/1 var(--sans);text-decoration:none;box-shadow:inset 0 0 0 1px #2A322C}
-.toc a:hover{background:#232A25}
+.brief{margin-top:24px;max-width:980px;padding:22px 24px;border-radius:20px;background:#FFFFFF;box-shadow:0 0 0 1px #E8E2D6,0 18px 40px -34px rgba(60,50,20,.35)}
+.brief h3{color:#7C877F;font:700 12px/1 var(--sans);letter-spacing:1.3px;text-transform:uppercase}
+.brief p{margin-top:10px;max-width:none;color:#3E4A42;font-size:15px;line-height:1.65}
+.brief b{color:#1D2920;font-weight:650}
+.brief a{color:#256039;text-underline-offset:3px}
 
-.scen{display:none;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:16px;padding:14px 16px;border-radius:16px;background:#181D19;box-shadow:inset 0 0 0 1px #262E28}
+.scen{display:none;flex-wrap:wrap;align-items:center;gap:12px 22px;max-width:1256px;margin:18px auto 0;padding:14px 16px;border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px #E8E2D6,0 14px 30px -26px rgba(60,50,20,.35)}
 body.proto .scen{display:flex}
 .sg{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
-.sl{color:#9FB0A4;font:600 12.5px/1 var(--sans);letter-spacing:.3px}
-.seg{display:flex;flex-wrap:wrap;padding:3px;border-radius:11px;background:#111412;box-shadow:inset 0 0 0 1px #2A322C}
-.seg button{padding:8px 11px;border-radius:8px;color:#C4CEC7;font:600 13px/1 var(--sans)}
-.seg button.on{background:#E6EBE7;color:#111412}
-.sbtn{padding:9px 12px;border-radius:10px;background:#232A25;color:#E6EBE7;font:600 13px/1 var(--sans);box-shadow:inset 0 0 0 1px #34403A}
+.sl{color:#6F7B73;font:600 12.5px/1 var(--sans);letter-spacing:.3px}
+.seg{display:flex;flex-wrap:wrap;padding:3px;border-radius:11px;background:#F3F0E9;box-shadow:inset 0 0 0 1px #E6E0D2}
+.seg button{padding:8px 11px;border-radius:8px;color:#4E5B53;font:600 13px/1 var(--sans)}
+.seg button.on{background:#1D2920;color:#FFFFFF}
+.sbtn{padding:9px 12px;border-radius:10px;background:#F3F0E9;color:#1D2920;font:600 13px/1 var(--sans);box-shadow:inset 0 0 0 1px #E3DDCF}
 
 .board{padding:0 0 12px}
 .group-head{max-width:1320px;margin:0 auto;padding:46px 32px 0}
-.kicker{display:inline-block;padding:7px 10px;border-radius:8px;background:#1E2420;color:#A9B4AC;font:700 11.5px/1 var(--sans);letter-spacing:1.2px;text-transform:uppercase;box-shadow:inset 0 0 0 1px #313933}
-.kicker.main{background:#1F3A28;color:#BFE3C8;box-shadow:inset 0 0 0 1px #2F5A3C}
-.group-head h2{margin-top:12px;font-family:var(--serif);font-weight:600;font-size:30px;letter-spacing:-.3px;color:#F4F1E8}
-.group-head p{margin-top:8px;max-width:900px;color:#A9B4AC;font-size:15.5px;line-height:1.6}
+.kicker{display:inline-block;padding:7px 10px;border-radius:8px;background:#F1EDE3;color:#7A6F55;font:700 11.5px/1 var(--sans);letter-spacing:1.2px;text-transform:uppercase}
+.kicker.main{background:#E2EEDF;color:#1D4A2F}
+.group-head h2{margin-top:12px;font-family:var(--serif);font-weight:600;font-size:30px;letter-spacing:-.3px;color:#1D2920}
+.group-head p{margin-top:8px;max-width:900px;color:#56635A;font-size:15.5px;line-height:1.6}
 .shots{display:flex;flex-wrap:wrap;justify-content:center;gap:60px 44px;max-width:2900px;margin:0 auto;padding:34px 24px 30px}
 
-body.proto .group-head,body.proto .flow,body.proto .extra,body.proto .brief{display:none}
 body.proto .group{display:none}
 body.proto .group.has-cur{display:block}
 body.proto .shots{padding:30px 24px 70px}
@@ -435,10 +428,10 @@ body.proto .shot.cur .note{width:380px;margin-top:34px}
 .fsvg svg{display:block;min-width:980px;width:100%;height:auto}
 .twrap{margin-top:14px;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .tbl{width:100%;min-width:760px;border-collapse:collapse}
-.tbl th{padding:10px 12px;text-align:left;color:#9FB0A4;font:700 12px/1.3 var(--sans);letter-spacing:.8px;text-transform:uppercase;border-bottom:1px solid #2E3731}
-.tbl td{padding:11px 12px;vertical-align:top;color:#C4CEC7;font-size:14.5px;line-height:1.5;border-bottom:1px solid #232B25}
-.tbl td b{color:#EEF2EE;font-weight:650}
-.tbl code{font:13px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;color:#BFE3C8;white-space:nowrap}
+.tbl th{padding:10px 12px;text-align:left;color:#7C877F;font:700 12px/1.3 var(--sans);letter-spacing:.8px;text-transform:uppercase;border-bottom:1px solid #E6E0D2}
+.tbl td{padding:11px 12px;vertical-align:top;color:#3E4A42;font-size:14.5px;line-height:1.5;border-bottom:1px solid #F0EBE1}
+.tbl td b{color:#1D2920;font-weight:650}
+.tbl code{font:13px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;color:#256039;white-space:nowrap}
 
 body.shotmode .group-head,body.shotmode .flow,body.shotmode .brief{display:none}
 body.shotmode .shots{display:block;padding:0}
@@ -451,21 +444,21 @@ body.overview .sweep,body.overview .spin,body.overview .caret,body.overview .sk-
 .lk-n .nb{display:block}
 .lk-n .nt{display:block;margin-top:2px;color:#1C1C1E;font:400 15px/1.32 var(--sans)}
 .lockcard .fc-body,.lockcard .fc-name,.lockcard .fc-meta{display:block}
-.fsvg .n1{fill:#F2EADA}
-.fsvg .n2{fill:#232B25;stroke:#3F4B43;stroke-width:1.2}
-.fsvg .nd{fill:#1C2620;stroke:#E0B84A;stroke-width:1.4}
+.fsvg .n1{fill:#E4EFE1;stroke:#A9CBB0;stroke-width:1.2}
+.fsvg .n2{fill:#FFFFFF;stroke:#D9D3C6;stroke-width:1.2}
+.fsvg .nd{fill:#FFF7E3;stroke:#D7A637;stroke-width:1.4}
 .fsvg .t1{font:650 14px var(--sans);fill:#163823}
-.fsvg .t1b{font:650 14px var(--sans);fill:#EEF2EE}
-.fsvg .t2{font:500 11.5px var(--sans);fill:#5C6B60}
-.fsvg .t2b{font:500 11.5px var(--sans);fill:#9FB0A4}
-.fsvg .t1c{font:650 13px var(--sans);fill:#F4F1E8;text-anchor:middle}
-.fsvg .t2c{font:500 12px var(--sans);fill:#E0C877;text-anchor:middle}
-.fsvg .e{fill:none;stroke:#7E9E88;stroke-width:1.6}
-.fsvg .e.ey{stroke:#E0B84A}
+.fsvg .t1b{font:650 14px var(--sans);fill:#1D2920}
+.fsvg .t2{font:500 11.5px var(--sans);fill:#4F6B57}
+.fsvg .t2b{font:500 11.5px var(--sans);fill:#6F7B73}
+.fsvg .t1c{font:650 13px var(--sans);fill:#1D2920;text-anchor:middle}
+.fsvg .t2c{font:500 12px var(--sans);fill:#9A7212;text-anchor:middle}
+.fsvg .e{fill:none;stroke:#9AB3A1;stroke-width:1.6}
+.fsvg .e.ey{stroke:#D7A637}
 .fsvg .e.ed{stroke-dasharray:5 4}
-.fsvg .ev{font:500 11px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#94C2A2}
-.fsvg .cd{font:600 11.5px var(--sans);fill:#E0B84A}
-.fsvg .lg{font:500 13px var(--sans);fill:#C4CEC7}
+.fsvg .ev{font:500 11px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#2E7146}
+.fsvg .cd{font:600 11.5px var(--sans);fill:#A87A10}
+.fsvg .lg{font:500 13px var(--sans);fill:#4E5B53}
 .ov.fixed .scrim,.ov.fixed .sk,.ov.fixed .survey,.ov.fixed .ios-alert,.ov.fixed .sk-hint{animation:none}
 body.shotmode .group{display:none}
 body.shotmode .group.has-cur{display:block}
@@ -478,6 +471,39 @@ body.shotmode .group.has-cur{display:block}
 .fbuy svg{flex:none;width:17px;height:17px;color:var(--g700)}
 .linkbtn.sm{font-size:14.5px;height:40px}
 .s10{top:526px}
+
+.topnav{position:sticky;top:0;z-index:200;background:rgba(250,248,243,.88);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 #ECE6DA}
+.tn-in{max-width:1320px;margin:0 auto;padding:12px 32px;display:flex;align-items:center;gap:18px}
+.tn-brand{flex:none;display:flex;align-items:center;gap:8px;color:#1D4A2F;font:700 15px/1 var(--sans);text-decoration:none;white-space:nowrap}
+.tn-brand svg{width:24px;height:24px}
+.tn-tabs{flex:1;min-width:0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tn-tabs::-webkit-scrollbar{display:none}
+.tn-tabs a{flex:none;padding:9px 12px;border-radius:10px;color:#4E5B53;font:600 14px/1 var(--sans);text-decoration:none;white-space:nowrap}
+.tn-tabs a:hover{background:#F0ECE3;color:#1D2920}
+.tn-tabs a.on{background:#1D2920;color:#FFFFFF}
+.tn-btn{flex:none;display:flex;align-items:center;gap:7px;padding:10px 14px;border-radius:12px;font:650 14px/1 var(--sans);white-space:nowrap}
+.tn-btn svg{width:14px;height:14px;fill:currentColor}
+.tn-proto{background:#256039;color:#FFFFFF;box-shadow:0 10px 20px -14px rgba(22,56,35,.9)}
+.tn-exit{display:none;margin-left:auto;background:#FFFFFF;color:#1D2920;box-shadow:inset 0 0 0 1px #E3DDCF}
+body.proto .tn-tabs,body.proto .tn-proto{display:none}
+body.proto .tn-exit{display:flex}
+body.proto .page-head,body.proto .flow,body.proto .extra,body.proto .pager{display:none}
+body:not(.proto):not(.shotmode):not(.overview) .page:not(.cur-page){display:none}
+.pager{max-width:1320px;margin:0 auto;padding:18px 32px 80px;display:flex;align-items:center;gap:16px}
+.pager a{display:flex;flex-direction:column;gap:6px;min-width:220px;padding:15px 18px;border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px #E6E0D2;color:#1D2920;font:650 16px/1.2 var(--sans);text-decoration:none}
+.pager a small{color:#7C877F;font:700 11.5px/1 var(--sans);letter-spacing:1px;text-transform:uppercase}
+.pager a:hover{box-shadow:0 0 0 1.5px #256039}
+.pager .pg-next{margin-left:auto;text-align:right}
+.pager .pg-count{flex:1;text-align:center;color:#8B958E;font:600 13px/1 var(--sans)}
+.pager a.hide{visibility:hidden}
+body.shotmode .topnav,body.shotmode .scen,body.shotmode .pager,body.overview .topnav,body.overview .scen,body.overview .pager{display:none}
+@media (max-width:760px){.tn-in{flex-wrap:wrap;gap:10px;padding:10px 16px}.tn-tabs{order:3;flex-basis:100%}.tn-btn{margin-left:auto;padding:9px 12px;font-size:13px}.pager{padding:14px 16px 60px;gap:10px}.pager a{min-width:0;flex:1}.pager .pg-count{display:none}.scen{margin:14px 16px 0}}
+@media (max-width:500px){.phone{box-shadow:0 0 0 1px #E3DDCF,0 24px 40px -28px rgba(45,50,30,.45)}}
+.about{max-width:1320px;margin:0 auto;padding:4px 32px 6px}
+.about .brief{margin-top:0}
+body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .about{display:none}
+.page-head p{max-width:980px}
+@media (max-width:560px){.about{padding:0 16px 6px}}
 </style>
 </head>
 <body>
@@ -681,37 +707,39 @@ body.shotmode .group.has-cur{display:block}
 </defs>
 </svg>
 
-<header class="page-head">
+<nav class="topnav">
+  <div class="tn-in">
+    <a class="tn-brand" href="#task"><svg><use href="#logo"/></svg>Farm to Table</a>
+    <div class="tn-tabs">
+      <a href="#task" data-tab="task">Задание</a>
+      <a href="#branches" data-tab="branches">До пейвола</a>
+      <a href="#paywalls" data-tab="paywalls">Пейвол A/B</a>
+      <a href="#after" data-tab="after">После оплаты</a>
+      <a href="#close" data-tab="close">Закрыл пейвол</a>
+      <a href="#flow" data-tab="flow">Схема и события</a>
+      <a href="#notes" data-tab="notes">Как делал</a>
+    </div>
+    <button class="tn-btn tn-proto" data-mode="proto"><svg viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10.2-6.5a1 1 0 0 0 0-1.7L9.5 4.6A1 1 0 0 0 8 5.5z"/></svg>Пройти как прототип</button>
+    <button class="tn-btn tn-exit" data-mode="board">Выйти из прототипа</button>
+  </div>
+</nav>
+
+<div class="scen">
+  <div class="sg"><span class="sl">Район</span><div class="seg" data-k="cov"><button data-v="dense" class="on">Тампа: 231 ферма</button><button data-v="sparse">Сан-Рафаэль: мало</button><button data-v="none">Элко: ферм нет</button></div></div>
+  <div class="sg"><span class="sl">Пейвол</span><div class="seg" data-k="pw"><button data-v="A" class="on">A · таймлайн</button><button data-v="B">B · фермы</button><button data-v="C">C · два плана</button></div></div>
+  <div class="sg"><span class="sl">Триал</span><div class="seg" data-k="trial"><button data-v="1" class="on">доступен</button><button data-v="0">уже был</button></div></div>
+  <div class="sg"><button class="sbtn" data-jump="1">С начала</button><button class="sbtn" data-jump="8">День 2: напоминание</button></div>
+  <div class="sg"><span class="sl">Клавиши: → дальше, ← назад, Esc закрывает окно</span></div>
+</div>
+
+<header class="page-head page" data-page="task">
   <h1>Farm to Table: онбординг и пейвол</h1>
-  <p>Тестовое задание на менеджера по монетизации, Viralyze. Первый блок - то, что просили: четыре экрана онбординга и пейвол в реальном размере iPhone 15 и 16 (393×852 pt), тексты на английском. Дальше - сверх задания: ветки и состояния вокруг этих экранов, три варианта пейвола для A/B, покупка через лист App Store, первые минуты триала, путь для тех, кто закрыл пейвол, схема воронки с событиями аналитики и порядок тестов.</p>
-  <div class="brief">
-    <h3>О процессе в пяти предложениях</h3>
-    <p><b>Референсы:</b> прямой конкурент Localize и подписочные приложения с картой и взрослой аудиторией - AllTrails, Fishbrain, onX Hunt, PictureThis, плюс Blinkist как первоисточник честного таймлайна триала; экраны смотрел по записям screensdesign и скриншотам paywallscreens, потому что Mobbin закрыт логином. <b>Почему они:</b> в 930 отзывах из App Store категорию больше всего злит оплата вслепую, без показа своего района (31% отзывов с 1-2 звёздами), поэтому у референсов брал только то, что показывает ценность до денег и снимает страх списания: фермы рядом до пейвола (Localize, Fishbrain), таймлайн с датами и напоминанием (AllTrails, onX, Blinkist, у которого он дал +23% стартов триала и -55% жалоб), честный якорь от реального месячного плана (Fishbrain) и экран «триал начался» (PictureThis). <b>Инструменты:</b> Claude Code на Claude Opus - пять промптов из папки prompts (PRD, работы по отзывам, конкуренты, отстройка, тренды) и разбор референсов прогнаны параллельными агентами с веб-поиском, экраны свёрстаны в HTML, карты и иконки нарисованы в SVG без стоков и дизайнера, Playwright снимал скриншоты для правок. <b>Постановка:</b> брифом с экранами, референсами и ограничениями, например: «Собери в одном HTML пять экранов iPhone 393×852 для Farm to Table… Тексты на английском, без таймеров и зачёркнутых цен, годовая цена крупнее пересчёта в месяц. Выбор продуктов на шаге 2 подставь в экран 4 и в текст пейвола», оба брифа целиком - в разделе <a href="#notes">«Как делал»</a>. <b>Итерации:</b> девять - пять на исходные экраны и четыре на расширение; последняя шла по итогам разбора референсов: праймер геолокации сведён к одной кнопке по HIG, таймлайн переведён на реальные даты, напоминание сдвинуто на два дня до списания.</p>
-  </div>
-  <nav class="toc">
-    <a href="#task">Задание</a><a href="#branches">До пейвола</a><a href="#paywalls">Варианты пейвола</a><a href="#after">После оплаты</a><a href="#close">Закрыл пейвол</a><a href="#flow">Схема и события</a><a href="#notes">Как делал</a>
-  </nav>
-  <div class="toolbar">
-    <button class="tbtn on" data-mode="board">Все экраны</button>
-    <button class="tbtn" data-mode="proto">Пройти как прототип</button>
-  </div>
-  <div class="scen">
-    <div class="sg"><span class="sl">Район</span><div class="seg" data-k="cov"><button data-v="dense" class="on">Тампа: 231 ферма</button><button data-v="sparse">Сан-Рафаэль: мало</button><button data-v="none">Элко: ферм нет</button></div></div>
-    <div class="sg"><span class="sl">Пейвол</span><div class="seg" data-k="pw"><button data-v="A" class="on">A · таймлайн</button><button data-v="B">B · фермы</button><button data-v="C">C · два плана</button></div></div>
-    <div class="sg"><span class="sl">Триал</span><div class="seg" data-k="trial"><button data-v="1" class="on">доступен</button><button data-v="0">уже был</button></div></div>
-    <div class="sg"><button class="sbtn" data-jump="1">С начала</button><button class="sbtn" data-jump="8">День 2: напоминание</button></div>
-    <div class="sg"><span class="sl">Клавиши: → дальше, ← назад, Esc закрывает окно</span></div>
-  </div>
+  <p>Тестовое задание на менеджера по монетизации, Viralyze: четыре экрана онбординга и пейвол в реальном размере iPhone 15 и 16 (393×852 pt), тексты на английском. Всё кликабельно: выбор продуктов на втором экране меняет экран с фермами и текст пейвола. Под экранами - процесс в пяти предложениях, на следующих страницах - то, что сделано сверх задания.</p>
 </header>
 
 <main class="board" id="board">
 
-<section class="group g1" id="task">
-  <div class="group-head">
-    <span class="kicker main">Задание</span>
-    <h2>Онбординг и пейвол</h2>
-    <p>Четыре экрана онбординга и пейвол, как в задании. Выбор продуктов на втором экране меняет экран с фермами и текст пейвола, кнопки ведут дальше по воронке.</p>
-  </div>
+<section class="group g1 page" data-page="task">
   <div class="shots">
   <section class="shot" data-n="1">
     <div class="shot-label">01 · Welcome</div>
@@ -775,7 +803,7 @@ body.shotmode .group.has-cur{display:block}
     </div></div>
     <div class="note">
       <p><b>Зачем.</b> Праймер перед системным окном iOS: сначала объясняем, зачем нужна геолокация, и только потом показываем запрос Apple. Кто нажал «Don’t Allow» в системном окне, того вернуть можно только через настройки.</p>
-      <p><b>Одна кнопка.</b> HIG разрешает на праймере только кнопку, которая открывает системное окно, без второго действия вроде «Enter a ZIP code instead». Ввод ZIP идёт после «Don’t Allow» (экран 03b), как требует правило 5.1.1(iv).</p>
+      <p><b>Одна кнопка.</b> HIG разрешает на праймере только кнопку, которая открывает системное окно, без второго действия вроде «Enter a ZIP code instead». Too Good To Go ставит вторую кнопку «Select location», но мы идём по HIG: ввод ZIP после «Don’t Allow» (экран 03b), как требует правило 5.1.1(iv).</p>
       <p><b>Метрика:</b> opt-in геолокации, доля ZIP, доходимость до пейвола.</p>
     </div>
   </section>
@@ -858,7 +886,14 @@ body.shotmode .group.has-cur{display:block}
   </div>
 </section>
 
-<section class="group g2" id="branches">
+<section class="about page" data-page="task">
+  <div class="brief">
+    <h3>О процессе в пяти предложениях</h3>
+    <p><b>Референсы:</b> прямой конкурент Localize и подписочные приложения с картой и взрослой аудиторией - AllTrails, Fishbrain, onX Hunt, PictureThis, плюс Blinkist как первоисточник честного таймлайна триала и Too Good To Go как ближайший аналог по местной еде; живые флоу смотрел в Mobbin (онбординги Blinkist, AllTrails, Too Good To Go и Yuka, пейвол Givingli с тем же 3-дневным триалом), остальное - по записям screensdesign и скриншотам paywallscreens. <b>Почему они:</b> в 930 отзывах из App Store категорию больше всего злит оплата вслепую, без показа своего района (31% отзывов с 1-2 звёздами), поэтому у референсов брал только то, что показывает ценность до денег и снимает страх списания: фермы рядом до пейвола (Localize, Fishbrain, Too Good To Go), лоадер с чек-листом реальных шагов (Blinkist), таймлайн с датами и напоминанием (AllTrails, onX, Blinkist, у которого он дал +23% стартов триала и -55% жалоб), честный якорь от реального месячного плана (Fishbrain) и экран «триал начался» (PictureThis). <b>Инструменты:</b> Claude Code на Claude Opus - пять промптов из папки prompts (PRD, работы по отзывам, конкуренты, отстройка, тренды) и разбор референсов прогнаны параллельными агентами с веб-поиском, экраны свёрстаны в HTML, карты и иконки нарисованы в SVG без стоков и дизайнера, Playwright снимал скриншоты для правок. <b>Постановка:</b> брифом с экранами, референсами и ограничениями, например: «Собери в одном HTML пять экранов iPhone 393×852 для Farm to Table… Тексты на английском, без таймеров и зачёркнутых цен, годовая цена крупнее пересчёта в месяц. Выбор продуктов на шаге 2 подставь в экран 4 и в текст пейвола», оба брифа целиком - в разделе <a href="#notes">«Как делал»</a>. <b>Итерации:</b> десять - пять на исходные экраны, четыре на расширение и одна на постраничный вид в светлой теме со сверкой по живым флоу в Mobbin; по итогам разбора референсов праймер геолокации сведён к одной кнопке по HIG, таймлайн переведён на реальные даты, а напоминание сдвинуто на два дня до списания.</p>
+  </div>
+</section>
+
+<section class="group g2 page" data-page="branches">
   <div class="group-head">
     <span class="kicker">Сверх задания</span>
     <h2>До пейвола: ветки и состояния</h2>
@@ -933,7 +968,7 @@ body.shotmode .group.has-cur{display:block}
     </div></div>
     <div class="note">
       <p><b>Зачем.</b> Пока база считает фермы по радиусу и продуктам, человек видит, что именно проверяется: его продукты по очереди, потом часы работы и даты проверки. Числа совпадут с экраном 4, потому что посчитаны тем же запросом.</p>
-      <p><b>Около трёх секунд</b> и дальше сам, без кнопки. Искусственно не растягиваем и не добавляем «анализирую ваш профиль»: экран показывает только реальную работу.</p>
+      <p><b>Около трёх секунд</b> и дальше сам, без кнопки. Так же устроен лоадер Blinkist перед пейволом: чек-лист реальных шагов, а не абстрактный процент. Искусственно не растягиваем и не добавляем «анализирую ваш профиль».</p>
       <p><b>Метрика:</b> время до экрана 4, доля отвалов на загрузке.</p>
     </div>
   </section>
@@ -997,11 +1032,11 @@ body.shotmode .group.has-cur{display:block}
   </div>
 </section>
 
-<section class="group g3" id="paywalls">
+<section class="group g3 page" data-page="paywalls">
   <div class="group-head">
     <span class="kicker">Сверх задания</span>
     <h2>Пейвол: варианты для A/B и состояния</h2>
-    <p>Вариант A - основной, он в задании выше. B и C меняют ровно один блок, чтобы разница в конверсии читалась однозначно. Отдельно - пейвол для тех, у кого триал уже был, и лист App Store, который человек видит перед оплатой.</p>
+    <p>Вариант A - основной, он на странице «Задание». B и C меняют ровно один блок, чтобы разница в конверсии читалась однозначно. Отдельно - пейвол для тех, у кого триал уже был, и лист App Store, который человек видит перед оплатой.</p>
   </div>
   <div class="shots">
 
@@ -1143,7 +1178,7 @@ body.shotmode .group.has-cur{display:block}
   </div>
 </section>
 
-<section class="group g4" id="after">
+<section class="group g4 page" data-page="after">
   <div class="group-head">
     <span class="kicker">Сверх задания</span>
     <h2>После оплаты: первые минуты триала</h2>
@@ -1172,7 +1207,7 @@ body.shotmode .group.has-cur{display:block}
       <div class="homebar"></div>
     </div></div>
     <div class="note">
-      <p><b>Зачем.</b> Пейвол обещал напоминание, и разрешение на него просим сейчас, когда оно нужно самому человеку. Превью показывает, что придёт и когда. У Blinkist такой экран «Remind me» после старта триала поднял согласие на пуши с 6% до 74%, медиана по iOS около 49% (Airship).</p>
+      <p><b>Зачем.</b> Пейвол обещал напоминание, и разрешение на него просим сейчас, когда оно нужно самому человеку. Превью показывает, что придёт и когда. У Blinkist такой экран «Remind me» после старта триала поднял согласие на пуши с 6% до 74%, медиана по iOS около 49% (Airship). Givingli с тем же 3-дневным триалом прямо в таймлайне просит включить уведомления ради напоминания.</p>
       <p><b>Если пуши запрещены,</b> напоминаем внутри приложения при следующем открытии и письмом, если есть email. Для тех, у кого триала не было, экран просит напоминание перед продлением.</p>
       <p><b>Метрика:</b> opt-in пушей, отмены триала до напоминания и после.</p>
     </div>
@@ -1205,7 +1240,7 @@ body.shotmode .group.has-cur{display:block}
     </div></div>
     <div class="note">
       <p><b>Зачем.</b> По данным RevenueCat, около 55% отмен трёхдневного триала случаются в день оформления: решение принимается в первые минуты. Поэтому сразу после покупки человек видит ту ферму, которая на экране 4 была скрыта: название, часы работы, дату проверки и кнопку звонка.</p>
-      <p><b>Ферма подбирается по выбору на шаге 2</b> и расстоянию, плашка сверху показывает, до какого числа идёт триал, а строка «как купить» отвечает тем, кто ждал заказ в приложении (23 отзыва). Оценку в App Store просим только после первого звонка ферме: 13 отзывов злятся на просьбу оценить до пользы.</p>
+      <p><b>Ферма подбирается по выбору на шаге 2</b> и расстоянию, плашка сверху показывает, до какого числа идёт триал, а строка «как купить» отвечает тем, кто ждал заказ в приложении (23 отзыва). Оценку в App Store просим только после первого звонка ферме: 13 отзывов злятся на просьбу оценить до пользы. Похожий ход у Yuka: сразу после онбординга - первое сканирование, а не обзор функций.</p>
       <p><b>Метрика:</b> first_farm_action в первый день; trial → paid у сделавших действие против остальных.</p>
     </div>
   </section>
@@ -1237,7 +1272,7 @@ body.shotmode .group.has-cur{display:block}
   </div>
 </section>
 
-<section class="group g5" id="close">
+<section class="group g5 page" data-page="close">
   <div class="group-head">
     <span class="kicker">Сверх задания</span>
     <h2>Если закрыл пейвол</h2>
@@ -1292,15 +1327,15 @@ body.shotmode .group.has-cur{display:block}
 
 </main>
 
-<section class="flow" id="flow">
+<section class="flow page" data-page="flow">
   <div class="card">
     <h2>Схема воронки</h2>
-    <p>Все экраны выше на одной схеме: развилки, куда ведёт каждая кнопка и какое событие аналитики отправляется на переходе. Светлые блоки - экраны из задания, тёмные - сверх задания.</p>
+    <p>Все экраны со всех страниц на одной схеме: развилки, куда ведёт каждая кнопка и какое событие аналитики отправляется на переходе. Зелёные блоки - экраны из задания, белые - сверх задания.</p>
     <div class="fsvg">
       <svg viewBox="0 0 1140 926" role="img" aria-label="Схема воронки Farm to Table">
         <defs>
-          <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#7E9E88"/></marker>
-          <marker id="ahy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E0B84A"/></marker>
+          <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9AB3A1"/></marker>
+          <marker id="ahy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#D7A637"/></marker>
         </defs>
 
         <g class="legend">
@@ -1430,16 +1465,16 @@ body.shotmode .group.has-cur{display:block}
   </div>
 </section>
 
-<section class="extra" id="notes">
+<section class="extra page" data-page="notes">
   <div class="card">
     <h2>Как делал</h2>
     <ul class="proc">
       <li><b>Промпты.</b> Прогнал все пять из папки prompts. PRD собран по prd-interview, но без интервью: ответы взяты из материалов Viralyze и отзывов, пробелы помечены как допущения. Из PRD по цепочке - работы и сегменты по отзывам (AJTBD), конкуренты, стратегия отстройки и тренды рынка. Вторым проходом, уже под расширение макета, - отзывы на полной выборке App Store и разбор онбордингов и пейволов референсов по структуре исследования конкурентов.</li>
       <li><b>Что дали отзывы.</b> 930 отзывов из App Store по 11 приложениям вместо 32, все размечены вручную. Самая частая жалоба категории - платишь, не видя своего района: 31% отзывов с 1-2 звёздами, 27 человек прямо просят показать фермы до оплаты, а одной цифре не верят. Цена почти никогда не жалоба сама по себе: из 85 недовольных ценой просто «дорого» пишут 5, у остальных рядом скрытые условия, «то же есть в Google» или пустой район. Радость первых минут - «нашёл ферму рядом»: 35% отзывов на 4-5 звёзд.</li>
-      <li><b>Референсы.</b> <a href="https://apps.apple.com/us/app/localize-farmers-market/id6756440767">Localize</a> - прямой конкурент и пример, как не надо: пейвол после анкеты без показа ферм, сезонная распродажа и зачёркнутая цена, которой нет в его списке покупок; 82% его негатива - про деньги. AllTrails, onX Hunt и Blinkist - таймлайн триала с напоминанием и «Cancel anytime» под кнопкой; у Blinkist он дал +23% стартов триала и -55% жалоб. Fishbrain - пины «near you» на пейволе и честный якорь 12 × $12.99 от реального месячного плана. PictureThis - та же цена $39.99 с пересчётом $3.33 и экран «триал начался». Yuka - польза до оплаты и пейвол в момент нажатия. Экраны смотрел по записям <a href="https://screensdesign.com">screensdesign</a> и скриншотам <a href="https://paywallscreens.com">paywallscreens</a> (Mobbin закрыт логином), факты сверены с документацией Apple, правилами FTC и отчётом RevenueCat 2026.</li>
+      <li><b>Референсы.</b> <a href="https://apps.apple.com/us/app/localize-farmers-market/id6756440767">Localize</a> - прямой конкурент и пример, как не надо: пейвол после анкеты без показа ферм, сезонная распродажа и зачёркнутая цена, которой нет в его списке покупок; 82% его негатива - про деньги. AllTrails, onX Hunt и Blinkist - таймлайн триала с напоминанием и «Cancel anytime» под кнопкой; у Blinkist он дал +23% стартов триала и -55% жалоб. Fishbrain - пины «near you» на пейволе и честный якорь 12 × $12.99 от реального месячного плана. PictureThis - та же цена $39.99 с пересчётом $3.33 и экран «триал начался». Yuka - польза до оплаты и пейвол в момент нажатия. Живые флоу смотрел в Mobbin: онбординг <a href="https://mobbin.com/apps/blinkist-ios-fdae09ec-9695-4a73-9981-84f1bd3538bf/c1a883aa-e28c-46a5-ba41-b3ca828a1371/flows">Blinkist</a> с лоадером-чек-листом и пейволом на датах, онбординг <a href="https://mobbin.com/apps/all-trails-ios-66ac61f7-f9ea-4c45-b512-b2fadf7e027b/caf6da24-bc01-47b9-a571-0f4db9d55dfe/flows">AllTrails</a> с таймлайном внутри выбранного плана, онбординг <a href="https://mobbin.com/apps/too-good-to-go-ios-d544c59a-6284-499f-ba07-92ca14f91002/00967c9c-7821-467b-8c31-7052fcd944b5/flows">Too Good To Go</a> (местная еда: вопрос о целях, праймеры пушей и геолокации, сразу выдача рядом), онбординг Yuka с первым действием сразу после входа и пейвол Givingli с тем же 3-дневным триалом. Fishbrain, PictureThis, onX и Localize в Mobbin нет, их смотрел по записям <a href="https://screensdesign.com">screensdesign</a> и скриншотам <a href="https://paywallscreens.com">paywallscreens</a>; факты сверены с документацией Apple, правилами FTC и отчётом RevenueCat 2026.</li>
       <li><b>Инструменты.</b> Всё в Claude Code на Claude Opus: исследование шло параллельными агентами с веб-поиском по промптам из папки, экраны свёрстаны в одном HTML, карта и иконки продуктов нарисованы в SVG без стоков и дизайнера, английские тексты писались с ним с упором на тон для американцев 35-65. Playwright снимал скриншоты каждого экрана для правок и PNG в 3x.</li>
       <li><b>Постановка.</b> Первый заход - подробным брифом, он ниже. Второй - одной фразой: «изучи промпты из папки, прогони нужные для тестового и сделай в прототипе больше, чем описано»; план расширения Claude собрал сам по итогам исследования, он ниже вторым блоком. Дальше правил по скриншотам каждого экрана.</li>
-      <li><b>Итерации.</b> Девять. Пять в первый день: структура и тексты; наложения по скриншотам; баг с пустыми строками на экране 4 и новая иконка курицы; полировка и экспорт PNG в 3x; правки после исследования. Четыре во второй: ветки, варианты пейвола, первые минуты триала, схема и события; правки по скриншотам; правки по 930 отзывам (названия ферм в варианте B, способ покупки, льготный доступ, подпись под числом ферм); правки по разбору референсов (одна кнопка на праймере по HIG, даты в таймлайне, напоминание за два дня до списания, текст листа App Store, 80,000+ ферм из версии 1.4.0).</li>
+      <li><b>Итерации.</b> Десять. Пять в первый день: структура и тексты; наложения по скриншотам; баг с пустыми строками на экране 4 и новая иконка курицы; полировка и экспорт PNG в 3x; правки после исследования. Четыре во второй: ветки, варианты пейвола, первые минуты триала, схема и события; правки по скриншотам; правки по 930 отзывам (названия ферм в варианте B, способ покупки, льготный доступ, подпись под числом ферм); правки по разбору референсов (одна кнопка на праймере по HIG, даты в таймлайне, напоминание за два дня до списания, текст листа App Store, 80,000+ ферм из версии 1.4.0). Десятая - постраничный вид в светлой теме и сверка паттернов с живыми флоу в Mobbin.</li>
     </ul>
     <div class="prompt">Собери в одном HTML пять экранов iPhone 393×852 для Farm to Table: карта ферм и фермерских рынков в США, ЦА 35-65, подписка $39.99 в год с 3 днями бесплатно. Экраны: приветствие, выбор продуктов, праймер геолокации с запасным ZIP-кодом, «231 ферма рядом» с карточкой ближайшей фермы, где название скрыто, и пейвол. Референсы: пейволы AllTrails (карта сверху, таймлайн триала), Fishbrain (пины рядом с пользователем), PictureThis (та же цена, напоминание до конца триала). Стиль: тёплый кремовый фон, тёмно-зелёный бренд как в текущем приложении, заголовки serif, текст от 16 px, кнопки от 56 px. Иллюстрации карты и иконки продуктов нарисуй сам в SVG, без стоков. Тексты на английском, без таймеров и зачёркнутых цен, годовая цена крупнее пересчёта в месяц. Выбор продуктов на шаге 2 подставь в экран 4 и в текст пейвола.</div>
     <div class="prompt">План расширения: опираться на файлы исследования - PRD, отзывы v2, конкурентов, отстройку, тренды и разбор референсов. До пейвола: системное окно геолокации, ввод ZIP с цифровой клавиатурой, сборка карты на три секунды, состояние «ферм нет в 100 милях» без пейвола. Пейвол: вариант B с тремя ближайшими фермами, вариант C с годовым и реальным месячным планом вместо зачёркнутой цены, пейвол для тех, у кого триал уже был, лист App Store с датой списания. После оплаты: праймер пуш-напоминания с превью, первая ферма со звонком и маршрутом, напоминание за два дня до списания на экране блокировки. После крестика: опрос из одного вопроса и карта с замками. Под каждым экраном: зачем, на какие цифры из отзывов опирается, какая метрика. В конце: схема воронки с событиями и порядок тестов.</div>
@@ -1467,6 +1502,8 @@ body.shotmode .group.has-cur{display:block}
   </div>
   </div>
 </section>
+
+<nav class="pager"><a class="pg-prev" href="#task"><small>Назад</small><span class="js-pg-prev"></span></a><span class="pg-count js-pg-count"></span><a class="pg-next" href="#branches"><small>Дальше</small><span class="js-pg-next"></span></a></nav>
 
 <script>
 const ITEMS = {
@@ -1739,6 +1776,26 @@ document.querySelectorAll('.shot[data-clone]').forEach(s => {
 });
 render();
 
+const PAGES = ['task', 'branches', 'paywalls', 'after', 'close', 'flow', 'notes'];
+const PAGE_TITLES = {task:'Задание', branches:'До пейвола', paywalls:'Пейвол A/B', after:'После оплаты', close:'Закрыл пейвол', flow:'Схема и события', notes:'Как делал'};
+let page = 'task';
+function showPage(p, scroll) {
+  page = PAGES.includes(p) ? p : 'task';
+  $$('.page').forEach(el => el.classList.toggle('cur-page', el.dataset.page === page));
+  $$('[data-tab]').forEach(a => a.classList.toggle('on', a.dataset.tab === page));
+  const i = PAGES.indexOf(page), prev = PAGES[i - 1], next = PAGES[i + 1];
+  const pa = document.querySelector('.pg-prev'), na = document.querySelector('.pg-next');
+  pa.classList.toggle('hide', !prev);
+  na.classList.toggle('hide', !next);
+  if (prev) { pa.href = '#' + prev; setT('.js-pg-prev', PAGE_TITLES[prev]); }
+  if (next) { na.href = '#' + next; setT('.js-pg-next', PAGE_TITLES[next]); }
+  setT('.js-pg-count', `${i + 1} / ${PAGES.length}`);
+  const tab = document.querySelector(`[data-tab="${page}"]`), bar = tab && tab.parentElement;
+  if (bar && bar.scrollWidth > bar.clientWidth) bar.scrollTo({left: tab.offsetLeft - (bar.clientWidth - tab.clientWidth) / 2});
+  if (scroll) window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', () => { if (!isProto()) showPage(location.hash.slice(1), true); });
+
 const shots = [...document.querySelectorAll('.shot')];
 const groups = [...document.querySelectorAll('.group')];
 let hist = [], timers = [];
@@ -1825,8 +1882,9 @@ document.addEventListener('click', e => {
     closeOv();
     resetBoard();
     hist = [];
-    if (proto) { st.reason = -1; show('1', true); document.querySelector('.toolbar').scrollIntoView({block:'start'}); }
-    else { shots.forEach(s => s.classList.remove('cur')); groups.forEach(g => g.classList.remove('has-cur')); render(); }
+    if (proto) { st.reason = -1; show('1', true); window.scrollTo(0, 0); }
+    else { shots.forEach(s => s.classList.remove('cur')); groups.forEach(g => g.classList.remove('has-cur')); render(); showPage(page, true); }
+    fit();
     return;
   }
   const sv = e.target.closest('.seg button');
@@ -1876,11 +1934,19 @@ document.addEventListener('click', e => {
   }
   const target = document.querySelector(`.shot[data-n="${resolve(g.dataset.go)}"]`);
   if (!target) return;
-  target.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+  const pg = target.closest('.page');
+  if (pg && pg.dataset.page !== page) { history.pushState(null, '', '#' + pg.dataset.page); showPage(pg.dataset.page, false); }
+  target.scrollIntoView({behavior:'smooth', block:'center', inline:'center'});
   target.animate([{transform:'translateY(0)'}, {transform:'translateY(-8px)'}, {transform:'translateY(0)'}], {duration:420, easing:'ease-out'});
 });
 document.addEventListener('keydown', e => {
-  if (!isProto()) return;
+  if (!isProto()) {
+    if (e.altKey || e.metaKey || e.ctrlKey || document.body.classList.contains('shotmode')) return;
+    const i = PAGES.indexOf(page);
+    if (e.key === 'ArrowRight' && i < PAGES.length - 1) location.hash = PAGES[i + 1];
+    if (e.key === 'ArrowLeft' && i > 0) location.hash = PAGES[i - 1];
+    return;
+  }
   const open = document.querySelector('.ov:not(.fixed)');
   if (e.key === 'Escape' && open) { closeOv(); return; }
   if (e.key === 'ArrowLeft') {
@@ -1896,6 +1962,7 @@ document.addEventListener('keydown', e => {
   }
 });
 
+showPage(location.hash.slice(1), false);
 const params = new URLSearchParams(location.search);
 if (params.get('shot')) { document.body.classList.add('shotmode'); show(params.get('shot')); }
 if (params.get('overview')) {
@@ -1906,7 +1973,9 @@ if (params.get('overview')) {
 function fit() {
   if (document.body.classList.contains('shotmode')) return;
   const narrow = window.innerWidth <= 500;
-  const z = Math.min(1, (window.innerWidth - (narrow ? 0 : 12)) / (narrow ? 393 : 417));
+  let z = Math.min(1, (window.innerWidth - (narrow ? 0 : 12)) / (narrow ? 393 : 417));
+  const box = isProto() && !narrow && document.querySelector('.group.has-cur .shots');
+  if (box) z = Math.min(z, Math.max(.62, (window.innerHeight - box.getBoundingClientRect().top - window.scrollY - 24) / 876));
   document.querySelectorAll('.frame').forEach(f => { f.style.zoom = z < 1 ? z : ''; });
 }
 window.addEventListener('resize', fit);
