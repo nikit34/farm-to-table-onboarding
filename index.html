@@ -5,15 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Farm to Table · Onboarding and Paywall</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Тестовое задание на менеджера по монетизации: 4 экрана онбординга и пейвол для Farm to Table, HTML в размере iPhone.">
+<meta name="description" content="Тестовое задание на менеджера по монетизации: 4 экрана онбординга и пейвол для Farm to Table в размере iPhone, плюс ветки воронки, варианты пейвола для A/B, первые минуты триала и схема событий.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nikit34.github.io/farm-to-table-onboarding/">
 <meta property="og:title" content="Farm to Table: онбординг и пейвол">
-<meta property="og:description" content="Тестовое задание на менеджера по монетизации: 4 экрана онбординга и пейвол, HTML в размере iPhone 393×852.">
+<meta property="og:description" content="4 экрана онбординга и пейвол в размере iPhone 393×852, плюс ветки воронки, три варианта пейвола, первые минуты триала и схема событий.">
 <meta property="og:image" content="https://nikit34.github.io/farm-to-table-onboarding/png/00_overview.png">
-<meta property="og:image:width" content="5640">
-<meta property="og:image:height" content="2030">
+<meta property="og:image:width" content="4714">
+<meta property="og:image:height" content="2022">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23256039%27/%3E%3Cpath d=%27M16 26.6s-7.8-6.6-7.8-13a7.8 7.8 0 0 1 15.6 0c0 6.4-7.8 13-7.8 13z%27 fill=%27%23FFFDF9%27/%3E%3Cpath d=%27M12.4 14.2l3.6-2.8 3.6 2.8v3.9h-7.2z%27 fill=%27%23256039%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -36,7 +37,6 @@ html,body{background:#111412;color:#E6EBE7;font-family:var(--sans);-webkit-font-
 .tbtn{padding:11px 16px;border-radius:12px;background:#1E2420;color:#E6EBE7;font:600 14px/1 var(--sans);box-shadow:inset 0 0 0 1px #313933}
 .tbtn.on{background:#E6EBE7;color:#111412}
 
-.board{display:flex;flex-wrap:wrap;justify-content:center;gap:60px 44px;max-width:2900px;margin:0 auto;padding:40px 24px 30px}
 .shot{width:417px;display:flex;flex-direction:column;align-items:center}
 .shot-label{align-self:flex-start;margin:0 0 14px 14px;color:#9FB0A4;font:600 12.5px/1 var(--sans);letter-spacing:1.4px;text-transform:uppercase}
 .frame{width:417px;height:876px;padding:12px;border-radius:66px;background:#0B0C0B;box-shadow:inset 0 0 0 1.5px #3B403C,0 50px 90px -30px rgba(0,0,0,.75)}
@@ -190,23 +190,294 @@ html,body{background:#111412;color:#E6EBE7;font-family:var(--sans);-webkit-font-
 .card .prompt{margin-top:18px}
 .prompt{margin-top:14px;padding:16px 18px;border-radius:14px;background:#111412;box-shadow:inset 0 0 0 1px #2A322C;color:#DDE4DE;font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap}
 
-body.proto .shot{display:none}
-body.proto .shot.cur{display:flex}
-body.proto .board{min-height:1000px}
 body.shotmode{background:var(--cream)}
 body.shotmode .page-head,body.shotmode .note,body.shotmode .shot-label,body.shotmode .extra,body.shotmode .island{display:none}
-body.shotmode .board{display:block;padding:0}
 body.shotmode .shot{display:none;width:393px}
 body.shotmode .shot.cur{display:block}
 body.shotmode .frame{width:393px;height:852px;padding:0;border-radius:0;background:none;box-shadow:none}
 body.shotmode .phone{border-radius:0}
 body.shotmode .pulse{animation:none;opacity:.16}
 body.overview .page-head,body.overview .note,body.overview .extra{display:none}
-body.overview .board{flex-wrap:nowrap;padding:48px 48px 60px}
 body.overview .pulse{animation:none;opacity:.16}
 @media (max-width:980px){.extra{grid-template-columns:1fr}}
 @media (max-width:560px){.page-head{padding:28px 16px 0}.page-head h1{font-size:28px}.extra{padding:0 16px 50px}.card{padding:22px 20px}}
-@media (max-width:500px){.board{padding:24px 0 16px;gap:40px}.shot{width:100%}.shot-label{margin:0 0 12px 16px}.frame{width:393px;height:852px;padding:0;border-radius:0;background:none;box-shadow:none}.phone{border-radius:26px}.island{display:none}.note{width:100%;padding:0 16px}}
+@media (max-width:500px){.shot{width:100%}.shot-label{margin:0 0 12px 16px}.frame{width:393px;height:852px;padding:0;border-radius:0;background:none;box-shadow:none}.phone{border-radius:26px}.island{display:none}.note{width:100%;padding:0 16px}}
+.brief{margin-top:22px;max-width:980px;padding:20px 22px;border-radius:18px;background:#181D19;box-shadow:inset 0 0 0 1px #262E28}
+.brief h3{color:#9FB0A4;font:700 12px/1 var(--sans);letter-spacing:1.3px;text-transform:uppercase}
+.brief p{margin-top:10px;max-width:none;color:#C9D2CB;font-size:15px;line-height:1.62}
+.brief b{color:#EEF2EE;font-weight:650}
+.brief a{color:#9BD1A9;text-underline-offset:3px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.toc a{padding:8px 11px;border-radius:10px;background:#1B211D;color:#C4CEC7;font:600 13px/1 var(--sans);text-decoration:none;box-shadow:inset 0 0 0 1px #2A322C}
+.toc a:hover{background:#232A25}
+
+.scen{display:none;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:16px;padding:14px 16px;border-radius:16px;background:#181D19;box-shadow:inset 0 0 0 1px #262E28}
+body.proto .scen{display:flex}
+.sg{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.sl{color:#9FB0A4;font:600 12.5px/1 var(--sans);letter-spacing:.3px}
+.seg{display:flex;flex-wrap:wrap;padding:3px;border-radius:11px;background:#111412;box-shadow:inset 0 0 0 1px #2A322C}
+.seg button{padding:8px 11px;border-radius:8px;color:#C4CEC7;font:600 13px/1 var(--sans)}
+.seg button.on{background:#E6EBE7;color:#111412}
+.sbtn{padding:9px 12px;border-radius:10px;background:#232A25;color:#E6EBE7;font:600 13px/1 var(--sans);box-shadow:inset 0 0 0 1px #34403A}
+
+.board{padding:0 0 12px}
+.group-head{max-width:1320px;margin:0 auto;padding:46px 32px 0}
+.kicker{display:inline-block;padding:7px 10px;border-radius:8px;background:#1E2420;color:#A9B4AC;font:700 11.5px/1 var(--sans);letter-spacing:1.2px;text-transform:uppercase;box-shadow:inset 0 0 0 1px #313933}
+.kicker.main{background:#1F3A28;color:#BFE3C8;box-shadow:inset 0 0 0 1px #2F5A3C}
+.group-head h2{margin-top:12px;font-family:var(--serif);font-weight:600;font-size:30px;letter-spacing:-.3px;color:#F4F1E8}
+.group-head p{margin-top:8px;max-width:900px;color:#A9B4AC;font-size:15.5px;line-height:1.6}
+.shots{display:flex;flex-wrap:wrap;justify-content:center;gap:60px 44px;max-width:2900px;margin:0 auto;padding:34px 24px 30px}
+
+body.proto .group-head,body.proto .flow,body.proto .extra,body.proto .brief{display:none}
+body.proto .group{display:none}
+body.proto .group.has-cur{display:block}
+body.proto .shots{padding:30px 24px 70px}
+body.proto .shot{display:none}
+body.proto .shot.cur{display:flex;flex-direction:row;align-items:flex-start;justify-content:center;gap:44px;width:auto}
+body.proto .shot.cur .shot-label{display:none}
+body.proto .shot.cur .note{width:380px;margin-top:34px}
+@media (max-width:900px){body.proto .shot.cur{flex-direction:column;align-items:center;gap:0}body.proto .shot.cur .note{margin-top:24px}}
+
+.linkbtn{position:absolute;z-index:21;left:24px;right:24px;height:44px;display:flex;align-items:center;justify-content:center;gap:8px;color:var(--g700);font:650 16.5px/1 var(--sans);text-align:center}
+.linkbtn svg{width:17px;height:17px;fill:currentColor}
+.toast{position:absolute;z-index:130;left:50%;top:62px;max-width:330px;width:max-content;transform:translate(-50%,-8px);padding:11px 15px;border-radius:14px;background:rgba(22,35,26,.95);color:#fff;font:600 14px/1.3 var(--sans);text-align:center;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+.zip-head{position:absolute;top:112px;left:24px;right:24px}
+.zip-field{position:absolute;top:262px;left:24px;right:24px;height:70px;border-radius:20px;background:var(--paper);box-shadow:inset 0 0 0 2px var(--g700),0 14px 26px -20px rgba(22,56,35,.7);display:flex;align-items:center;padding:0 22px}
+.zip-d{font:650 32px/1 var(--sans);letter-spacing:8px;color:var(--ink);font-variant-numeric:tabular-nums}
+.zip-d:empty:before{content:"ZIP code";letter-spacing:0;font-weight:500;font-size:22px;color:var(--ink3)}
+.caret{width:2.5px;height:34px;margin-left:3px;border-radius:2px;background:var(--g700);animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.zip-city{position:absolute;top:350px;left:26px;right:24px;display:flex;align-items:center;gap:9px;color:var(--g700);font:650 16.5px/1 var(--sans)}
+.zip-city .ok{width:22px;height:22px;border-radius:11px;background:var(--g700);display:grid;place-items:center;color:#fff}
+.zip-city .ok svg{width:13px;height:13px}
+.zip-city.wait{color:var(--ink3);font-weight:500}
+.zip-city.wait .ok{display:none}
+.zip-note{position:absolute;top:382px;left:24px;right:24px}
+.kp{position:absolute;z-index:50;left:0;right:0;bottom:0;height:291px;background:#D1D3D9;padding:8px 6px 0}
+.kp-g{display:grid;grid-template-columns:repeat(3,1fr);gap:7px 6px}
+.k{height:47px;border-radius:6px;background:#FDFDFE;box-shadow:0 1px 0 rgba(0,0,0,.28);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#0B0B0C;text-align:center}
+.k b{font:400 25px/1 var(--sans)}
+.k small{margin-top:2px;font:700 9.5px/1 var(--sans);letter-spacing:2.2px}
+.k.fn{background:none;box-shadow:none}
+.k.fn svg{width:28px;height:21px;color:#0B0B0C}
+.k:active{background:#B7BBC3}
+.k.fn:active{background:none}
+
+.s3c{top:430px}
+.s3c .title{margin-top:10px;font-size:30px}
+.pbar{margin-top:16px;height:8px;border-radius:4px;background:#E6DDC9;overflow:hidden}
+.pbar i{display:block;width:66%;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--g600),var(--g700));transition:width .55s ease}
+.lrows{margin-top:14px;display:flex;flex-direction:column;gap:7px}
+.lrow{height:46px}
+.lrow .st{display:flex;align-items:center;min-height:30px}
+.spin{display:block;width:20px;height:20px;margin-right:6px;border-radius:10px;border:2.6px solid #D9E7D4;border-top-color:var(--g700);animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.lrow .rc{display:none}
+.lrow.done .spin{display:none}
+.lrow.done .rc{display:block}
+.lrow.muted .rc{background:#EFE9DC;color:var(--ink3)}
+.lrow .ri.clk svg{width:21px;height:21px;fill:none;color:var(--g700)}
+.sweep{transform-box:view-box;transform-origin:206px 252px;animation:spin 2.6s linear infinite}
+
+.map.none svg{filter:saturate(.5) brightness(1.03)}
+.row.nearest .rc{background:#EFE9DC;color:var(--ink2)}
+
+.s5b{top:176px}
+.s5b .title{margin-top:8px;font-size:30px}
+.lfs{margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.lf{height:64px;border-radius:16px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);display:flex;align-items:center;gap:12px;padding:0 12px 0 9px}
+.lf .fc-ic{flex:none;width:46px;height:46px}
+.lf .fc-ic svg{width:33px;height:33px}
+.lf .lb{flex:1;min-width:0}
+.lf .ln{font:650 15.5px/1.2 var(--sans);color:var(--ink)}
+.lf .ln .blur{filter:blur(4.6px);user-select:none}
+.lf .lm{margin-top:4px;color:var(--ink2);font:500 13px/1.2 var(--sans);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lf .fc-lock{flex:none;width:32px;height:32px}
+.lf .fc-lock svg{width:15px;height:15px}
+.lf-more{margin-top:10px;padding-left:4px;color:var(--g700);font:650 15px/1 var(--sans)}
+.trialline{margin-top:16px;display:flex;align-items:center;gap:10px;color:var(--ink);font:500 15px/1.35 var(--sans)}
+.trialline .tld{flex:none;width:30px;height:30px;border-radius:15px;background:var(--g100);display:grid;place-items:center;color:var(--g700)}
+.trialline .tld svg{width:16px;height:16px;fill:currentColor}
+.trialline b{font-weight:700}
+.s5b .plan{margin-top:18px}
+
+.plans{margin-top:18px;display:flex;flex-direction:column;gap:12px}
+.plans .plan{margin-top:0;width:100%;text-align:left}
+.plan.pl{box-shadow:inset 0 0 0 1.5px var(--line)}
+.plan.pl.on{box-shadow:inset 0 0 0 2px var(--g700)}
+.plan.pl .radio{background:none;box-shadow:inset 0 0 0 1.5px #CFC6B1}
+.plan.pl.on .radio{background:var(--g700);box-shadow:none}
+.plan.pl .radio svg{opacity:0}
+.plan.pl.on .radio svg{opacity:1}
+.plan .tag.save{background:var(--g700);color:#fff}
+.s5c .trialline{margin-top:14px}
+
+.ov{position:absolute;inset:0;z-index:100}
+.scrim{position:absolute;inset:0;background:rgba(12,16,13,.4);animation:fadein .2s ease}
+@keyframes fadein{from{opacity:0}}
+@keyframes rise{from{transform:translateY(46px);opacity:0}}
+@keyframes pop{from{transform:translate(-50%,-50%) scale(1.1);opacity:0}}
+.ios-alert{position:absolute;left:50%;top:50%;width:270px;transform:translate(-50%,-50%);border-radius:14px;background:rgba(244,244,246,.97);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);overflow:hidden;text-align:center;color:#000;font-family:var(--sans);box-shadow:0 24px 50px -22px rgba(0,0,0,.55);animation:pop .22s ease}
+.ios-alert .at{padding:19px 16px 0;font:600 17px/1.3 var(--sans);letter-spacing:-.4px}
+.ios-alert .am{padding:5px 16px 16px;font:400 13px/1.38 var(--sans);letter-spacing:-.08px}
+.ios-alert .amap{position:relative;height:148px}
+.ios-alert .amap>svg{display:block;width:100%;height:100%}
+.precise{position:absolute;left:10px;top:10px;display:flex;align-items:center;gap:5px;padding:6px 9px;border-radius:14px;background:rgba(255,255,255,.95);color:#007AFF;font:600 12.5px/1 var(--sans);box-shadow:0 2px 8px -2px rgba(0,0,0,.25)}
+.ios-alert .precise svg{width:12px;height:12px;fill:currentColor}
+.ab{display:block;width:100%;height:44px;border-top:.5px solid rgba(60,60,67,.3);color:#007AFF;font:400 17px/44px var(--sans);letter-spacing:-.4px;text-align:center}
+.ab.b{font-weight:600}
+.ab2{display:flex}
+.ab2 .ab+.ab{border-left:.5px solid rgba(60,60,67,.3)}
+
+.sk{position:absolute;left:0;right:0;bottom:0;padding:16px 16px 42px;border-radius:14px 14px 0 0;background:#F2F2F7;color:#000;font-family:var(--sans);animation:rise .28s ease}
+.sk-top{display:flex;align-items:center;justify-content:space-between;padding:2px 2px 14px}
+.sk-top b{font:700 21px/1 var(--sans);letter-spacing:-.4px}
+.sk-x{width:30px;height:30px;border-radius:15px;background:#E3E3E8;display:grid;place-items:center;color:#7E7E83}
+.sk-x svg{width:14px;height:14px}
+.sk-box{border-radius:12px;background:#fff;padding:12px 14px}
+.sk-box+.sk-box{margin-top:10px}
+.sk-prod{display:flex;align-items:center;gap:12px}
+.sk-icon{flex:none;width:58px;height:58px;border-radius:13px;overflow:hidden;box-shadow:0 0 0 .5px rgba(0,0,0,.12)}
+.sk-icon svg{display:block;width:58px;height:58px}
+.sk-prod b{display:block;font:600 16px/1.25 var(--sans);letter-spacing:-.2px}
+.sk-prod span{display:block;margin-top:2px;color:#6C6C70;font:400 13.5px/1.25 var(--sans)}
+.skl{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:9px 0;font:400 15.5px/1.2 var(--sans)}
+.skl+.skl{border-top:.5px solid #D8D8DC}
+.skl span:last-child{color:#6C6C70;text-align:right}
+.sk-fine{margin:12px 4px 0;color:#6C6C70;font:400 12.5px/1.4 var(--sans)}
+.sk-acct{margin:10px 4px 0;color:#3C3C43;font:400 13.5px/1.2 var(--sans)}
+.sk-confirm{display:flex;flex-direction:column;align-items:center;gap:8px;width:100%;margin-top:20px;color:#000;font:600 15px/1.2 var(--sans);text-align:center}
+.sk-confirm svg{width:40px;height:40px;color:#1E7CF2}
+.sk-hint{position:absolute;right:0;top:132px;display:flex;align-items:center;gap:12px;color:#fff;font:600 16px/1.25 var(--sans);text-align:right;text-shadow:0 1px 8px rgba(0,0,0,.4);animation:fadein .3s ease}
+.sk-hint i{display:block;width:7px;height:84px;border-radius:4px 0 0 4px;background:#fff;animation:sidepulse 1.2s ease-in-out infinite}
+@keyframes sidepulse{50%{opacity:.35}}
+
+.survey{position:absolute;left:0;right:0;bottom:0;top:200px;border-radius:30px 30px 0 0;background:var(--cream);box-shadow:0 -16px 36px -18px rgba(35,40,20,.45);animation:rise .28s ease}
+.survey .title{font-size:28px}
+.survey .sub{margin-top:10px;font-size:16px}
+.opts{margin-top:16px;display:flex;flex-direction:column;gap:7px}
+.opt{width:100%;height:48px;border-radius:15px;background:var(--paper);box-shadow:inset 0 0 0 1.5px var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 14px 0 16px;color:var(--ink);font:600 15.5px/1.2 var(--sans);text-align:left}
+.opt .rd{flex:none;width:22px;height:22px;border-radius:11px;box-shadow:inset 0 0 0 1.5px #CFC6B1;display:grid;place-items:center;color:#fff}
+.opt .rd svg{width:13px;height:13px;opacity:0}
+.opt.on{background:var(--g50);box-shadow:inset 0 0 0 2px var(--g700)}
+.opt.on .rd{background:var(--g700);box-shadow:none}
+.opt.on .rd svg{opacity:1}
+
+.s6card{top:108px;height:222px}
+.okbadge{position:absolute;z-index:5;left:50%;top:298px;width:64px;height:64px;margin-left:-32px;border-radius:32px;background:var(--g700);display:grid;place-items:center;color:#fff;box-shadow:0 0 0 6px var(--cream),0 16px 26px -10px rgba(22,56,35,.7)}
+.okbadge svg{width:30px;height:30px}
+.s6-body{position:absolute;top:384px;left:24px;right:24px;text-align:center}
+.s6-body .title{margin-top:10px}
+.s6-body .sub{font-size:16.5px}
+.npv{position:absolute;left:24px;right:24px;top:560px;display:flex;gap:11px;padding:12px 14px 13px 12px;border-radius:20px;background:#fff;box-shadow:0 16px 30px -18px rgba(40,45,25,.55),0 0 0 1px rgba(60,50,20,.06)}
+.npv .ni,.lk-n .ni{flex:none;width:38px;height:38px;border-radius:9px;overflow:hidden}
+.npv .ni svg,.lk-n .ni svg{display:block;width:38px;height:38px}
+.npv .nb,.lk-n .nb{flex:1;min-width:0}
+.npv .nh,.lk-n .nh{display:flex;justify-content:space-between;gap:8px;color:#000;font:600 14.5px/1.25 var(--sans)}
+.npv .nh span,.lk-n .nh span{flex:none;color:#8A8A8E;font-weight:400;font-size:13px}
+.npv p{margin-top:2px;color:#3C3C43;font:400 14px/1.3 var(--sans)}
+
+.trialpill{position:absolute;z-index:30;top:110px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:7px 11px;border-radius:12px;background:var(--g700);color:#fff;font:650 12.5px/1 var(--sans);white-space:nowrap;box-shadow:0 8px 18px -8px rgba(22,56,35,.6)}
+.trialpill svg{width:13px;height:13px;fill:currentColor}
+.s7{top:432px}
+.farm-h{display:flex;gap:12px;align-items:center}
+.farm-h .fi{flex:none;width:54px;height:54px;border-radius:16px;background:var(--cream2);display:grid;place-items:center}
+.farm-h .fi svg{width:40px;height:40px}
+.farm-h h1{font-family:var(--serif);font-weight:600;font-size:23px;line-height:1.1;letter-spacing:-.3px;color:var(--g900)}
+.farm-meta{margin-top:5px;color:var(--ink2);font:500 14.5px/1.25 var(--sans)}
+.fstat{margin-top:14px;display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;font:650 14.5px/1 var(--sans)}
+.fstat .open{display:flex;align-items:center;gap:7px;color:var(--g700)}
+.fstat .open i{width:8px;height:8px;border-radius:4px;background:#34A853;box-shadow:0 0 0 3px rgba(52,168,83,.18)}
+.fstat .ver{display:flex;align-items:center;gap:6px;color:var(--ink2);font-weight:600}
+.fstat .ver .vi{width:17px;height:17px;border-radius:9px;background:var(--g100);display:grid;place-items:center;color:var(--g700)}
+.fstat .ver svg{width:10px;height:10px}
+.fchips{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.fchip{display:flex;align-items:center;gap:6px;padding:6px 11px 6px 6px;border-radius:12px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);color:var(--ink);font:600 14px/1 var(--sans)}
+.fchip svg{width:22px;height:22px}
+.acts{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.act{height:66px;border-radius:17px;background:var(--paper);box-shadow:inset 0 0 0 1.5px var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;color:var(--g800);font:650 14.5px/1 var(--sans);text-align:center}
+.act svg{width:22px;height:22px;fill:currentColor}
+.act.pri{background:var(--g700);color:#fff;box-shadow:0 14px 26px -14px rgba(22,56,35,.8)}
+.morebtn{margin-top:12px;width:100%;height:50px;border-radius:15px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 16px;color:var(--ink);font:600 15.5px/1 var(--sans)}
+.morebtn svg{width:18px;height:18px;transform:rotate(180deg);color:var(--ink3)}
+
+.phone.lock{background:#0E1A12}
+.lk-bg{position:absolute;inset:0;z-index:0}
+.lk-bg svg{display:block;width:100%;height:100%}
+.lk-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,26,16,.66) 0%,rgba(10,26,16,.3) 36%,rgba(10,26,16,.48) 66%,rgba(10,26,16,.84) 100%)}
+.sb.light{color:#fff}
+.lk-lock{position:absolute;z-index:3;top:62px;left:50%;width:15px;height:18px;margin-left:-7.5px;fill:#fff}
+.lk-date{position:absolute;z-index:3;top:92px;left:0;right:0;text-align:center;color:rgba(255,255,255,.95);font:600 20px/1 var(--sans);letter-spacing:-.2px}
+.lk-time{position:absolute;z-index:3;top:116px;left:0;right:0;text-align:center;color:#fff;font:700 100px/1 var(--sans);letter-spacing:-3px}
+.lk-n{position:absolute;z-index:3;left:10px;right:10px;top:528px;display:flex;gap:10px;padding:13px 14px 14px 12px;border-radius:24px;background:rgba(250,250,250,.82);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);color:#000;text-align:left}
+.lk-n p{margin-top:2px;color:#1C1C1E;font:400 15px/1.32 var(--sans)}
+.lk-b{position:absolute;z-index:3;bottom:44px;width:50px;height:50px;border-radius:25px;background:rgba(28,38,31,.55);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);display:grid;place-items:center}
+.lk-b svg{width:22px;height:22px;fill:#fff}
+.lk-b.l{left:46px}
+.lk-b.r{right:46px}
+.phone.lock .homebar{background:#fff}
+
+.map.tall{top:0;left:0;right:0;height:560px}
+.map.tall:before{content:"";position:absolute;z-index:1;left:0;right:0;top:0;height:96px;background:linear-gradient(180deg,rgba(248,243,232,.94) 0%,rgba(248,243,232,.6) 45%,rgba(248,243,232,0) 100%);pointer-events:none}
+.lockcard{top:352px;text-align:left}
+.lockcard .fc-lock{background:var(--g700)}
+.lockcard .fc-lock svg{fill:#fff}
+.s10{top:540px}
+.s10 .title{font-size:28px}
+.s10 .sub{margin-top:8px;font-size:16px}
+
+.flow{max-width:1320px;margin:0 auto;padding:40px 32px 0}
+.flow>.card+.card{margin-top:28px}
+.flow .card p{max-width:980px}
+.fsvg{margin-top:18px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.fsvg svg{display:block;min-width:980px;width:100%;height:auto}
+.twrap{margin-top:14px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tbl{width:100%;min-width:760px;border-collapse:collapse}
+.tbl th{padding:10px 12px;text-align:left;color:#9FB0A4;font:700 12px/1.3 var(--sans);letter-spacing:.8px;text-transform:uppercase;border-bottom:1px solid #2E3731}
+.tbl td{padding:11px 12px;vertical-align:top;color:#C4CEC7;font-size:14.5px;line-height:1.5;border-bottom:1px solid #232B25}
+.tbl td b{color:#EEF2EE;font-weight:650}
+.tbl code{font:13px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;color:#BFE3C8;white-space:nowrap}
+
+body.shotmode .group-head,body.shotmode .flow,body.shotmode .brief{display:none}
+body.shotmode .shots{display:block;padding:0}
+body.shotmode .sweep,body.shotmode .spin,body.shotmode .caret,body.shotmode .sk-hint i{animation:none}
+body.overview .group-head,body.overview .flow,body.overview .brief{display:none}
+body.overview .shots{flex-wrap:nowrap;padding:48px 48px 60px}
+body.overview .sweep,body.overview .spin,body.overview .caret,body.overview .sk-hint i{animation:none}
+@media (max-width:560px){.group-head{padding:34px 16px 0}.group-head h2{font-size:25px}.flow{padding:30px 16px 0}.brief{padding:18px 16px}}
+@media (max-width:500px){.shots{padding:24px 0 16px;gap:40px}}
+.lk-n .nb{display:block}
+.lk-n .nt{display:block;margin-top:2px;color:#1C1C1E;font:400 15px/1.32 var(--sans)}
+.lockcard .fc-body,.lockcard .fc-name,.lockcard .fc-meta{display:block}
+.fsvg .n1{fill:#F2EADA}
+.fsvg .n2{fill:#232B25;stroke:#3F4B43;stroke-width:1.2}
+.fsvg .nd{fill:#1C2620;stroke:#E0B84A;stroke-width:1.4}
+.fsvg .t1{font:650 14px var(--sans);fill:#163823}
+.fsvg .t1b{font:650 14px var(--sans);fill:#EEF2EE}
+.fsvg .t2{font:500 11.5px var(--sans);fill:#5C6B60}
+.fsvg .t2b{font:500 11.5px var(--sans);fill:#9FB0A4}
+.fsvg .t1c{font:650 13px var(--sans);fill:#F4F1E8;text-anchor:middle}
+.fsvg .t2c{font:500 12px var(--sans);fill:#E0C877;text-anchor:middle}
+.fsvg .e{fill:none;stroke:#7E9E88;stroke-width:1.6}
+.fsvg .e.ey{stroke:#E0B84A}
+.fsvg .e.ed{stroke-dasharray:5 4}
+.fsvg .ev{font:500 11px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#94C2A2}
+.fsvg .cd{font:600 11.5px var(--sans);fill:#E0B84A}
+.fsvg .lg{font:500 13px var(--sans);fill:#C4CEC7}
+.ov.fixed .scrim,.ov.fixed .sk,.ov.fixed .survey,.ov.fixed .ios-alert,.ov.fixed .sk-hint{animation:none}
+body.shotmode .group{display:none}
+body.shotmode .group.has-cur{display:block}
+.lk-bg svg{filter:saturate(.92) blur(.8px)}
+.scrim.dark{background:rgba(8,10,9,.56)}
+.lfs-sub{margin-top:6px;color:var(--ink2);font:500 15px/1.35 var(--sans)}
+.s5b .lfs{margin-top:12px}
+.s5b .lf{height:60px}
+.fbuy{margin-top:10px;display:flex;align-items:center;gap:8px;color:var(--ink2);font:600 14.5px/1.2 var(--sans)}
+.fbuy svg{flex:none;width:17px;height:17px;color:var(--g700)}
+.linkbtn.sm{font-size:14.5px;height:40px}
+.s10{top:526px}
 </style>
 </head>
 <body>
@@ -383,20 +654,65 @@ body.overview .pulse{animation:none;opacity:.16}
   <symbol id="sb-signal" viewBox="0 0 18 12"><rect x="0" y="7.6" width="3.1" height="4.4" rx=".9"/><rect x="5" y="5.2" width="3.1" height="6.8" rx=".9"/><rect x="10" y="2.6" width="3.1" height="9.4" rx=".9"/><rect x="15" y="0" width="3.1" height="12" rx=".9"/></symbol>
   <symbol id="sb-wifi" viewBox="0 0 16 12"><path d="M8 11.6l2.5-3a3.7 3.7 0 0 0-5 0z"/><path d="M3.2 6.3a7.1 7.1 0 0 1 9.6 0l-1.5 1.8a4.8 4.8 0 0 0-6.6 0z"/><path d="M.7 3.4a10.8 10.8 0 0 1 14.6 0l-1.5 1.8a8.4 8.4 0 0 0-11.6 0z"/></symbol>
   <symbol id="sb-batt" viewBox="0 0 27 13"><rect x=".6" y=".6" width="23" height="11.8" rx="3.8" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".4"/><rect x="2.3" y="2.3" width="19.6" height="8.4" rx="2.4"/><path d="M25 4.6v3.8c.8-.3 1.4-1.1 1.4-1.9s-.6-1.6-1.4-1.9z" opacity=".45"/></symbol>
+  <linearGradient id="sweepg" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#3D7BF7" stop-opacity="0"/>
+    <stop offset="1" stop-color="#3D7BF7" stop-opacity=".3"/>
+  </linearGradient>
+  <symbol id="appicon" viewBox="0 0 32 32">
+    <rect width="32" height="32" fill="#256039"/>
+    <circle cx="25" cy="6" r="11" fill="#2E7146"/>
+    <g transform="translate(4 3.2) scale(.75)">
+      <path d="M16 30.4S5.6 21.6 5.6 13.1a10.4 10.4 0 0 1 20.8 0c0 8.5-10.4 17.3-10.4 17.3z" fill="#FFFDF9"/>
+      <path d="M10.4 13.6L16 9.2l5.6 4.4v6.2H10.4z" fill="#256039"/>
+      <path d="M14.3 19.8v-3.5h3.4v3.5" fill="#FFFDF9"/>
+      <path d="M9.2 14.4L16 9.1l6.8 5.3" fill="none" stroke="#F2C14E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M7.1 3.1h2.3c.6 0 1 .4 1.2.9l.8 3.4c.1.5 0 1-.4 1.3L9.4 10.2c1.1 2.2 2.7 3.8 4.9 4.9l1.5-1.6c.3-.4.8-.5 1.3-.4l3.4.8c.5.2.9.6.9 1.2v2.3c0 1.3-1.1 2.3-2.4 2.2C10.6 19 5 13.4 4.9 5.5c-.1-1.3.9-2.4 2.2-2.4z"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path d="M10.7 2.9a1.9 1.9 0 0 1 2.6 0l8 8a1.9 1.9 0 0 1 0 2.6l-8 8a1.9 1.9 0 0 1-2.6 0l-8-8a1.9 1.9 0 0 1 0-2.6z"/><path d="M9.3 15.6v-3.1a1.6 1.6 0 0 1 1.6-1.6h4.4M13.6 8.7l2.2 2.2-2.2 2.2" fill="none" stroke="#FFFDF9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-save" viewBox="0 0 24 24"><path d="M7.2 3.4h9.6a1.8 1.8 0 0 1 1.8 1.8v15.3l-6.6-4.2-6.6 4.2V5.2a1.8 1.8 0 0 1 1.8-1.8z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.6V12l2.9 1.9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-del" viewBox="0 0 30 22"><path d="M9.6 2.2h16a2.2 2.2 0 0 1 2.2 2.2v13.2a2.2 2.2 0 0 1-2.2 2.2h-16L2.4 11z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M13.7 7.3l7 7M20.7 7.3l-7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-flash" viewBox="0 0 24 24"><path d="M8 2.6h8v3.2l-1.9 3.3v11.3a1.6 1.6 0 0 1-1.6 1.6h-1a1.6 1.6 0 0 1-1.6-1.6V9.1L8 5.8z"/><rect x="11.2" y="11" width="1.6" height="3.4" rx=".8" fill="#2A3A2F"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><path d="M8.7 5.3l1.1-1.7h4.4l1.1 1.7h3.3a2.2 2.2 0 0 1 2.2 2.2v10.1a2.2 2.2 0 0 1-2.2 2.2H5.4a2.2 2.2 0 0 1-2.2-2.2V7.5a2.2 2.2 0 0 1 2.2-2.2z"/><circle cx="12" cy="12.4" r="3.5" fill="none" stroke="#2A3A2F" stroke-width="1.7"/></symbol>
+  <symbol id="i-faceid" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5V9a5 5 0 0 1 5-5h3.5M27.5 4H31a5 5 0 0 1 5 5v3.5M36 27.5V31a5 5 0 0 1-5 5h-3.5M12.5 36H9a5 5 0 0 1-5-5v-3.5"/><path d="M14 15.2v3M26 15.2v3M20.4 15.2v7.6h-2M15 27.4c3.1 2.5 6.9 2.5 10 0"/></g></symbol>
+  <symbol id="i-lockfill" viewBox="0 0 15 18"><rect x="0" y="7.4" width="15" height="10.6" rx="2.6"/><path d="M3.3 7.6V5.4a4.2 4.2 0 0 1 8.4 0v2.2" fill="none" stroke="#fff" stroke-width="2"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9.6L12 4.2l8 5.4V20H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.6 20v-5.4h4.8V20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
 </defs>
 </svg>
 
 <header class="page-head">
   <h1>Farm to Table: онбординг и пейвол</h1>
-  <p>Тестовое задание на менеджера по монетизации, Viralyze. Четыре экрана онбординга и пейвол в реальном размере iPhone 15 и 16 (393×852 pt), плюс состояние экрана 4 для района, где мало ферм. Тексты на английском. Всё кликабельно: выбор продуктов на втором экране меняет экран с фермами и текст пейвола, кнопки ведут дальше по воронке.</p>
+  <p>Тестовое задание на менеджера по монетизации, Viralyze. Первый блок - то, что просили: четыре экрана онбординга и пейвол в реальном размере iPhone 15 и 16 (393×852 pt), тексты на английском. Дальше - сверх задания: ветки и состояния вокруг этих экранов, три варианта пейвола для A/B, покупка через лист App Store, первые минуты триала, путь для тех, кто закрыл пейвол, схема воронки с событиями аналитики и порядок тестов.</p>
+  <div class="brief">
+    <h3>О процессе в пяти предложениях</h3>
+    <p><b>Референсы:</b> прямой конкурент Localize и подписочные приложения с картой и взрослой аудиторией - AllTrails, Fishbrain, onX Hunt, PictureThis, плюс Blinkist как первоисточник честного таймлайна триала; экраны смотрел по записям screensdesign и скриншотам paywallscreens, потому что Mobbin закрыт логином. <b>Почему они:</b> в 930 отзывах из App Store категорию больше всего злит оплата вслепую, без показа своего района (31% отзывов с 1-2 звёздами), поэтому у референсов брал только то, что показывает ценность до денег и снимает страх списания: фермы рядом до пейвола (Localize, Fishbrain), таймлайн с датами и напоминанием (AllTrails, onX, Blinkist, у которого он дал +23% стартов триала и -55% жалоб), честный якорь от реального месячного плана (Fishbrain) и экран «триал начался» (PictureThis). <b>Инструменты:</b> Claude Code на Claude Opus - пять промптов из папки prompts (PRD, работы по отзывам, конкуренты, отстройка, тренды) и разбор референсов прогнаны параллельными агентами с веб-поиском, экраны свёрстаны в HTML, карты и иконки нарисованы в SVG без стоков и дизайнера, Playwright снимал скриншоты для правок. <b>Постановка:</b> брифом с экранами, референсами и ограничениями, например: «Собери в одном HTML пять экранов iPhone 393×852 для Farm to Table… Тексты на английском, без таймеров и зачёркнутых цен, годовая цена крупнее пересчёта в месяц. Выбор продуктов на шаге 2 подставь в экран 4 и в текст пейвола», оба брифа целиком - в разделе <a href="#notes">«Как делал»</a>. <b>Итерации:</b> девять - пять на исходные экраны и четыре на расширение; последняя шла по итогам разбора референсов: праймер геолокации сведён к одной кнопке по HIG, таймлайн переведён на реальные даты, напоминание сдвинуто на два дня до списания.</p>
+  </div>
+  <nav class="toc">
+    <a href="#task">Задание</a><a href="#branches">До пейвола</a><a href="#paywalls">Варианты пейвола</a><a href="#after">После оплаты</a><a href="#close">Закрыл пейвол</a><a href="#flow">Схема и события</a><a href="#notes">Как делал</a>
+  </nav>
   <div class="toolbar">
     <button class="tbtn on" data-mode="board">Все экраны</button>
     <button class="tbtn" data-mode="proto">Пройти как прототип</button>
+  </div>
+  <div class="scen">
+    <div class="sg"><span class="sl">Район</span><div class="seg" data-k="cov"><button data-v="dense" class="on">Тампа: 231 ферма</button><button data-v="sparse">Сан-Рафаэль: мало</button><button data-v="none">Элко: ферм нет</button></div></div>
+    <div class="sg"><span class="sl">Пейвол</span><div class="seg" data-k="pw"><button data-v="A" class="on">A · таймлайн</button><button data-v="B">B · фермы</button><button data-v="C">C · два плана</button></div></div>
+    <div class="sg"><span class="sl">Триал</span><div class="seg" data-k="trial"><button data-v="1" class="on">доступен</button><button data-v="0">уже был</button></div></div>
+    <div class="sg"><button class="sbtn" data-jump="1">С начала</button><button class="sbtn" data-jump="8">День 2: напоминание</button></div>
+    <div class="sg"><span class="sl">Клавиши: → дальше, ← назад, Esc закрывает окно</span></div>
   </div>
 </header>
 
 <main class="board" id="board">
 
+<section class="group g1" id="task">
+  <div class="group-head">
+    <span class="kicker main">Задание</span>
+    <h2>Онбординг и пейвол</h2>
+    <p>Четыре экрана онбординга и пейвол, как в задании. Выбор продуктов на втором экране меняет экран с фермами и текст пейвола, кнопки ведут дальше по воронке.</p>
+  </div>
+  <div class="shots">
   <section class="shot" data-n="1">
     <div class="shot-label">01 · Welcome</div>
     <div class="frame"><div class="phone" lang="en">
@@ -408,7 +724,7 @@ body.overview .pulse{animation:none;opacity:.16}
       <div class="s1-body">
         <div class="brand"><svg><use href="#logo"/></svg>Farm to Table</div>
         <h1 class="title xl">Real food from<br>farms near you</h1>
-        <p class="sub">Raw milk, grass-fed beef and pasture eggs from 30,000+ farms, ranches and markets in all 50 states.</p>
+        <p class="sub">Raw milk, grass-fed beef and pasture eggs from 80,000+ farms, ranches and markets in all 50 states.</p>
         <div class="trust"><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>4.9 on the App Store</div>
       </div>
       <button class="cta" data-go="2" style="bottom:88px">Find farms near me</button>
@@ -416,12 +732,11 @@ body.overview .pulse{animation:none;opacity:.16}
       <div class="homebar"></div>
     </div></div>
     <div class="note">
-      <p><b>Зачем.</b> За пару секунд объяснить, что это карта ферм рядом, и назвать продукты, за которыми сюда приходят. Raw milk, grass-fed beef и pasture eggs стоят первыми в описании в App Store и на экране с числом ферм в квизе V2. Карта в шапке сразу показывает, что будет внутри.</p>
+      <p><b>Зачем.</b> За пару секунд объяснить, что это карта ферм рядом, и назвать продукты, за которыми сюда приходят. Raw milk, grass-fed beef и pasture eggs стоят первыми в описании в App Store и на экране с числом ферм в квизе V2. Карта в шапке сразу показывает, что будет внутри. Число ферм - из заметок к версии 1.4.0 от 26 сентября (80,000+); в V2 и пейволе до сих пор 23,000+, нужна одна цифра из базы.</p>
       <p><b>Sign in на первом экране</b> для тех, кто уже оплатил в веб-воронке: по инструкции после оплаты они ищут именно эту кнопку.</p>
       <p><b>Метрика:</b> переход на шаг 2.</p>
     </div>
   </section>
-
   <section class="shot" data-n="2">
     <div class="shot-label">02 · What are you looking for</div>
     <div class="frame"><div class="phone" lang="en">
@@ -442,7 +757,6 @@ body.overview .pulse{animation:none;opacity:.16}
       <p><b>Метрика:</b> доля завершивших шаг, среднее число выбранных продуктов.</p>
     </div>
   </section>
-
   <section class="shot" data-n="3">
     <div class="shot-label">03 · Location</div>
     <div class="frame"><div class="phone" lang="en">
@@ -455,17 +769,16 @@ body.overview .pulse{animation:none;opacity:.16}
         <p class="sub">Allow location to see farms, ranches and markets within a short drive of home.</p>
         <div class="privacy"><svg><use href="#i-shield"/></svg>Used only to build your map. Never shared.</div>
       </div>
-      <button class="cta" data-go="4" style="bottom:116px"><svg><use href="#i-nav"/></svg>Use my location</button>
-      <button class="cta alt" data-go="4" style="bottom:46px">Enter a ZIP code instead</button>
+      <p class="fine" style="bottom:118px">Next, iOS will ask to share your location.</p>
+      <button class="cta" data-go="3a" data-ov="loc" style="bottom:46px">Continue</button>
       <div class="homebar"></div>
     </div></div>
     <div class="note">
       <p><b>Зачем.</b> Праймер перед системным окном iOS: сначала объясняем, зачем нужна геолокация, и только потом показываем запрос Apple. Кто нажал «Don’t Allow» в системном окне, того вернуть можно только через настройки.</p>
-      <p><b>ZIP-код вместо отказа:</b> без геолокации пользователь всё равно доходит до экрана с фермами, а не выпадает из воронки.</p>
+      <p><b>Одна кнопка.</b> HIG разрешает на праймере только кнопку, которая открывает системное окно, без второго действия вроде «Enter a ZIP code instead». Ввод ZIP идёт после «Don’t Allow» (экран 03b), как требует правило 5.1.1(iv).</p>
       <p><b>Метрика:</b> opt-in геолокации, доля ZIP, доходимость до пейвола.</p>
     </div>
   </section>
-
   <section class="shot" data-n="4">
     <div class="shot-label">04 · Your farm map</div>
     <div class="frame"><div class="phone" lang="en">
@@ -473,12 +786,12 @@ body.overview .pulse{animation:none;opacity:.16}
       <div class="sb"><span>9:41</span><span class="ic"><svg width="18" height="12"><use href="#sb-signal"/></svg><svg width="16" height="12"><use href="#sb-wifi"/></svg><svg width="27" height="13"><use href="#sb-batt"/></svg></span></div>
       <div class="map full" data-map="reveal"></div>
       <button class="mapbtn" data-go="3" aria-label="Back"><svg><use href="#i-chev"/></svg></button>
-      <div class="citytag"><svg><use href="#i-nav"/></svg>Tampa, FL · 30 mi</div>
+      <div class="citytag"><svg><use href="#i-nav"/></svg><span class="js-city">Tampa, FL</span> · 30 mi</div>
       <div class="farmcard">
         <span class="fc-tag">Closest to you</span>
-        <span class="fc-tag v"><svg><use href="#i-check"/></svg>Verified 6 days ago</span>
-        <span class="fc-ic"><svg><use href="#ic-milk"/></svg></span>
-        <div class="fc-body"><div class="fc-name"><span class="blur">Sunny Acres Family Farm</span></div><div class="fc-meta">6.2 mi · Raw milk · Pasture eggs</div></div>
+        <span class="fc-tag v"><svg><use href="#i-check"/></svg><span class="js-fc-ver">Verified 6 days ago</span></span>
+        <span class="fc-ic js-fc-ic"><svg><use href="#ic-milk"/></svg></span>
+        <div class="fc-body"><div class="fc-name"><span class="blur js-fc-name">Sunny Acres Family Farm</span></div><div class="fc-meta js-fc-meta">6.2 mi · Raw milk · Pasture eggs</div></div>
         <span class="fc-lock"><svg><use href="#i-lock"/></svg></span>
       </div>
       <div class="sheet s4" style="top:428px">
@@ -486,17 +799,142 @@ body.overview .pulse{animation:none;opacity:.16}
         <div class="sheet-in">
           <div class="eyebrow">Your farm map is ready</div>
           <h1 class="title"><span class="num">231</span> farms near you</h1>
-          <p class="sub" id="revealSub">Within 30 miles, selling what you picked</p>
-          <div class="rows" id="rows"></div>
+          <p class="sub js-revealsub">117 of them sell what you picked</p>
+          <div class="rows js-rows"></div>
         </div>
       </div>
-      <button class="cta" data-go="5" style="bottom:46px">Show me the farms</button>
+      <button class="cta" data-go="@pw" style="bottom:46px">Show me the farms</button>
       <div class="homebar"></div>
     </div></div>
     <div class="note">
-      <p><b>Главный экран воронки.</b> В V2 похожий экран уже есть на шаге 10 из 29 («231 farms near you»). Здесь меняются три вещи: число считается из базы по радиусу и выбранным продуктам, экран стоит прямо перед пейволом, а карточка ближайшей фермы со скрытым названием показывает, что откроется после оплаты.</p>
-      <p><b>Дата проверки</b> на карточке отвечает на первую жалобу всей категории, включая бесплатные приложения: закрытые и несуществующие фермы. Её не показывает ни один из восьми конкурентов. Бейдж «Verified» только у ферм, которые реально проверили звонком или SMS, у остальных честное «Updated» с датой.</p>
+      <p><b>Главный экран воронки.</b> В V2 похожий экран уже есть на шаге 10 из 29 («231 farms near you»). Здесь меняются три вещи: под общим числом ферм в радиусе видно, сколько из них продают выбранное, экран стоит прямо перед пейволом, а карточка ближайшей фермы со скрытым названием показывает, что откроется после оплаты.</p>
+      <p><b>Почему не одна цифра.</b> Самая частая жалоба категории в 930 отзывах - платишь, не видя своего района: 31% отзывов с 1-2 звёздами. Голому числу не верят («a number that could be BS for all I know»), поэтому рядом строки по продуктам и реальная ближайшая ферма.</p>
+      <p><b>Дата проверки</b> отвечает ещё на две жалобы: закрытые фермы и «то же бесплатно в Google» (20% негатива). Её не показывает ни один из восьми конкурентов. Бейдж «Verified» только у ферм, которые реально проверили звонком или SMS, у остальных честное «Updated» с датой.</p>
       <p><b>Метрика:</b> CTR в пейвол, trial → paid и рефанды в разрезе покрытия района.</p>
+    </div>
+  </section>
+  <section class="shot" data-n="5">
+    <div class="shot-label">05 · Paywall</div>
+    <div class="frame"><div class="phone" lang="en">
+      <div class="island"></div>
+      <div class="sb"><span>9:41</span><span class="ic"><svg width="18" height="12"><use href="#sb-signal"/></svg><svg width="16" height="12"><use href="#sb-wifi"/></svg><svg width="27" height="13"><use href="#sb-batt"/></svg></span></div>
+      <div class="map strip" data-map="pay"></div>
+      <button class="close" data-go="9" data-ov="survey" aria-label="Close"><svg><use href="#i-x"/></svg></button>
+      <div class="ratechip"><svg><use href="#i-star"/></svg>4.9 on the App Store</div>
+      <div class="sheet s5">
+        <div class="handle"></div>
+        <div class="sheet-in">
+          <h1 class="title">Unlock all <span class="num js-total">231</span> farms<br>near you</h1>
+          <ul class="benefits">
+            <li><span class="bi"><svg><use href="#i-check"/></svg></span><span class="js-within">Farms and ranches within 30 miles</span></li>
+            <li><span class="bi"><svg><use href="#i-check"/></svg></span><span class="js-sells">Who sells raw milk, beef and eggs</span></li>
+            <li><span class="bi"><svg><use href="#i-check"/></svg></span>Call or get directions in one tap</li>
+          </ul>
+          <div class="tl">
+            <div class="tl-h">How your free trial works</div>
+            <div class="tl-row first"><span class="tl-dot"><svg><use href="#i-unlock"/></svg></span><span class="tl-t"><b>Today:</b> unlock your full farm map</span></div>
+            <div class="tl-row"><span class="tl-dot"><svg><use href="#i-bell"/></svg></span><span class="tl-t"><b class="js-d-rem">Day 2:</b> we send you a reminder</span></div>
+            <div class="tl-row"><span class="tl-dot"><svg><use href="#i-card"/></svg></span><span class="tl-t"><b class="js-d-charge">Day 3:</b> you pay $39.99 for the year</span></div>
+          </div>
+          <div class="plan">
+            <span class="tag">Just $3.33/mo, less than a dozen farm eggs</span>
+            <span class="radio"><svg><use href="#i-check"/></svg></span>
+            <div class="pn"><b>Annual membership</b><span>Free for 3 days</span></div>
+            <div class="pp"><b>$39.99</b><span>per year</span></div>
+          </div>
+        </div>
+      </div>
+      <button class="cta" data-go="5e" data-ov="sk" style="bottom:102px">Start my free trial</button>
+      <p class="fine">No payment today. Cancel anytime in Settings.</p>
+      <p class="legal">Restore purchases · Terms of Use · Privacy Policy</p>
+      <div class="homebar"></div>
+    </div></div>
+    <div class="note">
+      <p><b>Зачем.</b> Заголовок продолжает экран 4, продукты в списке подставляются из шага 2. Таймлайн с датами - как у AllTrails, onX и Blinkist: у Blinkist таймлайн с напоминанием дал +23% стартов триала и -55% жалоб. Напоминание приходит за два дня до списания: Apple снимает деньги за сутки до конца триала, и напоминание «за день» уже опоздало бы. По RevenueCat, 55% отмен 3-дневного триала приходится на день оформления, поэтому обещание совпадает с тем, что человек сразу увидит на карте: «within 30 miles», а не «every farm».</p>
+      <p><b>Цена.</b> Сумма списания $39.99 крупнее пересчёта в месяц: Apple требует, чтобы она была самым заметным ценовым элементом (страница Auto-renewable subscriptions и HIG, отказы идут по 3.1.2). Вместо зачёркнутой цены якорь из жизни ЦА: $3.33 в месяц дешевле дюжины фермерских яиц ($6.20 в вашем же квизе).</p>
+      <p><b>A/B против V1:</b> trial → paid и выручка на установку по когортам 30 дней, плюс рефанды. Крестик виден сразу и ведёт в короткий опрос (09), кнопка - в лист App Store (05e).</p>
+    </div>
+  </section>
+  </div>
+</section>
+
+<section class="group g2" id="branches">
+  <div class="group-head">
+    <span class="kicker">Сверх задания</span>
+    <h2>До пейвола: ветки и состояния</h2>
+    <p>Что видит человек после системного окна геолокации, если отказал в ней, пока карта собирается, и если рядом мало ферм или их нет совсем. В пустом районе пейвол не показываем.</p>
+  </div>
+  <div class="shots">
+
+  <section class="shot" data-n="3a" data-clone="3" data-ovshow="loc">
+    <div class="shot-label">03a · System location prompt</div>
+    <div class="frame"><div class="phone" lang="en"></div></div>
+    <div class="note">
+      <p><b>Зачем.</b> Системное окно появляется только после праймера, и его текст продолжает праймер: зачем геолокация и что будет дальше. «Don’t Allow» не обрывает воронку, а ведёт на ввод ZIP-кода: правило 5.1.1(iv) требует дать отказавшим ручной ввод адреса.</p>
+      <p><b>Текст для Info.plist</b> (NSLocationWhenInUseUsageDescription) в окне: «We use it to show farms, ranches and markets within a short drive of you». Точная геолокация не нужна: для радиуса в 30 миль хватит и приблизительной, поэтому выключенный «Precise» ничего не ломает.</p>
+      <p><b>Метрика:</b> доля Allow среди увидевших окно, доля ушедших в ZIP.</p>
+    </div>
+  </section>
+
+  <section class="shot" data-n="3b">
+    <div class="shot-label">03b · ZIP code</div>
+    <div class="frame"><div class="phone" lang="en">
+      <div class="island"></div>
+      <div class="sb"><span>9:41</span><span class="ic"><svg width="18" height="12"><use href="#sb-signal"/></svg><svg width="16" height="12"><use href="#sb-wifi"/></svg><svg width="27" height="13"><use href="#sb-batt"/></svg></span></div>
+      <div class="nav"><button class="back" data-go="3" aria-label="Back"><svg><use href="#i-chev"/></svg></button><div class="prog"><i class="on"></i><i class="on"></i><i></i></div></div>
+      <div class="zip-head">
+        <h1 class="title">Where should<br>we look?</h1>
+        <p class="sub">Enter your ZIP code and we’ll show farms within a short drive of it.</p>
+      </div>
+      <div class="zip-field"><span class="zip-d js-zip">33602</span><span class="caret"></span></div>
+      <div class="zip-city js-zipcity"><span class="ok"><svg><use href="#i-check"/></svg></span><span class="js-zipname">Tampa, FL</span></div>
+      <div class="zip-note"><div class="privacy"><svg><use href="#i-shield"/></svg>We only use it to find farms nearby.</div></div>
+      <button class="cta js-zipgo" data-go="3c" style="bottom:305px">Show farms near 33602</button>
+      <div class="kp"><div class="kp-g">
+        <button class="k" data-key="1"><b>1</b><small>&nbsp;</small></button>
+        <button class="k" data-key="2"><b>2</b><small>ABC</small></button>
+        <button class="k" data-key="3"><b>3</b><small>DEF</small></button>
+        <button class="k" data-key="4"><b>4</b><small>GHI</small></button>
+        <button class="k" data-key="5"><b>5</b><small>JKL</small></button>
+        <button class="k" data-key="6"><b>6</b><small>MNO</small></button>
+        <button class="k" data-key="7"><b>7</b><small>PQRS</small></button>
+        <button class="k" data-key="8"><b>8</b><small>TUV</small></button>
+        <button class="k" data-key="9"><b>9</b><small>WXYZ</small></button>
+        <span class="k fn"></span>
+        <button class="k" data-key="0"><b>0</b></button>
+        <button class="k fn" data-key="del" aria-label="Delete"><svg><use href="#i-del"/></svg></button>
+      </div></div>
+      <div class="homebar"></div>
+    </div></div>
+    <div class="note">
+      <p><b>Зачем.</b> Сюда ведёт «Don’t Allow» в системном окне: без геолокации человек всё равно доходит до ферм, а не выпадает из воронки. Город подтверждается сразу под полем, чтобы было видно, что ZIP понят правильно; Localize вместо поля даёт выбрать город чипами.</p>
+      <p><b>В прототипе ZIP переключает район:</b> 33602 - Тампа, ферм много; 94901 - Сан-Рафаэль в округе Марин, ферм мало, как в реальном отзыве на Farm to Table; 89801 - Элко в Неваде, ферм нет. Так проходятся все три состояния экрана с фермами.</p>
+      <p><b>Метрика:</b> доля ZIP, доходимость до пейвола и trial → paid у ZIP против геолокации.</p>
+    </div>
+  </section>
+
+  <section class="shot" data-n="3c">
+    <div class="shot-label">03c · Building your map</div>
+    <div class="frame"><div class="phone" lang="en">
+      <div class="island"></div>
+      <div class="sb"><span>9:41</span><span class="ic"><svg width="18" height="12"><use href="#sb-signal"/></svg><svg width="16" height="12"><use href="#sb-wifi"/></svg><svg width="27" height="13"><use href="#sb-batt"/></svg></span></div>
+      <div class="map full" data-map="scan"></div>
+      <div class="citytag"><svg><use href="#i-nav"/></svg><span class="js-city">Tampa, FL</span></div>
+      <div class="sheet s3c">
+        <div class="handle"></div>
+        <div class="sheet-in">
+          <div class="eyebrow">Building your farm map</div>
+          <h1 class="title">Checking farms<br>near <span class="js-cityshort">Tampa</span></h1>
+          <div class="pbar"><i class="js-pbar"></i></div>
+          <div class="lrows js-lrows"></div>
+        </div>
+      </div>
+      <div class="homebar"></div>
+    </div></div>
+    <div class="note">
+      <p><b>Зачем.</b> Пока база считает фермы по радиусу и продуктам, человек видит, что именно проверяется: его продукты по очереди, потом часы работы и даты проверки. Числа совпадут с экраном 4, потому что посчитаны тем же запросом.</p>
+      <p><b>Около трёх секунд</b> и дальше сам, без кнопки. Искусственно не растягиваем и не добавляем «анализирую ваш профиль»: экран показывает только реальную работу.</p>
+      <p><b>Метрика:</b> время до экрана 4, доля отвалов на загрузке.</p>
     </div>
   </section>
 
@@ -512,13 +950,13 @@ body.overview .pulse{animation:none;opacity:.16}
         <div class="handle"></div>
         <div class="sheet-in">
           <div class="eyebrow">Few farms near you yet</div>
-          <h1 class="title"><span class="num">3</span> farms within 30 mi</h1>
-          <p class="sub">We widened your search to 60 miles and found 14 farms with what you picked.</p>
-          <div class="rows" id="rowsLow"></div>
+          <h1 class="title"><span class="num js-near">3</span> farms within 30 mi</h1>
+          <p class="sub">We widened your search to 60 miles and found <span class="js-match">14</span> farms with what you picked.</p>
+          <div class="rows js-rowslow"></div>
         </div>
       </div>
-      <div class="notify"><svg><use href="#i-bell"/></svg>Notify me when farms join near me</div>
-      <button class="cta" data-go="5" style="bottom:46px">Show me the 14 farms</button>
+      <button class="notify" data-toast="Done. We’ll let you know when farms join near you."><svg><use href="#i-bell"/></svg>Notify me when farms join near me</button>
+      <button class="cta" data-go="@pw" style="bottom:46px"><span>Show me the <span class="js-match">14</span> farms</span></button>
       <div class="homebar"></div>
     </div></div>
     <div class="note">
@@ -528,64 +966,494 @@ body.overview .pulse{animation:none;opacity:.16}
     </div>
   </section>
 
-  <section class="shot" data-n="5">
-    <div class="shot-label">05 · Paywall</div>
+  <section class="shot" data-n="4c">
+    <div class="shot-label">04c · No farms nearby yet</div>
+    <div class="frame"><div class="phone" lang="en">
+      <div class="island"></div>
+      <div class="sb"><span>9:41</span><span class="ic"><svg width="18" height="12"><use href="#sb-signal"/></svg><svg width="16" height="12"><use href="#sb-wifi"/></svg><svg width="27" height="13"><use href="#sb-batt"/></svg></span></div>
+      <div class="map low none" data-map="none"></div>
+      <button class="mapbtn" data-go="3" aria-label="Back"><svg><use href="#i-chev"/></svg></button>
+      <div class="citytag"><svg><use href="#i-nav"/></svg>Elko, NV · 100 mi</div>
+      <div class="sheet s4" style="top:388px">
+        <div class="handle"></div>
+        <div class="sheet-in">
+          <div class="eyebrow">Not in your area yet</div>
+          <h1 class="title">No farms within<br>100 miles yet</h1>
+          <p class="sub">We don’t want you to pay for an empty map. We’ll let you know as soon as farms near Elko join.</p>
+          <div class="rows"><div class="row nearest"><span class="ri"><svg><use href="#ic-beef"/></svg></span><span class="rl">Nearest farm</span><span class="rc">142 mi</span></div></div>
+        </div>
+      </div>
+      <button class="cta" data-toast="Done. We’ll let you know when farms near Elko join." style="bottom:108px"><svg><use href="#i-bell"/></svg>Notify me when farms join</button>
+      <button class="linkbtn" data-go="3b" style="bottom:50px">Try a different ZIP code</button>
+      <div class="homebar"></div>
+    </div></div>
+    <div class="note">
+      <p><b>Зачем.</b> Если и в 100 милях нет ни одной фермы, пейвол не показываем совсем. Деньги такого пользователя почти наверняка вернутся рефандом и отзывом в одну звезду, а «Notify me» оставляет способ вернуть его, когда база вырастет.</p>
+      <p><b>Для закупки.</b> Доля этого экрана по гео и кампаниям показывает, где реклама тратится впустую. Такие регионы стоит исключить из таргетинга ещё до тестов онбординга.</p>
+      <p><b>Метрика:</b> доля показов по гео, opt-in уведомлений, возврат по пушу.</p>
+    </div>
+  </section>
+
+  </div>
+</section>
+
+<section class="group g3" id="paywalls">
+  <div class="group-head">
+    <span class="kicker">Сверх задания</span>
+    <h2>Пейвол: варианты для A/B и состояния</h2>
+    <p>Вариант A - основной, он в задании выше. B и C меняют ровно один блок, чтобы разница в конверсии читалась однозначно. Отдельно - пейвол для тех, у кого триал уже был, и лист App Store, который человек видит перед оплатой.</p>
+  </div>
+  <div class="shots">
+
+  <section class="shot" data-n="5b">
+    <div class="shot-label">05b · Paywall B: your nearest farms</div>
     <div class="frame"><div class="phone" lang="en">
       <div class="island"></div>
       <div class="sb"><span>9:41</span><span class="ic"><svg width="18" height="12"><use href="#sb-signal"/></svg><svg width="16" height="12"><use href="#sb-wifi"/></svg><svg width="27" height="13"><use href="#sb-batt"/></svg></span></div>
       <div class="map strip" data-map="pay"></div>
-      <button class="close" data-go="4" aria-label="Close"><svg><use href="#i-x"/></svg></button>
+      <button class="close" data-go="9" data-ov="survey" aria-label="Close"><svg><use href="#i-x"/></svg></button>
       <div class="ratechip"><svg><use href="#i-star"/></svg>4.9 on the App Store</div>
-      <div class="sheet s5">
+      <div class="sheet s5b">
         <div class="handle"></div>
         <div class="sheet-in">
-          <h1 class="title">Unlock all <span class="num">231</span> farms<br>near you</h1>
-          <ul class="benefits">
-            <li><span class="bi"><svg><use href="#i-check"/></svg></span>Farms and ranches within 30 miles</li>
-            <li><span class="bi"><svg><use href="#i-check"/></svg></span><span id="sells">Who sells raw milk, beef and eggs</span></li>
-            <li><span class="bi"><svg><use href="#i-check"/></svg></span>Call or get directions in one tap</li>
-          </ul>
-          <div class="tl">
-            <div class="tl-h">How your free trial works</div>
-            <div class="tl-row first"><span class="tl-dot"><svg><use href="#i-unlock"/></svg></span><span class="tl-t"><b>Today:</b> unlock your full farm map</span></div>
-            <div class="tl-row"><span class="tl-dot"><svg><use href="#i-bell"/></svg></span><span class="tl-t"><b>Day 2:</b> we send you a reminder</span></div>
-            <div class="tl-row"><span class="tl-dot"><svg><use href="#i-card"/></svg></span><span class="tl-t"><b>Day 3:</b> you pay $39.99 for the year</span></div>
-          </div>
+          <div class="eyebrow">Ready near <span class="js-cityshort">Tampa</span></div>
+          <h1 class="title">Your closest farms</h1>
+          <p class="lfs-sub">Phone and directions unlock with membership.</p>
+          <div class="lfs js-lfs"></div>
+          <div class="lf-more js-lfmore">+ 228 more within 30 miles</div>
+          <div class="trialline"><span class="tld"><svg><use href="#i-bell"/></svg></span><span>Free for 3 days. We remind you <b>2 days before</b> you pay.</span></div>
           <div class="plan">
-            <span class="tag">Just $3.33/mo, less than a dozen farm eggs</span>
             <span class="radio"><svg><use href="#i-check"/></svg></span>
             <div class="pn"><b>Annual membership</b><span>Free for 3 days</span></div>
             <div class="pp"><b>$39.99</b><span>per year</span></div>
           </div>
         </div>
       </div>
-      <button class="cta" style="bottom:102px">Start my free trial</button>
+      <button class="cta" data-go="5e" data-ov="sk" style="bottom:102px">Unlock my farms</button>
       <p class="fine">No payment today. Cancel anytime in Settings.</p>
       <p class="legal">Restore purchases · Terms of Use · Privacy Policy</p>
       <div class="homebar"></div>
     </div></div>
     <div class="note">
-      <p><b>Зачем.</b> Заголовок продолжает экран 4, продукты в списке подставляются из шага 2. Таймлайн триала с напоминанием на второй день взят у AllTrails и PictureThis: у аудитории 35-65 частый страх перед триалом - незаметное списание. По RevenueCat, около 55% отмен 3-дневного триала приходится на день оформления, поэтому обещание должно совпадать с тем, что человек сразу увидит на карте: отсюда «within 30 miles», а не «every farm».</p>
-      <p><b>Цена.</b> Годовая $39.99 крупнее пересчёта в месяц, как требует Apple (App Review 3.1.2). Вместо зачёркнутой цены якорь из жизни ЦА: $3.33 в месяц дешевле дюжины фермерских яиц ($6.20 в вашем же квизе).</p>
-      <p><b>A/B против V1:</b> trial → pay и выручка на установку по когортам 30 дней, плюс рефанды. Плашку распродажи из V1.1 можно добавить через тот же remote config, если она выиграет.</p>
+      <p><b>Гипотеза.</b> Тот, кто пришёл за конкретным продуктом, покупает не список выгод, а ферму. В отзывах 27 человек прямо просят показать фермы района до оплаты, а платить готовы «once I want contact for a farm». Поэтому названия видны, закрыты только телефон и маршрут; карта с пинами вокруг - как у Fishbrain и Localize.</p>
+      <p><b>Риск</b> - найдут ферму в Google: «то же бесплатно в Google» пишут 20% недовольных. Поэтому это вариант для теста, а не замена A. Одна цена и напоминание до списания - как в A.</p>
+      <p><b>Метрика:</b> trial → paid и выручка на установку за 30 дней против A.</p>
     </div>
   </section>
 
+  <section class="shot" data-n="5c">
+    <div class="shot-label">05c · Paywall C: two plans, honest anchor</div>
+    <div class="frame"><div class="phone" lang="en">
+      <div class="island"></div>
+      <div class="sb"><span>9:41</span><span class="ic"><svg width="18" height="12"><use href="#sb-signal"/></svg><svg width="16" height="12"><use href="#sb-wifi"/></svg><svg width="27" height="13"><use href="#sb-batt"/></svg></span></div>
+      <div class="map strip" data-map="pay"></div>
+      <button class="close" data-go="9" data-ov="survey" aria-label="Close"><svg><use href="#i-x"/></svg></button>
+      <div class="ratechip"><svg><use href="#i-star"/></svg>4.9 on the App Store</div>
+      <div class="sheet s5 s5c">
+        <div class="handle"></div>
+        <div class="sheet-in">
+          <h1 class="title">Unlock all <span class="num js-total">231</span> farms<br>near you</h1>
+          <ul class="benefits">
+            <li><span class="bi"><svg><use href="#i-check"/></svg></span><span class="js-within">Farms and ranches within 30 miles</span></li>
+            <li><span class="bi"><svg><use href="#i-check"/></svg></span><span class="js-sells">Who sells raw milk, beef and eggs</span></li>
+            <li><span class="bi"><svg><use href="#i-check"/></svg></span>Call or get directions in one tap</li>
+          </ul>
+          <div class="plans">
+            <button class="plan pl on" data-plan="annual">
+              <span class="tag save">Save 58%</span>
+              <span class="radio"><svg><use href="#i-check"/></svg></span>
+              <span class="pn"><b>Annual</b><span>Free for 3 days · $3.33/mo</span></span>
+              <span class="pp"><b>$39.99</b><span>per year</span></span>
+            </button>
+            <button class="plan pl" data-plan="monthly">
+              <span class="radio"><svg><use href="#i-check"/></svg></span>
+              <span class="pn"><b>Monthly</b><span>No free trial</span></span>
+              <span class="pp"><b>$7.99</b><span>per month</span></span>
+            </button>
+          </div>
+          <div class="trialline js-planline"><span class="tld"><svg><use href="#i-bell"/></svg></span><span class="js-planlinet">We remind you <b>2 days before</b> the trial ends.</span></div>
+        </div>
+      </div>
+      <button class="cta js-plancta" data-go="5e" data-ov="sk" style="bottom:102px">Start my free trial</button>
+      <p class="fine js-planfine">No payment today. Cancel anytime in Settings.</p>
+      <p class="legal">Restore purchases · Terms of Use · Privacy Policy</p>
+      <div class="homebar"></div>
+    </div></div>
+    <div class="note">
+      <p><b>Гипотеза.</b> Зачёркнутая $79.98 в V1 - это $39.99 × 2 из remote config, такой цены нет в списке покупок приложения, а по 16 CFR 233.1 скидка от цены, по которой не продавали, считается ложной. Честный якорь - реальный месячный план, как у Fishbrain ($155.88 = 12 × $12.99): рядом с $7.99 в месяц «Save 58%» - правда. Месячный продукт в App Store Connect нужно завести.</p>
+      <p><b>Риск:</b> часть возьмёт месяц и отменит после первого списания, поэтому решаем по выручке на установку за 30 дней и прогнозу на 12 месяцев; guardrail - доля месячных. Недельный план не берём: в отзывах Localize он вызывает самую резкую реакцию.</p>
+      <p><b>Ветка C2:</b> только годовой, месячный за ссылкой «See all plans». У Mojo такой перенос дал +15-20% доли годовых.</p>
+      <p><b>Метрика:</b> выручка на установку, доля годовых, рефанды.</p>
+    </div>
+  </section>
+
+  <section class="shot" data-n="5d">
+    <div class="shot-label">05d · Trial already used</div>
+    <div class="frame"><div class="phone" lang="en">
+      <div class="island"></div>
+      <div class="sb"><span>9:41</span><span class="ic"><svg width="18" height="12"><use href="#sb-signal"/></svg><svg width="16" height="12"><use href="#sb-wifi"/></svg><svg width="27" height="13"><use href="#sb-batt"/></svg></span></div>
+      <div class="map strip" data-map="pay"></div>
+      <button class="close" data-go="9" data-ov="survey" aria-label="Close"><svg><use href="#i-x"/></svg></button>
+      <div class="ratechip"><svg><use href="#i-star"/></svg>4.9 on the App Store</div>
+      <div class="sheet s5">
+        <div class="handle"></div>
+        <div class="sheet-in">
+          <h1 class="title">Welcome back. Your<br><span class="num js-total">231</span> farms are waiting</h1>
+          <ul class="benefits">
+            <li><span class="bi"><svg><use href="#i-check"/></svg></span><span class="js-within">Farms and ranches within 30 miles</span></li>
+            <li><span class="bi"><svg><use href="#i-check"/></svg></span><span class="js-sells">Who sells raw milk, beef and eggs</span></li>
+            <li><span class="bi"><svg><use href="#i-check"/></svg></span>Call or get directions in one tap</li>
+          </ul>
+          <div class="tl">
+            <div class="tl-h">How your membership works</div>
+            <div class="tl-row first"><span class="tl-dot"><svg><use href="#i-unlock"/></svg></span><span class="tl-t"><b>Today:</b> full farm map, $39.99 a year</span></div>
+            <div class="tl-row"><span class="tl-dot"><svg><use href="#i-bell"/></svg></span><span class="tl-t"><b>Before it renews:</b> we remind you</span></div>
+            <div class="tl-row"><span class="tl-dot"><svg><use href="#i-card"/></svg></span><span class="tl-t"><b>Anytime:</b> cancel in Settings</span></div>
+          </div>
+          <div class="plan">
+            <span class="tag">Just $3.33/mo, less than a dozen farm eggs</span>
+            <span class="radio"><svg><use href="#i-check"/></svg></span>
+            <div class="pn"><b>Annual membership</b><span>Billed today</span></div>
+            <div class="pp"><b>$39.99</b><span>per year</span></div>
+          </div>
+        </div>
+      </div>
+      <button class="cta" data-go="5e" data-ov="sk" style="bottom:102px">Subscribe for $39.99/year</button>
+      <p class="fine">Renews yearly. Cancel anytime in Settings.</p>
+      <p class="legal">Restore purchases · Terms of Use · Privacy Policy</p>
+      <div class="homebar"></div>
+    </div></div>
+    <div class="note">
+      <p><b>Зачем.</b> Бесплатный период внутри одной группы подписок даётся один раз на Apple ID. Тот, кто уже пробовал, при покупке заплатит сразу, и обещание «3 days free» для него - прямой путь к жалобе и рефанду. Право на триал проверяем до показа (isEligibleForIntroOffer в StoreKit или через Adapty), такой человек видит этот вариант; AllTrails и Fishbrain в справке прямо пишут, что повторный триал списывает оплату сразу.</p>
+      <p><b>Вместо таймлайна триала</b> - когда списание, что будет перед продлением и как отменить. Напоминание о продлении годовой подписки заодно закрывает требования штатов вроде Калифорнии.</p>
+      <p><b>Метрика:</b> доля неэлигибельных, конверсия в оплату у них.</p>
+    </div>
+  </section>
+
+  <section class="shot" data-n="5e" data-clone="5" data-ovshow="sk">
+    <div class="shot-label">05e · App Store purchase sheet</div>
+    <div class="frame"><div class="phone" lang="en"></div></div>
+    <div class="note">
+      <p><b>Зачем в макете.</b> Последний экран перед деньгами рисует Apple, и HIG запрещает его копировать или менять, но текст пейвола должен с ним совпасть: три дня бесплатно, потом $39.99 в конкретную дату. Лист нарисован по записям покупок у Localize, onX, AllTrails и PictureThis 2025-2026 годов.</p>
+      <p><b>Отдельная воронка</b> между кнопкой пейвола и trial_start: отказ на листе показывает, сколько людей передумали уже после решения, и это тоже метрика пейвола.</p>
+      <p><b>Метрика:</b> purchase_sheet_cancel / purchase_sheet_shown.</p>
+    </div>
+  </section>
+
+  </div>
+</section>
+
+<section class="group g4" id="after">
+  <div class="group-head">
+    <span class="kicker">Сверх задания</span>
+    <h2>После оплаты: первые минуты триала</h2>
+    <p>Пейвол обещает три вещи: карту сразу, напоминание перед списанием и простую отмену. Эти экраны выполняют обещание. Решение отменить триал принимается в первые минуты, поэтому сразу после покупки человек получает ту ферму, ради которой пришёл.</p>
+  </div>
+  <div class="shots">
+
+  <section class="shot" data-n="6">
+    <div class="shot-label">06 · Trial started: reminder</div>
+    <div class="frame"><div class="phone" lang="en">
+      <div class="island"></div>
+      <div class="sb"><span>9:41</span><span class="ic"><svg width="18" height="12"><use href="#sb-signal"/></svg><svg width="16" height="12"><use href="#sb-wifi"/></svg><svg width="27" height="13"><use href="#sb-batt"/></svg></span></div>
+      <div class="loc-card s6card"><div class="map" data-map="unl"></div></div>
+      <div class="okbadge"><svg><use href="#i-check"/></svg></div>
+      <div class="s6-body">
+        <div class="eyebrow js-s6eye">Free trial started</div>
+        <h1 class="title">Your farm map<br>is unlocked</h1>
+        <p class="sub js-s6sub">Free until Sep 29. Want a reminder on Sep 27, so nothing surprises you?</p>
+      </div>
+      <div class="npv">
+        <span class="ni"><svg><use href="#appicon"/></svg></span>
+        <div class="nb"><div class="nh"><b class="js-s6nt">Your free trial ends in 2 days</b><span class="js-s6nd">Sep 27</span></div><p class="js-s6nb">Cancel before Sep 28, 3:00 PM and you won’t be charged.</p></div>
+      </div>
+      <button class="cta" data-go="7" data-ov="push" style="bottom:112px"><svg><use href="#i-bell"/></svg><span class="js-s6cta">Remind me before it ends</span></button>
+      <button class="linkbtn" data-go="7" style="bottom:52px">Not now</button>
+      <div class="homebar"></div>
+    </div></div>
+    <div class="note">
+      <p><b>Зачем.</b> Пейвол обещал напоминание, и разрешение на него просим сейчас, когда оно нужно самому человеку. Превью показывает, что придёт и когда. У Blinkist такой экран «Remind me» после старта триала поднял согласие на пуши с 6% до 74%, медиана по iOS около 49% (Airship).</p>
+      <p><b>Если пуши запрещены,</b> напоминаем внутри приложения при следующем открытии и письмом, если есть email. Для тех, у кого триала не было, экран просит напоминание перед продлением.</p>
+      <p><b>Метрика:</b> opt-in пушей, отмены триала до напоминания и после.</p>
+    </div>
+  </section>
+
+  <section class="shot" data-n="7">
+    <div class="shot-label">07 · Your first farm</div>
+    <div class="frame"><div class="phone" lang="en">
+      <div class="island"></div>
+      <div class="sb"><span>9:41</span><span class="ic"><svg width="18" height="12"><use href="#sb-signal"/></svg><svg width="16" height="12"><use href="#sb-wifi"/></svg><svg width="27" height="13"><use href="#sb-batt"/></svg></span></div>
+      <div class="map full" data-map="route"></div>
+      <div class="citytag"><svg><use href="#i-nav"/></svg><span class="js-city">Tampa, FL</span> · <span class="js-radius">30</span> mi</div>
+      <div class="trialpill"><svg><use href="#i-unlock"/></svg><span class="js-pillt">Free trial · ends Sep 29</span></div>
+      <div class="sheet s7">
+        <div class="handle"></div>
+        <div class="sheet-in">
+          <div class="farm-h"><span class="fi js-f-ic"><svg><use href="#ic-milk"/></svg></span><div><h1 class="js-f-name">Sunny Acres Family Farm</h1><div class="farm-meta js-f-meta">Family dairy · 6.2 mi · 14 min drive</div></div></div>
+          <div class="fstat"><span class="open"><i></i><span class="js-f-hours">Open today · 8 AM - 6 PM</span></span><span class="ver"><span class="vi"><svg><use href="#i-check"/></svg></span><span class="js-f-ver">Verified 6 days ago</span></span></div>
+          <div class="fbuy"><svg><use href="#i-store"/></svg><span class="js-f-buy">Farm store on site · cash or card</span></div>
+          <div class="fchips js-f-chips"></div>
+          <div class="acts">
+            <button class="act pri js-f-call" data-toast="Calling Sunny Acres Family Farm"><svg><use href="#i-phone"/></svg>Call</button>
+            <button class="act" data-toast="Opens Apple Maps with the route"><svg><use href="#i-route"/></svg>Directions</button>
+            <button class="act" data-toast="Saved to My farms"><svg><use href="#i-save"/></svg>Save</button>
+          </div>
+          <button class="morebtn" data-toast="Opens the list of all farms nearby"><span>See all <b class="js-morecount">231</b> farms near you</span><svg><use href="#i-chev"/></svg></button>
+        </div>
+      </div>
+      <div class="homebar"></div>
+    </div></div>
+    <div class="note">
+      <p><b>Зачем.</b> По данным RevenueCat, около 55% отмен трёхдневного триала случаются в день оформления: решение принимается в первые минуты. Поэтому сразу после покупки человек видит ту ферму, которая на экране 4 была скрыта: название, часы работы, дату проверки и кнопку звонка.</p>
+      <p><b>Ферма подбирается по выбору на шаге 2</b> и расстоянию, плашка сверху показывает, до какого числа идёт триал, а строка «как купить» отвечает тем, кто ждал заказ в приложении (23 отзыва). Оценку в App Store просим только после первого звонка ферме: 13 отзывов злятся на просьбу оценить до пользы.</p>
+      <p><b>Метрика:</b> first_farm_action в первый день; trial → paid у сделавших действие против остальных.</p>
+    </div>
+  </section>
+
+  <section class="shot" data-n="8">
+    <div class="shot-label">08 · Day 2: trial reminder</div>
+    <div class="frame"><div class="phone lock" lang="en">
+      <div class="lk-bg" data-map="wall"></div>
+      <div class="island"></div>
+      <div class="sb light"><span>9:41</span><span class="ic"><svg width="18" height="12"><use href="#sb-signal"/></svg><svg width="16" height="12"><use href="#sb-wifi"/></svg><svg width="27" height="13"><use href="#sb-batt"/></svg></span></div>
+      <svg class="lk-lock"><use href="#i-lockfill"/></svg>
+      <div class="lk-date js-lkdate">Sunday, September 27</div>
+      <div class="lk-time">9:41</div>
+      <button class="lk-n" data-toast="Opens Membership: plan, renewal date and Cancel">
+        <span class="ni"><svg><use href="#appicon"/></svg></span>
+        <span class="nb"><span class="nh"><b class="js-lktitle">Your free trial ends in 2 days</b><span>now</span></span><span class="nt js-lkbody">$39.99 for the year on Sep 29. Not for you? Cancel before Sep 28, 3:00 PM and you won’t be charged.</span></span>
+      </button>
+      <span class="lk-b l"><svg><use href="#i-flash"/></svg></span>
+      <span class="lk-b r"><svg><use href="#i-cam"/></svg></span>
+      <div class="homebar"></div>
+    </div></div>
+    <div class="note">
+      <p><b>Зачем.</b> Обещание с пейвола, выполненное буквально: за два дня до списания, с суммой и точным сроком отмены. Apple снимает оплату за сутки до конца триала, поэтому напоминание «за день» уже опаздывает. Кто нашёл свою ферму, остаётся, а кто не нашёл, отменяет сам, вместо рефанда и отзыва в одну звезду.</p>
+      <p><b>Тап ведёт в приложение,</b> на экран подписки с датой продления и кнопкой отмены (системный лист управления подпиской), а не в поиск по настройкам.</p>
+      <p><b>Метрика:</b> отмены после напоминания, рефанды за 30 дней, trial → paid.</p>
+    </div>
+  </section>
+
+  </div>
+</section>
+
+<section class="group g5" id="close">
+  <div class="group-head">
+    <span class="kicker">Сверх задания</span>
+    <h2>Если закрыл пейвол</h2>
+    <p>Большинство закрывает пейвол, и сейчас неизвестно почему. Один вопрос превращает крестик в данные для следующих тестов, а карта после него оставляет повод вернуться в момент интереса, а не по таймеру.</p>
+  </div>
+  <div class="shots">
+
+  <section class="shot" data-n="9" data-clone="5" data-ovshow="survey">
+    <div class="shot-label">09 · Exit survey</div>
+    <div class="frame"><div class="phone" lang="en"></div></div>
+    <div class="note">
+      <p><b>Зачем.</b> Каждый ответ ведёт к своему тесту. «Не уверен, что есть ферма» - растим показ покрытия, это вариант B. «Дорого» - тестируем месячный план, вариант C. «Не хочу ещё одну подписку» - усиливаем обещание напоминания и простой отмены.</p>
+      <p><b>Без скидки на выходе.</b> В iOS такой оффер получает отказы по правилу 5.6, а promotional offers Apple даёт только текущим и бывшим подписчикам. Тем, кому дорого, - льготный доступ, как «Nobody left behind» в V1, но в один тап (экран 10); позже можно проверить тарифы по штату, как у onX Hunt.</p>
+      <p><b>Метрика:</b> paywall_exit_reason, доля ответивших.</p>
+    </div>
+  </section>
+
+  <section class="shot" data-n="10">
+    <div class="shot-label">10 · Look around first</div>
+    <div class="frame"><div class="phone" lang="en">
+      <div class="island"></div>
+      <div class="sb"><span>9:41</span><span class="ic"><svg width="18" height="12"><use href="#sb-signal"/></svg><svg width="16" height="12"><use href="#sb-wifi"/></svg><svg width="27" height="13"><use href="#sb-batt"/></svg></span></div>
+      <div class="map tall" data-map="browse"></div>
+      <div class="citytag"><svg><use href="#i-nav"/></svg><span class="js-city">Tampa, FL</span> · <span class="js-radius">30</span> mi</div>
+      <button class="farmcard lockcard" data-go="@pw">
+        <span class="fc-ic js-lc-ic"><svg><use href="#ic-beef"/></svg></span>
+        <span class="fc-body"><span class="fc-name"><span class="blur js-lc-name">Kalon Creek Ranch</span></span><span class="fc-meta js-lc-meta">8.9 mi · Grass-fed beef · Bulk beef</span></span>
+        <span class="fc-lock"><svg><use href="#i-lock"/></svg></span>
+      </button>
+      <div class="sheet s10">
+        <div class="handle"></div>
+        <div class="sheet-in">
+          <h1 class="title js-r-title">Take a look around first</h1>
+          <p class="sub js-r-sub">Tap any pin to see what the farm sells and how far it is. Names, phone numbers and directions unlock with membership.</p>
+        </div>
+      </div>
+      <button class="cta js-10cta" data-go="@pw" style="bottom:112px">Start my free trial</button>
+      <p class="fine js-10fine" style="bottom:84px">3 days free, then $39.99 a year</p>
+      <button class="linkbtn sm" data-toast="Opens a short form for a sponsored membership" style="bottom:36px">Can’t afford it? Ask for a sponsored membership</button>
+      <div class="homebar"></div>
+    </div></div>
+    <div class="note">
+      <p><b>Зачем.</b> После крестика человек не упирается в стену: пины на карте видны, понятно, что и где продают, а название, телефон и маршрут закрыты. Тап по пину открывает пейвол уже с конкретной фермой: повторный показ в момент интереса.</p>
+      <p><b>Текст подстраивается под ответ опроса:</b> сомневающимся в покрытии - «посмотрите сами», тем, кому дорого, - цена в месяц, тем, кто не хочет подписок, - напоминание и отмена. Тестируем против текущего поведения, где после крестика остаётся только пейвол.</p>
+      <p><b>Не freemium:</b> по RevenueCat hard paywall конвертирует установку в оплату в 5 раз лучше (10.7% против 2.1%), поэтому карта с замками только для закрывших пейвол. Льготный доступ в один тап - у Localize такой путь дал 60 отзывов на 4-5 звёзд из 72; guardrail - доля заявок.</p>
+      <p><b>Метрика:</b> install → trial к 7-му дню у закрывших пейвол, paywall_view с placement pin.</p>
+    </div>
+  </section>
+
+  </div>
+</section>
+
 </main>
 
-<section class="extra">
+<section class="flow" id="flow">
+  <div class="card">
+    <h2>Схема воронки</h2>
+    <p>Все экраны выше на одной схеме: развилки, куда ведёт каждая кнопка и какое событие аналитики отправляется на переходе. Светлые блоки - экраны из задания, тёмные - сверх задания.</p>
+    <div class="fsvg">
+      <svg viewBox="0 0 1140 926" role="img" aria-label="Схема воронки Farm to Table">
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#7E9E88"/></marker>
+          <marker id="ahy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E0B84A"/></marker>
+        </defs>
+
+        <g class="legend">
+          <rect x="800" y="24" width="26" height="18" rx="5" class="n1"/><text x="838" y="38" class="lg">экраны из задания</text>
+          <rect x="800" y="54" width="26" height="18" rx="5" class="n2"/><text x="838" y="68" class="lg">экраны сверх задания</text>
+          <path d="M800 93L806 84H820L826 93L820 102H806Z" class="nd"/><text x="838" y="98" class="lg">развилка по данным</text>
+          <path d="M800 122H824" class="e" marker-end="url(#ah)"/><text x="838" y="127" class="ev">event_name</text><text x="922" y="127" class="lg">событие аналитики</text>
+        </g>
+
+        <g class="edges">
+          <path d="M185 66V89" class="e" marker-end="url(#ah)"/>
+          <path d="M185 136V159" class="e" marker-end="url(#ah)"/>
+          <path d="M185 206V229" class="e" marker-end="url(#ah)"/>
+          <path d="M185 276V299" class="e" marker-end="url(#ah)"/>
+          <path d="M185 346V369" class="e" marker-end="url(#ah)"/>
+          <path d="M185 416V439" class="e" marker-end="url(#ah)"/>
+          <path d="M185 486V509" class="e" marker-end="url(#ah)"/>
+          <path d="M185 556V579" class="e" marker-end="url(#ah)"/>
+          <path d="M185 626V649" class="e" marker-end="url(#ah)"/>
+          <path d="M185 696V719" class="e" marker-end="url(#ah)"/>
+          <path d="M185 766V789" class="e" marker-end="url(#ah)"/>
+          <path d="M185 836V859" class="e" marker-end="url(#ah)"/>
+
+          <path d="M330 253H469" class="e" marker-end="url(#ah)"/>
+          <path d="M595 276V323H331" class="e" marker-end="url(#ah)"/>
+          <path d="M330 393H595V439" class="e ey" marker-end="url(#ahy)"/>
+          <path d="M595 393H950V439" class="e ey" marker-end="url(#ahy)"/>
+          <path d="M595 486V491H189" class="e" marker-end="url(#ah)"/>
+          <path d="M330 522H469" class="e" marker-end="url(#ah)"/>
+          <path d="M720 533H799" class="e" marker-end="url(#ah)"/>
+          <path d="M950 556V566H400V544H331" class="e ed" marker-end="url(#ah)"/>
+          <path d="M40 603H24V533H39" class="e ed" marker-end="url(#ah)"/>
+          <path d="M330 673H469" class="e" marker-end="url(#ah)"/>
+          <path d="M595 696V743H331" class="e" marker-end="url(#ah)"/>
+        </g>
+
+        <g class="labels">
+          <text x="197" y="82" class="ev">onb_step_view</text>
+          <text x="197" y="152" class="ev">onb_products_selected</text>
+          <text x="197" y="222"><tspan class="cd">Continue · </tspan><tspan class="ev">location_prompt_shown</tspan></text>
+          <text x="197" y="292"><tspan class="cd">Allow · </tspan><tspan class="ev">location_permission_result</tspan></text>
+          <text x="197" y="362" class="ev">map_build_complete</text>
+          <text x="197" y="432"><tspan class="cd">10+ ферм · </tspan><tspan class="ev">coverage_shown</tspan></text>
+          <text x="197" y="506" class="ev">paywall_view</text>
+          <text x="197" y="573" class="ev">purchase_sheet_shown</text>
+          <text x="197" y="642"><tspan class="cd">Subscribe · </tspan><tspan class="ev">trial_start</tspan></text>
+          <text x="197" y="712" class="cd">Not now</text>
+          <text x="197" y="782"><tspan class="ev">first_farm_action</tspan><tspan class="cd"> · через день</tspan></text>
+          <text x="197" y="852" class="ev">trial_reminder_sent</text>
+
+          <text x="344" y="246" class="cd">Don’t Allow</text>
+          <text x="606" y="304" class="ev">zip_submitted</text>
+          <text x="398" y="386" class="cd">меньше 10: радиус 60, 100 миль</text>
+          <text x="700" y="386" class="cd">0 ферм в 100 милях</text>
+          <text x="342" y="515" class="ev">paywall_close</text>
+          <text x="610" y="583"><tspan class="cd">тап по пину · </tspan><tspan class="ev">paywall_view(pin)</tspan></text>
+          <text x="16" y="585" class="cd" transform="rotate(-90 16 585)">cancel</text>
+          <text x="344" y="666" class="cd">Remind me</text>
+          <text x="606" y="724" class="ev">push_permission_result</text>
+        </g>
+
+        <g class="nodes">
+          <rect x="40" y="20" width="290" height="46" rx="12" class="n1"/><text x="54" y="39" class="t1">01 Welcome</text><text x="54" y="56" class="t2">«Find farms near me», вход для веба</text>
+          <rect x="40" y="90" width="290" height="46" rx="12" class="n1"/><text x="54" y="109" class="t1">02 What are you looking for</text><text x="54" y="126" class="t2">8 плиток, мультивыбор</text>
+          <rect x="40" y="160" width="290" height="46" rx="12" class="n1"/><text x="54" y="179" class="t1">03 Location primer</text><text x="54" y="196" class="t2">одна кнопка Continue, как в HIG</text>
+          <rect x="40" y="230" width="290" height="46" rx="12" class="n2"/><text x="54" y="249" class="t1b">03a iOS location prompt</text><text x="54" y="266" class="t2b">Allow Once · While Using · Don’t Allow</text>
+          <rect x="40" y="300" width="290" height="46" rx="12" class="n2"/><text x="54" y="319" class="t1b">03c Building your map</text><text x="54" y="336" class="t2b">~3 с, считаем ваши продукты</text>
+          <path d="M40 393L58 370H312L330 393L312 416H58Z" class="nd"/><text x="185" y="389" class="t1c">Сколько ферм в 30 милях</text><text x="185" y="405" class="t2c">с вашими продуктами?</text>
+          <rect x="40" y="440" width="290" height="46" rx="12" class="n1"/><text x="54" y="459" class="t1">04 Your farm map</text><text x="54" y="476" class="t2">231 ферма, ближайшая скрыта</text>
+          <rect x="40" y="510" width="290" height="46" rx="12" class="n1"/><text x="54" y="529" class="t1">05 Paywall A · B · C</text><text x="54" y="546" class="t2">remote config; 05d, если триал уже был</text>
+          <rect x="40" y="580" width="290" height="46" rx="12" class="n2"/><text x="54" y="599" class="t1b">05e App Store sheet</text><text x="54" y="616" class="t2b">3 дня бесплатно, затем $39.99 в год</text>
+          <rect x="40" y="650" width="290" height="46" rx="12" class="n2"/><text x="54" y="669" class="t1b">06 Trial started</text><text x="54" y="686" class="t2b">просим разрешение на напоминание</text>
+          <rect x="40" y="720" width="290" height="46" rx="12" class="n2"/><text x="54" y="739" class="t1b">07 First farm</text><text x="54" y="756" class="t2b">звонок, маршрут, сохранить</text>
+          <rect x="40" y="790" width="290" height="46" rx="12" class="n2"/><text x="54" y="809" class="t1b">08 Day 2 reminder</text><text x="54" y="826" class="t2b">за 2 дня до списания, сумма и срок</text>
+          <rect x="40" y="860" width="290" height="46" rx="12" class="n2"/><text x="54" y="879" class="t1b">Day 3: продление или отмена</text><text x="54" y="896" class="ev">renewal · trial_cancel · refund</text>
+
+          <rect x="470" y="230" width="250" height="46" rx="12" class="n2"/><text x="484" y="249" class="t1b">03b ZIP code</text><text x="484" y="266" class="t2b">город виден сразу под полем</text>
+          <rect x="470" y="440" width="250" height="46" rx="12" class="n2"/><text x="484" y="459" class="t1b">04b Few farms</text><text x="484" y="476" class="t2b">честно пишем радиус и число</text>
+          <rect x="470" y="510" width="250" height="46" rx="12" class="n2"/><text x="484" y="529" class="t1b">09 Exit survey</text><text x="484" y="546" class="t2b">один вопрос, пять ответов</text>
+          <rect x="470" y="650" width="250" height="46" rx="12" class="n2"/><text x="484" y="669" class="t1b">iOS notification prompt</text><text x="484" y="686" class="t2b">Allow · Don’t Allow</text>
+          <rect x="800" y="440" width="300" height="46" rx="12" class="n2"/><text x="814" y="459" class="t1b">04c No farms in 100 mi</text><text x="814" y="476" class="t2b">Notify me, пейвол не показываем</text>
+          <rect x="800" y="510" width="300" height="46" rx="12" class="n2"/><text x="814" y="529" class="t1b">10 Look around</text><text x="814" y="546" class="t2b">карта с замками, пин открывает пейвол</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>События аналитики</h2>
+    <p>Минимальный набор, чтобы каждый тест ниже читался без ручных выгрузок. Выручку и отмены берём из серверных уведомлений App Store через Adapty, а не из клиента.</p>
+    <div class="twrap"><table class="tbl">
+      <thead><tr><th>Событие</th><th>Когда</th><th>Параметры</th></tr></thead>
+      <tbody>
+        <tr><td><code>onb_step_view</code></td><td>показ каждого экрана онбординга</td><td>step, flow: short или V2</td></tr>
+        <tr><td><code>onb_products_selected</code></td><td>Continue на шаге 2</td><td>items, count</td></tr>
+        <tr><td><code>location_prompt_shown</code></td><td>Continue на праймере</td><td>нет</td></tr>
+        <tr><td><code>location_permission_result</code></td><td>ответ в системном окне</td><td>allow_once, while_using, denied; precise</td></tr>
+        <tr><td><code>zip_submitted</code></td><td>ввод ZIP-кода</td><td>zip3, city_resolved</td></tr>
+        <tr><td><code>coverage_shown</code></td><td>экран с фермами</td><td>state: dense, sparse, none; radius; total; per_item</td></tr>
+        <tr><td><code>paywall_view</code></td><td>каждый показ пейвола</td><td>variant: A, B, C, no_trial; placement: onboarding, pin, survey; coverage_state</td></tr>
+        <tr><td><code>paywall_plan_selected</code></td><td>выбор плана в варианте C</td><td>plan</td></tr>
+        <tr><td><code>purchase_sheet_shown</code>, <code>purchase_sheet_cancel</code></td><td>лист App Store</td><td>product_id, variant</td></tr>
+        <tr><td><code>trial_start</code>, <code>purchase</code></td><td>успешная покупка</td><td>product_id, price, trial_days, placement</td></tr>
+        <tr><td><code>paywall_close</code>, <code>paywall_exit_reason</code></td><td>крестик и опрос</td><td>reason или skipped</td></tr>
+        <tr><td><code>push_permission_result</code></td><td>системное окно после покупки</td><td>allowed или denied; source</td></tr>
+        <tr><td><code>first_farm_action</code></td><td>экран первой фермы</td><td>call, directions, save; minutes_since_trial</td></tr>
+        <tr><td><code>trial_reminder_sent</code>, <code>trial_reminder_opened</code></td><td>за день до списания</td><td>channel: push, in_app, email</td></tr>
+        <tr><td><code>renewal</code>, <code>trial_cancel</code>, <code>refund</code></td><td>серверные уведомления App Store</td><td>day_of_trial, variant, coverage_state</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h2>Порядок тестов</h2>
+    <p>Сначала то, что дешевле и быстрее даёт деньги: пейвол в Adapty без релиза. Онбординг целиком - только на крупный эффект, мелкие правки экранов на таком трафике не различить. Расчёт объёмов - в PRD, альфа 0.05, мощность 80%.</p>
+    <div class="twrap"><table class="tbl">
+      <thead><tr><th>Тест</th><th>Гипотеза</th><th>Метрика и guardrails</th><th>Объём</th></tr></thead>
+      <tbody>
+        <tr><td><b>1. Пейвол A против V1</b> внутри текущего V2</td><td>Прозрачный пейвол без зачёркнутой цены не проигрывает по выручке и снижает рефанды</td><td>trial → paid, выручка на установку за 30 дней; рефанды, отзывы 1-2 звезды</td><td>1.2-2.1 тыс. триалов на вариант при trial → paid 25.5% (бенчмарк RevenueCat)</td></tr>
+        <tr><td><b>2. B и C против победителя</b></td><td>B: конкретные фермы продают лучше буллетов. C: реальный месячный якорь поднимает долю годовых</td><td>B: trial → paid. C: выручка на установку и доля годовых; доля месячных</td><td>тот же расчёт; C решаем по выручке, а не по конверсии; ветка C2 - месячный за «See all plans»</td></tr>
+        <tr><td><b>3. Короткий онбординг против V2</b></td><td>Пять экранов с реальным покрытием дают install → paid не ниже 29 экранов</td><td>install → paid, выручка на установку; рефанды</td><td>только эффект от +20%: 3.6-10.3 тыс. установок на вариант</td></tr>
+        <tr><td><b>4. Опрос и карта после крестика</b></td><td>Повторный показ пейвола в момент интереса добирает конверсию без скидок</td><td>install → trial к 7-му дню, trial → paid</td><td>после двух недель сбора ответов опроса</td></tr>
+        <tr><td><b>5. Триал 3 дня против 7</b></td><td>Между закупками у фермы проходит неделя-полторы, за 3 дня человек не успевает доехать до фермы и отменяет, не получив пользы</td><td>выручка на установку за 30 дней, trial → paid; отмены в день 0. По RevenueCat медиана trial → paid у триалов до 4 дней 25.5%, у 5-9 дней 37.4%</td><td>как тест 1; первые деньги на 4 дня позже, это учитываем в окупаемости рекламы</td></tr>
+        <tr><td><b>6. Пустые районы без пейвола</b></td><td>Правило, а не тест: не продаём пустую карту</td><td>доля 04c и рефанды по гео, CAC по плотным и тонким районам</td><td>тест не нужен</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section class="extra" id="notes">
   <div class="card">
     <h2>Как делал</h2>
-    <ul class="proc"><li><b>Референсы.</b> Конкуренты из App Store по «farmers market» (<a href="https://apps.apple.com/us/app/localize-farmers-market/id6756440767">Localize</a> на 16 тыс. оценок, Locally Grown, Farmstand, Soko) и 32 отзыва на них и на <a href="https://apps.apple.com/us/app/farm-to-table-farmers-market/id6775965172">Farm to Table</a>, разобранные по AJTBD: главная жалоба всей категории - закрытые фермы и пустые районы, которые видно только после оплаты, поэтому число ферм стоит прямо перед пейволом, а у пустого района есть честное состояние.</li><li><b>Пейвол.</b> Собран по паттернам из библиотеки <a href="https://paywallscreens.com">paywallscreens</a> от Superwall: у AllTrails взял карту сверху и таймлайн триала, у Fishbrain пины на карте рядом с пользователем, у PictureThis ту же цену $39.99 в год с пересчётом в месяц и напоминание до конца триала, а его аудитория ближе всего к нашим 35-65.</li><li><b>Инструменты.</b> Всё собрано в Claude (Claude Code): HTML в размере iPhone 393×852, иллюстрации карты и иконки продуктов нарисованы им же в SVG, без стоков и дизайнера, английские тексты тоже писал с ним, с упором на тон для американцев 35-65.</li><li><b>Постановка.</b> Задачу поставил одним брифом, он ниже, дальше правил по скриншотам каждого экрана.</li><li><b>Итерации.</b> Пять: структура и тексты; чистка наложений по скриншотам; исправление бага с пустыми строками на экране 4 и новая иконка курицы вместо окорочка, который читался как апельсин; полировка и экспорт PNG в 3x; после разбора отзывов, конкурентов и трендов - состояние для района с малым покрытием, дата проверки на карточке фермы, плитка Bulk beef вместо CSA-бокса и честная формулировка первой выгоды в пейволе.</li></ul>
-    <div class="prompt" id="promptText">Собери в одном HTML пять экранов iPhone 393×852 для Farm to Table: карта ферм и фермерских рынков в США, ЦА 35-65, подписка $39.99 в год с 3 днями бесплатно. Экраны: приветствие, выбор продуктов, праймер геолокации с запасным ZIP-кодом, «231 ферма рядом» с карточкой ближайшей фермы, где название скрыто, и пейвол. Референсы: пейволы AllTrails (карта сверху, таймлайн триала), Fishbrain (пины рядом с пользователем), PictureThis (та же цена, напоминание до конца триала). Стиль: тёплый кремовый фон, тёмно-зелёный бренд как в текущем приложении, заголовки serif, текст от 16 px, кнопки от 56 px. Иллюстрации карты и иконки продуктов нарисуй сам в SVG, без стоков. Тексты на английском, без таймеров и зачёркнутых цен, годовая цена крупнее пересчёта в месяц. Выбор продуктов на шаге 2 подставь в экран 4 и в текст пейвола.</div>
+    <ul class="proc">
+      <li><b>Промпты.</b> Прогнал все пять из папки prompts. PRD собран по prd-interview, но без интервью: ответы взяты из материалов Viralyze и отзывов, пробелы помечены как допущения. Из PRD по цепочке - работы и сегменты по отзывам (AJTBD), конкуренты, стратегия отстройки и тренды рынка. Вторым проходом, уже под расширение макета, - отзывы на полной выборке App Store и разбор онбордингов и пейволов референсов по структуре исследования конкурентов.</li>
+      <li><b>Что дали отзывы.</b> 930 отзывов из App Store по 11 приложениям вместо 32, все размечены вручную. Самая частая жалоба категории - платишь, не видя своего района: 31% отзывов с 1-2 звёздами, 27 человек прямо просят показать фермы до оплаты, а одной цифре не верят. Цена почти никогда не жалоба сама по себе: из 85 недовольных ценой просто «дорого» пишут 5, у остальных рядом скрытые условия, «то же есть в Google» или пустой район. Радость первых минут - «нашёл ферму рядом»: 35% отзывов на 4-5 звёзд.</li>
+      <li><b>Референсы.</b> <a href="https://apps.apple.com/us/app/localize-farmers-market/id6756440767">Localize</a> - прямой конкурент и пример, как не надо: пейвол после анкеты без показа ферм, сезонная распродажа и зачёркнутая цена, которой нет в его списке покупок; 82% его негатива - про деньги. AllTrails, onX Hunt и Blinkist - таймлайн триала с напоминанием и «Cancel anytime» под кнопкой; у Blinkist он дал +23% стартов триала и -55% жалоб. Fishbrain - пины «near you» на пейволе и честный якорь 12 × $12.99 от реального месячного плана. PictureThis - та же цена $39.99 с пересчётом $3.33 и экран «триал начался». Yuka - польза до оплаты и пейвол в момент нажатия. Экраны смотрел по записям <a href="https://screensdesign.com">screensdesign</a> и скриншотам <a href="https://paywallscreens.com">paywallscreens</a> (Mobbin закрыт логином), факты сверены с документацией Apple, правилами FTC и отчётом RevenueCat 2026.</li>
+      <li><b>Инструменты.</b> Всё в Claude Code на Claude Opus: исследование шло параллельными агентами с веб-поиском по промптам из папки, экраны свёрстаны в одном HTML, карта и иконки продуктов нарисованы в SVG без стоков и дизайнера, английские тексты писались с ним с упором на тон для американцев 35-65. Playwright снимал скриншоты каждого экрана для правок и PNG в 3x.</li>
+      <li><b>Постановка.</b> Первый заход - подробным брифом, он ниже. Второй - одной фразой: «изучи промпты из папки, прогони нужные для тестового и сделай в прототипе больше, чем описано»; план расширения Claude собрал сам по итогам исследования, он ниже вторым блоком. Дальше правил по скриншотам каждого экрана.</li>
+      <li><b>Итерации.</b> Девять. Пять в первый день: структура и тексты; наложения по скриншотам; баг с пустыми строками на экране 4 и новая иконка курицы; полировка и экспорт PNG в 3x; правки после исследования. Четыре во второй: ветки, варианты пейвола, первые минуты триала, схема и события; правки по скриншотам; правки по 930 отзывам (названия ферм в варианте B, способ покупки, льготный доступ, подпись под числом ферм); правки по разбору референсов (одна кнопка на праймере по HIG, даты в таймлайне, напоминание за два дня до списания, текст листа App Store, 80,000+ ферм из версии 1.4.0).</li>
+    </ul>
+    <div class="prompt">Собери в одном HTML пять экранов iPhone 393×852 для Farm to Table: карта ферм и фермерских рынков в США, ЦА 35-65, подписка $39.99 в год с 3 днями бесплатно. Экраны: приветствие, выбор продуктов, праймер геолокации с запасным ZIP-кодом, «231 ферма рядом» с карточкой ближайшей фермы, где название скрыто, и пейвол. Референсы: пейволы AllTrails (карта сверху, таймлайн триала), Fishbrain (пины рядом с пользователем), PictureThis (та же цена, напоминание до конца триала). Стиль: тёплый кремовый фон, тёмно-зелёный бренд как в текущем приложении, заголовки serif, текст от 16 px, кнопки от 56 px. Иллюстрации карты и иконки продуктов нарисуй сам в SVG, без стоков. Тексты на английском, без таймеров и зачёркнутых цен, годовая цена крупнее пересчёта в месяц. Выбор продуктов на шаге 2 подставь в экран 4 и в текст пейвола.</div>
+    <div class="prompt">План расширения: опираться на файлы исследования - PRD, отзывы v2, конкурентов, отстройку, тренды и разбор референсов. До пейвола: системное окно геолокации, ввод ZIP с цифровой клавиатурой, сборка карты на три секунды, состояние «ферм нет в 100 милях» без пейвола. Пейвол: вариант B с тремя ближайшими фермами, вариант C с годовым и реальным месячным планом вместо зачёркнутой цены, пейвол для тех, у кого триал уже был, лист App Store с датой списания. После оплаты: праймер пуш-напоминания с превью, первая ферма со звонком и маршрутом, напоминание за два дня до списания на экране блокировки. После крестика: опрос из одного вопроса и карта с замками. Под каждым экраном: зачем, на какие цифры из отзывов опирается, какая метрика. В конце: схема воронки с событиями и порядок тестов.</div>
   </div>
   <div class="col">
   <div class="card">
     <h2>Что заметил в живой воронке</h2>
     <ul>
       <li>В пейволе V1 до сих пор плашка <b>Labor Day Sale</b>, хотя День труда был 7 сентября. Распродажа после праздника выглядит как ненастоящая скидка, особенно для аудитории 35-65.</li>
-      <li><b>Цифры расходятся между экранами:</b> 23,000+ ферм в хуке V2 и в пейволе против 30,000+ в App Store и в веб-хуке; 40,000+ семей в соцдоказательстве против 300,000+ участников в пейволе.</li>
+      <li><b>Зачёркнутая $79.98 в V1 - это $39.99 × 2</b> из remote config: по такой цене подписку никто не покупал. По правилам FTC (16 CFR 233.1) скидка от цены, по которой товар не продавали, считается ложной, в Калифорнии то же закреплено в BPC 17501, а в отзывах на конкурентов 76 человек уже обвиняют категорию в bait and switch. Честная альтернатива - вариант C с реальным месячным планом.</li>
+      <li><b>Цифры расходятся между экранами:</b> 23,000+ ферм в хуке V2 и в пейволе, 30,000+ в веб-хуке и 80,000+ в заметках к версии 1.4.0 от 26 сентября; 40,000+ семей в соцдоказательстве против 300,000+ участников в пейволе.</li>
       <li><b>Онбординг обещает сделки</b> и экономию $1,500 в год, а в списке того, что входит в подписку, сделок нет. Такой разрыв ожиданий бьёт по отменам триала и по отзывам, в App Store уже есть: «you have to be better than google search near me».</li>
+      <li><b>29 экранов до цены.</b> У конкурентов 45 отзывов жалуются на длинную анкету перед пейволом и 62 - на цену, которую не показали заранее. Короткий флоу и цена крупно на самом пейволе отвечают на это напрямую.</li>
+      <li><b>«Nobody left behind» по email</b> - правильная идея в неудобной форме: у Localize льготный доступ в самом приложении дал 60 отзывов на 4-5 звёзд из 72. В макете это одна кнопка на экране после крестика.</li>
     </ul>
   </div>
   <div class="card">
@@ -593,6 +1461,7 @@ body.overview .pulse{animation:none;opacity:.16}
     <ul>
       <li><b>Проверить, считается ли число 231 из базы.</b> Если это фиксированная цифра, жалобы вида «после оплаты одна ферма на округ» будут повторяться при любом пейволе.</li>
       <li><b>Первым тестом - пейвол в Adapty</b> внутри текущего онбординга: без релиза, метрика trial → paid, при бенчмарке RevenueCat 25.5% нужно 1.2-2.1 тыс. триалов на вариант. Онбординг тестировать целиком и только на крупный эффект.</li>
+      <li><b>Сразу включить опрос при закрытии пейвола.</b> Две недели ответов покажут, что ставить вторым тестом: вариант B, если не верят в покрытие, или C, если упираются в цену.</li>
       <li><b>Закупать рекламу по плотности покрытия.</b> Где рядом мало ферм с нужным продуктом, онбординг не перевесит бесплатный Google Maps, а рефанды приходят как раз оттуда. Разделить кампании на плотные и тонкие районы и сравнить trial → paid и рефанды за 30 дней.</li>
     </ul>
   </div>
@@ -601,17 +1470,70 @@ body.overview .pulse{animation:none;opacity:.16}
 
 <script>
 const ITEMS = {
-  milk:{name:'Raw milk',short:'raw milk',count:24,low:2},
-  beef:{name:'Grass-fed beef',short:'beef',count:68,low:9},
-  eggs:{name:'Pasture eggs',short:'eggs',count:51,low:6},
-  chicken:{name:'Pasture chicken',short:'chicken',count:29,low:3},
-  veg:{name:'Fresh produce',short:'produce',count:142,low:11},
-  honey:{name:'Raw honey',short:'honey',count:57,low:4},
-  cheese:{name:'Cheese & butter',short:'cheese',count:33,low:2},
-  bulk:{name:'Bulk beef',short:'bulk beef',count:19,low:3}
+  milk:{name:'Raw milk',tag:'Raw milk',short:'raw milk',count:24,low:2},
+  beef:{name:'Grass-fed beef',tag:'Grass-fed beef',short:'beef',count:68,low:9},
+  eggs:{name:'Pasture eggs',tag:'Pasture eggs',short:'eggs',count:51,low:6},
+  chicken:{name:'Pasture chicken',tag:'Chicken',short:'chicken',count:29,low:3},
+  veg:{name:'Fresh produce',tag:'Produce',short:'produce',count:142,low:11},
+  honey:{name:'Raw honey',tag:'Honey',short:'honey',count:57,low:4},
+  cheese:{name:'Cheese & butter',tag:'Cheese',short:'cheese',count:33,low:2},
+  bulk:{name:'Bulk beef',tag:'Bulk beef',short:'bulk beef',count:19,low:3}
 };
 const ORDER = ['milk','beef','eggs','chicken','veg','honey','cheese','bulk'];
 const picked = new Set(['milk','beef','eggs']);
+const AREAS = {
+  dense:{city:'Tampa, FL',short:'Tampa'},
+  sparse:{city:'San Rafael, CA',short:'San Rafael'},
+  none:{city:'Elko, NV',short:'Elko'}
+};
+const ZIPS = {'33602':'dense','94901':'sparse','89801':'none'};
+const DENSE_ALL = 231, SPARSE_ALL = 24;
+const FARMS = [
+  {name:'Sunny Acres Family Farm',kind:'Family dairy',mi:6.2,far:18.4,items:['milk','eggs','cheese'],ver:'Verified 6 days ago',hours:'Open today · 8 AM - 6 PM',buy:'Farm store on site · cash or card'},
+  {name:'Old Mill Farm Stand',kind:'Farm stand',mi:7.4,far:23.9,items:['veg','honey','eggs'],ver:'Verified 3 days ago',hours:'Open today · 9 AM - 5 PM',buy:'Roadside stand · cash or Venmo'},
+  {name:'Whitfield Creek Ranch',kind:'Cattle ranch',mi:8.9,far:27.5,items:['beef','bulk'],ver:'Verified 12 days ago',hours:'Open Saturday · 9 AM - 2 PM',buy:'Order by phone · pickup on Saturday'},
+  {name:'Green Pastures Poultry',kind:'Pasture poultry',mi:9.7,far:34.2,items:['chicken','eggs'],ver:'Updated 2 weeks ago',hours:'Open today · 10 AM - 4 PM',buy:'Farm store on site · card'},
+  {name:'Twin Oaks Apiary',kind:'Honey farm',mi:11.3,far:41.6,items:['honey'],ver:'Updated 3 weeks ago',hours:'Open Saturday · 8 AM - 12 PM',buy:'Honor box stand · cash'},
+  {name:'Bluebird Hill Creamery',kind:'Creamery',mi:12.6,far:47.8,items:['cheese','milk'],ver:'Verified 9 days ago',hours:'Open Thu to Sun · 10 AM - 6 PM',buy:'Creamery shop · card'},
+  {name:'Cedar Run Beef Co.',kind:'Grass-fed ranch',mi:14.1,far:52.3,items:['beef','bulk','chicken'],ver:'Verified 5 days ago',hours:'Open Friday · 12 PM - 6 PM',buy:'Order ahead · quarter and half shares'}
+];
+const OPTS = ['I’m not sure there’s a farm I’d use','It costs more than I want to pay','I don’t want another subscription','I’m just looking around','Something else'];
+const st = {cov:'dense',pw:'A',trial:true,plan:'annual',reason:0,label:null,draft:'33602',load:2};
+
+const NOW = new Date();
+const dayOf = n => new Date(NOW.getFullYear(), NOW.getMonth(), NOW.getDate() + n);
+const fmt = (d, o) => d.toLocaleDateString('en-US', o);
+const MD = d => fmt(d, {month:'short', day:'numeric'});
+const MDY = d => fmt(d, {month:'short', day:'numeric', year:'numeric'});
+const WMD = d => fmt(d, {weekday:'long', month:'long', day:'numeric'});
+const REMIND = dayOf(1), CHARGE = dayOf(3);
+const CUTOFF = fmt(new Date(NOW.getTime() + 48 * 3600e3), {month:'short', day:'numeric', hour:'numeric', minute:'2-digit'});
+
+const $$ = s => document.querySelectorAll(s);
+const setT = (s, v) => $$(s).forEach(e => { e.textContent = v; });
+const setH = (s, v) => $$(s).forEach(e => { e.innerHTML = v; });
+const icon = k => `<svg><use href="#ic-${k}"/></svg>`;
+const isProto = () => document.body.classList.contains('proto');
+
+function active() { const k = ORDER.filter(x => picked.has(x)); return k.length ? k : ORDER; }
+function union(field, all) { let p = 1; active().forEach(k => { p *= 1 - ITEMS[k][field] / all; }); return Math.round(all * (1 - p)); }
+const denseMatch = () => union('count', DENSE_ALL);
+const sparseMatch = () => union('low', SPARSE_ALL);
+const sparseNear = () => Math.max(1, Math.round(sparseMatch() * .22));
+const unlockTotal = () => st.cov === 'sparse' ? sparseMatch() : DENSE_ALL;
+const radius = () => st.cov === 'sparse' ? 60 : 30;
+const area = () => Object.assign({}, AREAS[st.cov], st.label || {});
+const hasTrial = () => st.trial && !(st.pw === 'C' && st.plan === 'monthly');
+
+function farmsFor() {
+  const ks = active(), key = st.cov === 'sparse' ? 'far' : 'mi', by = (a, b) => a[key] - b[key];
+  const hit = FARMS.filter(f => f.items.some(i => ks.includes(i))).sort(by);
+  return hit.concat(FARMS.filter(f => !hit.includes(f)).sort(by));
+}
+function farmItems(f) { const ks = active(), hit = f.items.filter(i => ks.includes(i)); return hit.concat(f.items.filter(i => !hit.includes(i))); }
+const dist = f => st.cov === 'sparse' ? f.far : f.mi;
+const drive = f => st.cov === 'sparse' ? Math.round(f.far * 1.5 + 3) : Math.round(f.mi * 2.1 + 1);
+const metaLine = f => `${dist(f)} mi · ` + farmItems(f).slice(0, 2).map(i => ITEMS[i].tag).join(' · ');
 
 function pin(x, y, icon, o = {}) {
   const s = o.s || 1, fill = o.fill || '#1D4A2F', op = o.op == null ? 1 : o.op;
@@ -630,26 +1552,63 @@ function me(x, y) {
   return `<g transform="translate(${x} ${y})"><circle class="pulse" r="26" fill="#3D7BF7" opacity=".16"/><circle r="11" fill="#FFFFFF"/><circle r="7.5" fill="#3D7BF7"/></g>`;
 }
 function ringLabel(x, y, t) {
-  return `<g transform="translate(${x} ${y})"><rect x="-20" y="-10.5" width="40" height="21" rx="7" fill="#FFFDF9" opacity=".96"/><text y="4.3" text-anchor="middle" font-family="-apple-system,Inter,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#3D7BF7">${t}</text></g>`;
+  return `<g transform="translate(${x} ${y})"><rect x="-22" y="-10.5" width="44" height="21" rx="7" fill="#FFFDF9" opacity=".96"/><text y="4.3" text-anchor="middle" font-family="-apple-system,Inter,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#3D7BF7">${t}</text></g>`;
 }
 function ring(x, y, r) {
   return `<circle cx="${x}" cy="${y}" r="${r}" fill="#3D7BF7" fill-opacity=".07" stroke="#3D7BF7" stroke-opacity=".55" stroke-width="1.7" stroke-dasharray="6 6"/>`;
 }
+const firstIcon = n => { const f = farmsFor()[n] || farmsFor()[0]; return farmItems(f)[0]; };
+const ROUTE = 'M206 252C203 282 202 306 208 322S232 334 246 334';
 const MAPS = {
   hero: () => pin(96, 172, 'milk') + pin(322, 146, 'beef') + pin(358, 234, 'honey', {s:.9}) + pin(104, 344, 'veg') + pin(314, 302, 'eggs') + me(206, 252),
   loc: () => ring(206, 252, 132) + pin(150, 196, 'milk', {op:.55, s:.9}) + pin(272, 206, 'beef', {op:.55, s:.9}) + pin(164, 330, 'eggs', {op:.55, s:.9}) + pin(290, 318, 'veg', {op:.55, s:.9}) + pin(236, 160, 'honey', {op:.55, s:.9}) + me(206, 252),
   reveal: () => ring(206, 252, 158) + cluster(70, 198, 6) + cluster(350, 292, 9) + cluster(234, 172, 4) + cluster(124, 302, 5)
-    + pin(118, 176, 'milk') + pin(302, 166, 'beef') + pin(160, 222, 'eggs', {s:.92}) + pin(336, 226, 'eggs') + pin(92, 266, 'beef') + pin(270, 264, 'milk', {s:.92}) + pin(172, 322, 'beef', {s:.92}) + pin(246, 334, 'milk', {s:1.14, hi:true}) + me(206, 252),
+    + pin(118, 176, 'milk') + pin(302, 166, 'beef') + pin(160, 222, 'eggs', {s:.92}) + pin(336, 226, 'eggs') + pin(92, 266, 'beef') + pin(270, 264, 'milk', {s:.92}) + pin(172, 322, 'beef', {s:.92}) + pin(246, 334, firstIcon(0), {s:1.14, hi:true}) + me(206, 252),
   low: () => ring(206, 252, 172) + '<circle cx="206" cy="252" r="92" fill="none" stroke="#3D7BF7" stroke-opacity=".45" stroke-width="1.4" stroke-dasharray="3 5"/>'
     + pin(90, 182, 'beef', {s:.9}) + pin(330, 192, 'eggs', {s:.9}) + pin(112, 344, 'veg', {s:.9}) + pin(318, 334, 'beef', {s:.9}) + pin(58, 236, 'milk', {s:.9}) + cluster(286, 392, 4)
     + pin(180, 222, 'milk') + pin(252, 300, 'eggs') + pin(152, 292, 'beef')
     + ringLabel(298, 252, '30 mi') + ringLabel(376, 252, '60 mi') + me(206, 252),
-  pay: () => pin(80, 212, 'milk') + pin(150, 186, 'eggs') + pin(300, 206, 'beef') + pin(338, 276, 'milk') + pin(118, 292, 'beef') + pin(252, 262, 'eggs') + me(206, 252)
+  pay: () => pin(80, 212, 'milk') + pin(150, 186, 'eggs') + pin(300, 206, 'beef') + pin(338, 276, 'milk') + pin(118, 292, 'beef') + pin(252, 262, 'eggs') + me(206, 252),
+  scan: () => ring(206, 252, 158) + '<g class="sweep"><path d="M206 252L206 94A158 158 0 0 1 342.8 173Z" fill="url(#sweepg)"/></g>'
+    + pin(150, 196, 'milk', {op:.5, s:.9}) + pin(272, 206, 'beef', {op:.5, s:.9}) + pin(164, 330, 'eggs', {op:.5, s:.9}) + pin(290, 318, 'veg', {op:.5, s:.9}) + pin(236, 160, 'honey', {op:.5, s:.9}) + me(206, 252),
+  none: () => '<circle cx="206" cy="252" r="176" fill="#3D7BF7" fill-opacity=".05" stroke="#3D7BF7" stroke-opacity=".5" stroke-width="1.7" stroke-dasharray="6 6"/>'
+    + ringLabel(206, 428, '100 mi') + pin(40, 402, 'beef', {s:.8, op:.85})
+    + '<g transform="translate(40 418)"><rect x="-24" y="-1" width="48" height="19" rx="7" fill="#FFFDF9" opacity=".96"/><text y="13" text-anchor="middle" font-family="-apple-system,Inter,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#526157">142 mi</text></g>'
+    + me(206, 252),
+  unl: () => pin(120, 214, 'milk') + pin(300, 200, 'beef') + pin(166, 334, 'eggs', {s:.95}) + pin(262, 318, 'veg', {s:.95}) + pin(344, 300, 'honey', {s:.9}) + pin(66, 300, 'chicken', {s:.9}) + me(206, 252),
+  route: () => pin(74, 206, 'milk', {op:.7}) + pin(346, 214, 'eggs', {op:.7}) + pin(104, 306, 'beef', {op:.7}) + pin(314, 292, 'beef', {op:.7}) + pin(150, 390, 'veg', {op:.7}) + pin(330, 400, 'honey', {op:.7})
+    + `<path d="${ROUTE}" fill="none" stroke="#FFFDF9" stroke-width="9" stroke-linecap="round"/><path d="${ROUTE}" fill="none" stroke="#2E7146" stroke-width="5" stroke-linecap="round"/>`
+    + pin(246, 334, firstIcon(0), {s:1.18, hi:true}) + me(206, 252),
+  browse: () => pin(100, 190, 'milk') + pin(170, 150, 'eggs', {s:.92}) + pin(300, 160, 'beef') + pin(340, 236, 'honey', {s:.9}) + pin(122, 292, 'veg') + pin(236, 196, 'chicken', {s:.92})
+    + pin(96, 430, 'beef', {s:.92}) + pin(322, 446, 'eggs', {s:.92}) + pin(214, 440, 'milk', {s:.92}) + pin(286, 296, firstIcon(1), {s:1.15, hi:true}) + me(206, 252),
+  alert: () => me(206, 252),
+  wall: () => ''
 };
+const LIVE_MAPS = ['reveal', 'route', 'browse'];
 function mapSVG(key) {
   return `<svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#mapbase"/>${MAPS[key]()}</svg>`;
 }
-document.querySelectorAll('[data-map]').forEach(el => { el.innerHTML = mapSVG(el.dataset.map); });
+
+function locHTML() {
+  return `<div class="scrim"></div><div class="ios-alert"><div class="at">Allow “Farm to Table” to use your location?</div><div class="am">We use it to show farms, ranches and markets within a short drive of you.</div><div class="amap">${mapSVG('alert')}<span class="precise"><svg><use href="#i-nav"/></svg>Precise: On</span></div><button class="ab" data-go="3c">Allow Once</button><button class="ab" data-go="3c">Allow While Using App</button><button class="ab" data-go="3b">Don’t Allow</button></div>`;
+}
+function pushHTML() {
+  return `<div class="scrim"></div><div class="ios-alert"><div class="at">“Farm to Table” Would Like to Send You Notifications</div><div class="am">Notifications may include alerts, sounds, and icon badges. These can be configured in Settings.</div><div class="ab2"><button class="ab" data-go="7">Don’t Allow</button><button class="ab b" data-go="7">Allow</button></div></div>`;
+}
+function skHTML() {
+  const monthly = st.pw === 'C' && st.plan === 'monthly', trial = hasTrial();
+  const prod = monthly ? 'Farm to Table Monthly Membership' : 'Farm to Table Annual Membership';
+  const lines = trial
+    ? `<div class="skl"><span>3-day free trial</span><span>Starting today</span></div><div class="skl"><span>$39.99 per year</span><span>Starting ${MDY(CHARGE)}</span></div>`
+    : monthly ? '<div class="skl"><span>$7.99 per month</span><span>Starting today</span></div>'
+    : '<div class="skl"><span>$39.99 per year</span><span>Starting today</span></div>';
+  return `<div class="scrim dark" data-close></div><button class="sk-hint" data-go="6"><span>Double-Click<br>to Subscribe</span><i></i></button><div class="sk"><div class="sk-top"><b>App Store</b><button class="sk-x" data-close aria-label="Cancel"><svg><use href="#i-x"/></svg></button></div><div class="sk-box sk-prod"><span class="sk-icon"><svg><use href="#appicon"/></svg></span><div><b>${prod}</b><span>Farm to Table: Farmers Market</span><span>Subscription</span></div></div><div class="sk-box">${lines}</div><p class="sk-fine">Cancel anytime in Settings > Apple Account at least a day before each renewal date. Plan automatically renews until canceled.</p><p class="sk-acct">Account: j••••••@icloud.com</p><button class="sk-confirm" data-go="6"><svg><use href="#i-faceid"/></svg><span>Confirm with Side Button</span></button></div>`;
+}
+function surveyHTML() {
+  const opts = OPTS.map((o, i) => `<button class="opt${st.reason === i ? ' on' : ''}" data-reason="${i}"><span>${o}</span><span class="rd"><svg><use href="#i-check"/></svg></span></button>`).join('');
+  return `<div class="scrim" data-close></div><div class="survey"><div class="handle"></div><div class="sheet-in"><h1 class="title">Before you go, what held you back?</h1><p class="sub">One tap. It helps us make the app better.</p><div class="opts">${opts}</div></div><button class="cta" data-go="10" style="bottom:96px"${st.reason < 0 ? ' disabled' : ''}>Continue</button><button class="linkbtn" data-go="10" data-skip style="bottom:40px">Skip</button></div>`;
+}
+const OV = {loc: locHTML, push: pushHTML, sk: skHTML, survey: surveyHTML};
 
 function listText(words) {
   if (words.length <= 1) return words.join('');
@@ -663,65 +1622,287 @@ function renderTiles() {
       <span class="ck"><svg><use href="#i-check"/></svg></span>
     </button>`).join('');
 }
-function renderDynamic() {
-  const keys = ORDER.filter(k => picked.has(k));
-  document.getElementById('c2').disabled = keys.length === 0;
-  const rows = keys.slice(0, 3);
-  document.getElementById('rows').innerHTML = rows.map(k => `
-    <div class="row"><span class="ri"><svg><use href="#ic-${k}"/></svg></span><span class="rl">${ITEMS[k].name}</span><span class="rc">${ITEMS[k].count} farms</span></div>`).join('');
-  document.getElementById('rowsLow').innerHTML = rows.map(k => `
-    <div class="row"><span class="ri"><svg><use href="#ic-${k}"/></svg></span><span class="rl">${ITEMS[k].name}</span><span class="rc">${ITEMS[k].low} farms</span></div>`).join('');
-  document.getElementById('revealSub').textContent = keys.length > 3
-    ? `Within 30 miles, selling ${keys.length} things you picked`
-    : 'Within 30 miles, selling what you picked';
-  const words = keys.slice(0, 3).map(k => ITEMS[k].short);
-  document.getElementById('sells').textContent = !words.length
-    ? 'What each farm sells'
-    : keys.length > 3 ? 'Who sells ' + words.join(', ') + ' and more' : 'Who sells ' + listText(words);
+function renderLoading() {
+  const counts = active().slice(0, 3).map(k => [k, st.cov === 'dense' ? ITEMS[k].count : st.cov === 'sparse' ? ITEMS[k].low : 0]);
+  const rows = counts.map(([k, n]) => `<div class="row lrow${n ? '' : ' muted'}"><span class="ri">${icon(k)}</span><span class="rl">${ITEMS[k].name}</span><span class="st"><i class="spin"></i><span class="rc">${n ? n + ' farms' : 'None yet'}</span></span></div>`);
+  rows.push('<div class="row lrow"><span class="ri clk"><svg><use href="#i-clock"/></svg></span><span class="rl">Hours and last checks</span><span class="st"><i class="spin"></i><span class="rc">Done</span></span></div>');
+  setH('.js-lrows', rows.join(''));
+  $$('.js-lrows').forEach(c => [...c.children].forEach((r, i) => r.classList.toggle('done', i < st.load)));
+  $$('.js-pbar').forEach(b => { b.style.width = Math.max(6, Math.round(st.load / rows.length * 100)) + '%'; });
 }
-document.getElementById('tiles').addEventListener('click', e => {
-  const t = e.target.closest('.tile');
-  if (!t) return;
-  const k = t.dataset.item;
-  picked.has(k) ? picked.delete(k) : picked.add(k);
-  renderTiles();
-  renderDynamic();
-});
-renderTiles();
-renderDynamic();
+function renderZip() {
+  const z = st.draft, ok = z.length === 5, known = ZIPS[z];
+  setT('.js-zip', z);
+  $$('.js-zipcity').forEach(e => e.classList.toggle('wait', !ok));
+  setT('.js-zipname', !ok ? 'Enter 5 digits' : known ? AREAS[known].city : 'ZIP ' + z);
+  $$('.js-zipgo').forEach(b => { b.disabled = !ok; b.textContent = ok ? `Show farms near ${z}` : 'Show farms'; });
+}
+function render() {
+  const sel = ORDER.filter(k => picked.has(k)), ks = active(), a = area(), rows3 = ks.slice(0, 3);
+  document.getElementById('c2').disabled = sel.length === 0;
+  const row = (k, n) => `<div class="row"><span class="ri">${icon(k)}</span><span class="rl">${ITEMS[k].name}</span><span class="rc">${n} farms</span></div>`;
+  setH('.js-rows', rows3.map(k => row(k, ITEMS[k].count)).join(''));
+  setH('.js-rowslow', rows3.map(k => row(k, ITEMS[k].low)).join(''));
+  setT('.js-revealsub', `${denseMatch()} of them sell what you picked`);
+  setT('.js-near', sparseNear());
+  setT('.js-match', sparseMatch());
+  const words = rows3.map(k => ITEMS[k].short);
+  setT('.js-sells', !sel.length ? 'What each farm sells' : sel.length > 3 ? 'Who sells ' + words.join(', ') + ' and more' : 'Who sells ' + listText(words));
+  setT('.js-total', unlockTotal());
+  setT('.js-within', `Farms and ranches within ${radius()} miles`);
+  setT('.js-city', a.city);
+  setT('.js-cityshort', a.short);
+  setT('.js-radius', radius());
 
-const SEQ = ['1', '2', '3', '4', '5'];
-const shots = [...document.querySelectorAll('.shot')];
-function show(key) {
-  shots.forEach(s => s.classList.toggle('cur', s.dataset.n === String(key)));
+  const fs = farmsFor(), f0 = fs[0], f1 = fs[1];
+  setH('.js-fc-ic', icon(farmItems(f0)[0]));
+  setT('.js-fc-name', f0.name);
+  setT('.js-fc-meta', metaLine(f0));
+  setT('.js-fc-ver', f0.ver);
+  setH('.js-lfs', fs.slice(0, 3).map(f => `<div class="lf"><span class="fc-ic">${icon(farmItems(f)[0])}</span><div class="lb"><div class="ln">${f.name}</div><div class="lm">${metaLine(f)}</div></div><span class="fc-lock"><svg><use href="#i-lock"/></svg></span></div>`).join(''));
+  setT('.js-lfmore', `+ ${unlockTotal() - 3} more within ${radius()} miles`);
+
+  const monthly = st.plan === 'monthly';
+  $$('[data-plan]').forEach(b => b.classList.toggle('on', b.dataset.plan === st.plan));
+  setT('.js-plancta', monthly ? 'Continue for $7.99/month' : 'Start my free trial');
+  setT('.js-planfine', monthly ? 'Billed monthly. Cancel anytime in Settings.' : 'No payment today. Cancel anytime in Settings.');
+  setH('.js-planlinet', monthly ? 'Switch to annual anytime and <b>save 58%</b>.' : 'We remind you <b>2 days before</b> the trial ends.');
+
+  if (hasTrial()) {
+    setT('.js-s6eye', 'Free trial started');
+    setT('.js-s6sub', `Free until ${MD(CHARGE)}. Want a reminder on ${MD(REMIND)}, so nothing surprises you?`);
+    setT('.js-s6nt', 'Your free trial ends in 2 days');
+    setT('.js-s6nd', MD(REMIND));
+    setT('.js-s6nb', `Cancel before ${CUTOFF} and you won’t be charged.`);
+    setT('.js-s6cta', 'Remind me before it ends');
+    setT('.js-pillt', `Free trial · ends ${MD(CHARGE)}`);
+  } else {
+    const m = st.trial && st.pw === 'C' && monthly;
+    const renew = m ? dayOf(30) : new Date(NOW.getFullYear() + 1, NOW.getMonth(), NOW.getDate());
+    setT('.js-s6eye', 'Membership active');
+    setT('.js-s6sub', `Renews on ${MDY(renew)}. Want a reminder before it does, so nothing surprises you?`);
+    setT('.js-s6nt', 'Your membership renews soon');
+    setT('.js-s6nd', MD(new Date(renew.getFullYear(), renew.getMonth(), renew.getDate() - (m ? 2 : 7))));
+    setT('.js-s6nb', `${m ? '$7.99' : '$39.99'} on ${MD(renew)}. Manage or cancel in Settings.`);
+    setT('.js-s6cta', 'Remind me before it renews');
+    setT('.js-pillt', `Member · renews ${MD(renew)}`);
+  }
+
+  setH('.js-f-ic', icon(farmItems(f0)[0]));
+  setT('.js-f-name', f0.name);
+  setT('.js-f-meta', `${f0.kind} · ${dist(f0)} mi · ${drive(f0)} min drive`);
+  setT('.js-f-hours', f0.hours);
+  setT('.js-f-ver', f0.ver);
+  setT('.js-f-buy', f0.buy);
+  setH('.js-f-chips', farmItems(f0).slice(0, 2).map(i => `<span class="fchip">${icon(i)}${ITEMS[i].name}</span>`).join(''));
+  $$('.js-f-call').forEach(b => { b.dataset.toast = 'Calling ' + f0.name; });
+  setT('.js-morecount', unlockTotal());
+
+  setT('.js-lkdate', WMD(REMIND));
+  setT('.js-lktitle', 'Your free trial ends in 2 days');
+  setT('.js-lkbody', `$39.99 for the year on ${MD(CHARGE)}. Not for you? Cancel before ${CUTOFF} and you won’t be charged.`);
+  setT('.js-d-rem', MD(REMIND) + ':');
+  setT('.js-d-charge', MD(CHARGE) + ':');
+
+  setH('.js-lc-ic', icon(farmItems(f1)[0]));
+  setT('.js-lc-name', f1.name);
+  setT('.js-lc-meta', metaLine(f1));
+  const r = st.reason < 0 ? 3 : st.reason;
+  const reasons = [
+    ['Take a look around first', 'Tap any pin to see what the farm sells and how far it is. Names, phone numbers and directions unlock with membership.'],
+    ['Your map will be here', st.trial ? 'It’s $3.33 a month, less than a dozen farm eggs, billed $39.99 a year. Start with 3 free days whenever you’re ready.' : 'It’s $3.33 a month, less than a dozen farm eggs, billed $39.99 a year.'],
+    ['No surprise charges', st.trial ? 'Try it free for 3 days. We remind you 2 days before you pay, and you can cancel in Settings in a few taps.' : 'We remind you before your membership renews, and you can cancel in Settings in a few taps.'],
+    ['Look around your map', 'Tap any pin to see what the farm sells. Names and directions unlock when you’re ready.'],
+    ['Look around your map', 'Tap any pin to see what the farm sells. Names and directions unlock when you’re ready.']
+  ][r];
+  setT('.js-r-title', reasons[0]);
+  setT('.js-r-sub', reasons[1]);
+  setT('.js-10cta', st.trial ? 'Start my free trial' : 'See membership');
+  setT('.js-10fine', st.trial ? '3 days free, then $39.99 a year' : '$39.99 a year, cancel anytime');
+
+  renderZip();
+  renderLoading();
+  LIVE_MAPS.forEach(k => { const svg = mapSVG(k); $$(`[data-map="${k}"]`).forEach(el => { if (el._svg !== svg) { el.innerHTML = svg; el._svg = svg; } }); });
+  $$('.ov.fixed').forEach(o => { const h = OV[o.dataset.ovkey](); if (o._html !== h) { o.innerHTML = h; o._html = h; } });
 }
+
+document.querySelectorAll('[data-map]').forEach(el => { el.innerHTML = mapSVG(el.dataset.map); });
+renderTiles();
+document.querySelectorAll('.shot[data-clone]').forEach(s => {
+  const src = document.querySelector(`.shot[data-n="${s.dataset.clone}"] .phone`);
+  const ph = s.querySelector('.phone');
+  ph.innerHTML = src.innerHTML;
+  const ov = document.createElement('div');
+  ov.className = 'ov fixed';
+  ov.dataset.ovkey = s.dataset.ovshow;
+  ph.appendChild(ov);
+});
+render();
+
+const shots = [...document.querySelectorAll('.shot')];
+const groups = [...document.querySelectorAll('.group')];
+let hist = [], timers = [];
+function resolve(n) {
+  if (n === '@cov') return isProto() ? {dense:'4', sparse:'4b', none:'4c'}[st.cov] : '4';
+  if (n === '@pw') return !isProto() ? '5' : !st.trial ? '5d' : {A:'5', B:'5b', C:'5c'}[st.pw];
+  return n;
+}
+const curShot = () => shots.find(s => s.classList.contains('cur'));
+function closeOv() { $$('.ov:not(.fixed)').forEach(o => o.remove()); }
+function stopTimers() { timers.forEach(clearTimeout); timers = []; }
+function openOv(key, phone) {
+  closeOv();
+  if (key === 'survey') st.reason = -1;
+  const d = document.createElement('div');
+  d.className = 'ov';
+  d.dataset.ovkey = key;
+  d.innerHTML = OV[key]();
+  phone.appendChild(d);
+}
+function runLoading() {
+  const total = active().slice(0, 3).length + 1;
+  st.load = 0;
+  renderLoading();
+  const step = () => {
+    st.load++;
+    renderLoading();
+    if (st.load < total) timers.push(setTimeout(step, 620));
+    else timers.push(setTimeout(() => show(resolve('@cov')), 650));
+  };
+  timers.push(setTimeout(step, 520));
+}
+function show(n, back) {
+  stopTimers();
+  closeOv();
+  const c = curShot();
+  if (!back && c && c.dataset.n !== n) hist.push(c.dataset.n);
+  shots.forEach(s => s.classList.toggle('cur', s.dataset.n === n));
+  groups.forEach(g => g.classList.toggle('has-cur', !!g.querySelector('.shot.cur')));
+  if (isProto()) {
+    st.load = n === '3c' ? 0 : 2;
+    if (n === '3b') st.draft = '';
+  }
+  render();
+  if (n === '3c' && isProto()) runLoading();
+}
+function syncSeg() {
+  $$('.seg').forEach(g => {
+    const k = g.dataset.k, v = k === 'trial' ? (st.trial ? '1' : '0') : st[k];
+    g.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.v === v));
+  });
+}
+function resetBoard() {
+  Object.assign(st, {cov:'dense', pw:'A', trial:true, plan:'annual', reason:0, label:null, draft:'33602', load:2});
+  syncSeg();
+}
+function toast(phone, text) {
+  let t = phone.querySelector('.toast');
+  if (!t) { t = document.createElement('div'); t.className = 'toast'; phone.appendChild(t); }
+  t.textContent = text;
+  t.classList.add('show');
+  clearTimeout(t._h);
+  t._h = setTimeout(() => t.classList.remove('show'), 1900);
+}
+function zipKey(k) {
+  if (k === 'del') st.draft = st.draft.slice(0, -1);
+  else if (st.draft.length < 5) st.draft += k;
+  if (st.draft.length === 5 && isProto()) {
+    const c = ZIPS[st.draft];
+    st.cov = c || 'dense';
+    st.label = c ? null : {city:'ZIP ' + st.draft, short:st.draft};
+    syncSeg();
+  }
+  render();
+}
+
 document.addEventListener('click', e => {
   const m = e.target.closest('[data-mode]');
   if (m) {
-    document.querySelectorAll('[data-mode]').forEach(b => b.classList.toggle('on', b === m));
-    document.body.classList.toggle('proto', m.dataset.mode === 'proto');
-    show('1');
+    const proto = m.dataset.mode === 'proto';
+    $$('[data-mode]').forEach(b => b.classList.toggle('on', b === m));
+    document.body.classList.toggle('proto', proto);
+    stopTimers();
+    closeOv();
+    resetBoard();
+    hist = [];
+    if (proto) { st.reason = -1; show('1', true); document.querySelector('.toolbar').scrollIntoView({block:'start'}); }
+    else { shots.forEach(s => s.classList.remove('cur')); groups.forEach(g => g.classList.remove('has-cur')); render(); }
     return;
   }
+  const sv = e.target.closest('.seg button');
+  if (sv) {
+    const k = sv.closest('.seg').dataset.k;
+    st[k] = k === 'trial' ? sv.dataset.v === '1' : sv.dataset.v;
+    if (k === 'cov') st.label = null;
+    syncSeg();
+    const c = curShot(), n = c ? c.dataset.n : '';
+    if (['4', '4b', '4c'].includes(n) || (st.cov === 'none' && ['5', '5b', '5c', '5d', '10'].includes(n))) show(resolve('@cov'), true);
+    else if (['5', '5b', '5c', '5d'].includes(n)) show(resolve('@pw'), true);
+    else render();
+    return;
+  }
+  const j = e.target.closest('[data-jump]');
+  if (j) { hist = []; show(j.dataset.jump, true); return; }
+  const t = e.target.closest('.tile');
+  if (t) {
+    const k = t.dataset.item;
+    picked.has(k) ? picked.delete(k) : picked.add(k);
+    renderTiles();
+    render();
+    return;
+  }
+  const key = e.target.closest('[data-key]');
+  if (key) { zipKey(key.dataset.key); return; }
+  const pl = e.target.closest('[data-plan]');
+  if (pl) { st.plan = pl.dataset.plan; render(); return; }
+  const op = e.target.closest('[data-reason]');
+  if (op) {
+    st.reason = +op.dataset.reason;
+    const box = op.closest('.ov');
+    if (box && !box.classList.contains('fixed')) box.innerHTML = OV.survey();
+    render();
+    return;
+  }
+  if (e.target.closest('[data-close]')) { if (isProto()) closeOv(); return; }
+  const to = e.target.closest('[data-toast]');
+  if (to) { toast(to.closest('.phone'), to.dataset.toast); return; }
   const g = e.target.closest('[data-go]');
   if (!g || g.disabled) return;
-  const n = g.dataset.go;
-  if (document.body.classList.contains('proto')) { show(n); return; }
-  const target = document.querySelector(`.shot[data-n="${n}"]`);
-  target.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
-  target.animate([{transform: 'translateY(0)'}, {transform: 'translateY(-8px)'}, {transform: 'translateY(0)'}], {duration: 420, easing: 'ease-out'});
+  if (g.hasAttribute('data-skip')) st.reason = 3;
+  if (isProto()) {
+    if (g.dataset.ov) { openOv(g.dataset.ov, g.closest('.phone')); return; }
+    show(resolve(g.dataset.go));
+    return;
+  }
+  const target = document.querySelector(`.shot[data-n="${resolve(g.dataset.go)}"]`);
+  if (!target) return;
+  target.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+  target.animate([{transform:'translateY(0)'}, {transform:'translateY(-8px)'}, {transform:'translateY(0)'}], {duration:420, easing:'ease-out'});
 });
 document.addEventListener('keydown', e => {
-  if (!document.body.classList.contains('proto')) return;
-  const cur = (shots.find(s => s.classList.contains('cur')) || {dataset: {}}).dataset.n;
-  const i = SEQ.indexOf(cur);
-  if (e.key === 'ArrowRight' && i > -1 && i < SEQ.length - 1) show(SEQ[i + 1]);
-  if (e.key === 'ArrowLeft' && i > 0) show(SEQ[i - 1]);
+  if (!isProto()) return;
+  const open = document.querySelector('.ov:not(.fixed)');
+  if (e.key === 'Escape' && open) { closeOv(); return; }
+  if (e.key === 'ArrowLeft') {
+    if (open) { closeOv(); return; }
+    if (hist.length) show(hist.pop(), true);
+    return;
+  }
+  if (e.key === 'ArrowRight') {
+    const scope = open || (curShot() && curShot().querySelector('.phone'));
+    if (!scope) return;
+    const sel = ['.sk-confirm', '.ab.b', '.cta:not([disabled])', '.ab', '.opt', '.act'].find(q => scope.querySelector(q));
+    if (sel) scope.querySelector(sel).click();
+  }
 });
 
 const params = new URLSearchParams(location.search);
 if (params.get('shot')) { document.body.classList.add('shotmode'); show(params.get('shot')); }
-if (params.get('overview')) { document.body.classList.add('overview'); }
+if (params.get('overview')) {
+  document.body.classList.add('overview');
+  const g = params.get('overview');
+  groups.forEach(x => { x.style.display = x.classList.contains('g' + g) ? '' : 'none'; });
+}
 function fit() {
   if (document.body.classList.contains('shotmode')) return;
   const narrow = window.innerWidth <= 500;
