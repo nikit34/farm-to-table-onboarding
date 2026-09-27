@@ -747,7 +747,7 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
       <div class="island"></div>
       <div class="sb"><span>9:41</span><span class="ic"><svg width="18" height="12"><use href="#sb-signal"/></svg><svg width="16" height="12"><use href="#sb-wifi"/></svg><svg width="27" height="13"><use href="#sb-batt"/></svg></span></div>
       <div class="map hero" data-map="hero"></div>
-      <div class="mchip" style="left:112px;top:108px"><span class="mi"><svg><use href="#ic-milk"/></svg></span><div><b>Raw milk</b><span>4.2 mi · Open today</span></div></div>
+      <div class="mchip" style="left:112px;top:108px"><span class="mi"><svg><use href="#ic-milk"/></svg></span><div><b>Raw milk</b><span>4.2 mi · Family dairy</span></div></div>
       <div class="mchip" style="left:186px;top:294px"><span class="mi"><svg><use href="#ic-eggs"/></svg></span><div><b>Pasture eggs</b><span>6.8 mi · Farm stand</span></div></div>
       <div class="s1-body">
         <div class="brand"><svg><use href="#logo"/></svg>Farm to Table</div>
@@ -781,7 +781,7 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
     </div></div>
     <div class="note">
       <p><b>Зачем.</b> Один вопрос вместо цепочки «ценности, диета, категории, стейплы». Ответ работает дважды: на экране 4 показываем фермы по выбранным продуктам, в пейволе подставляем их в текст.</p>
-      <p><b>Крупные плитки</b> с иллюстрацией и подписью от 16 px, выбор без лимита: аудитории 35-65 так проще, чем мелкие чипсы. <b>Bulk beef</b> вместо CSA-бокса: покупка говядины тушей у ранчо - гипотеза сегмента с крупным чеком и возможной платой за лид, и выбор этой плитки даёт данные о спросе без разработки.</p>
+      <p><b>Крупные плитки</b> с иллюстрацией и подписью от 16 px, выбор без лимита: аудитории 35-65 так проще, чем мелкие чипсы. <b>Bulk beef</b> вместо CSA-бокса: покупка говядины тушей у ранчо - гипотеза сегмента с крупным чеком и возможной платой за лид, и выбор этой плитки даёт данные о спросе без разработки. Отдельной категории для неё в базе нет, поэтому в числе ферм она считается по ранчо с grass-fed beef, у которых в описании есть продажа долями туши.</p>
       <p><b>Метрика:</b> доля завершивших шаг, среднее число выбранных продуктов.</p>
     </div>
   </section>
@@ -861,7 +861,7 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
           <div class="tl">
             <div class="tl-h">How your free trial works</div>
             <div class="tl-row first"><span class="tl-dot"><svg><use href="#i-unlock"/></svg></span><span class="tl-t"><b>Today:</b> unlock your full farm map</span></div>
-            <div class="tl-row"><span class="tl-dot"><svg><use href="#i-bell"/></svg></span><span class="tl-t"><b class="js-d-rem">Day 2:</b> we send you a reminder</span></div>
+            <div class="tl-row"><span class="tl-dot"><svg><use href="#i-bell"/></svg></span><span class="tl-t"><b class="js-d-rem">Day 2:</b> get a reminder</span></div>
             <div class="tl-row"><span class="tl-dot"><svg><use href="#i-card"/></svg></span><span class="tl-t"><b class="js-d-charge">Day 3:</b> you pay $39.99 for the year</span></div>
           </div>
           <div class="plan">
@@ -878,7 +878,7 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
       <div class="homebar"></div>
     </div></div>
     <div class="note">
-      <p><b>Зачем.</b> Заголовок продолжает экран 4, продукты в списке подставляются из шага 2. Таймлайн с датами - как у AllTrails, onX и Blinkist: у Blinkist таймлайн с напоминанием дал +23% стартов триала и -55% жалоб. Напоминание приходит за два дня до списания: Apple снимает деньги за сутки до конца триала, и напоминание «за день» уже опоздало бы. По RevenueCat, 55% отмен 3-дневного триала приходится на день оформления, поэтому обещание совпадает с тем, что человек сразу увидит на карте: «within 30 miles», а не «every farm».</p>
+      <p><b>Зачем.</b> Заголовок продолжает экран 4, продукты в списке подставляются из шага 2. Таймлайн с датами - как у AllTrails, onX и Blinkist: у Blinkist таймлайн с напоминанием дал +23% стартов триала и -55% жалоб. Напоминание приходит за два дня до конца триала, то есть за сутки до списания: Apple снимает деньги в последние сутки триала, и напоминание в последний день уже опоздало бы. В тексте «get a reminder», а не «we send you a reminder»: напоминание человек включает сам на экране 06, обещать его всем нельзя. По RevenueCat, 55% отмен 3-дневного триала приходится на день оформления, поэтому обещание совпадает с тем, что человек сразу увидит на карте: «within 30 miles», а не «every farm».</p>
       <p><b>Цена.</b> Сумма списания $39.99 крупнее пересчёта в месяц: Apple требует, чтобы она была самым заметным ценовым элементом (страница Auto-renewable subscriptions и HIG, отказы идут по 3.1.2). Вместо зачёркнутой цены якорь из жизни ЦА: $3.33 в месяц дешевле дюжины фермерских яиц ($6.20 в вашем же квизе).</p>
       <p><b>A/B против V1:</b> trial → paid и выручка на установку по когортам 30 дней, плюс рефанды. Крестик виден сразу и ведёт в короткий опрос (09), кнопка - в лист App Store (05e).</p>
     </div>
@@ -889,7 +889,7 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
 <section class="about page" data-page="task">
   <div class="brief">
     <h3>О процессе в пяти предложениях</h3>
-    <p><b>Референсы:</b> прямой конкурент Localize и подписочные приложения с картой и взрослой аудиторией - AllTrails, Fishbrain, onX Hunt, PictureThis, плюс Blinkist как первоисточник честного таймлайна триала и Too Good To Go как ближайший аналог по местной еде; живые флоу смотрел в Mobbin (онбординги Blinkist, AllTrails, Too Good To Go и Yuka, пейвол Givingli с тем же 3-дневным триалом), остальное - по записям screensdesign и скриншотам paywallscreens. <b>Почему они:</b> в 930 отзывах из App Store категорию больше всего злит оплата вслепую, без показа своего района (31% отзывов с 1-2 звёздами), поэтому у референсов брал только то, что показывает ценность до денег и снимает страх списания: фермы рядом до пейвола (Localize, Fishbrain, Too Good To Go), лоадер с чек-листом реальных шагов (Blinkist), таймлайн с датами и напоминанием (AllTrails, onX, Blinkist, у которого он дал +23% стартов триала и -55% жалоб), честный якорь от реального месячного плана (Fishbrain) и экран «триал начался» (PictureThis). <b>Инструменты:</b> Claude Code на Claude Opus - пять промптов из папки prompts (PRD, работы по отзывам, конкуренты, отстройка, тренды) и разбор референсов прогнаны параллельными агентами с веб-поиском, экраны свёрстаны в HTML, карты и иконки нарисованы в SVG без стоков и дизайнера, Playwright снимал скриншоты для правок. <b>Постановка:</b> брифом с экранами, референсами и ограничениями, например: «Собери в одном HTML пять экранов iPhone 393×852 для Farm to Table… Тексты на английском, без таймеров и зачёркнутых цен, годовая цена крупнее пересчёта в месяц. Выбор продуктов на шаге 2 подставь в экран 4 и в текст пейвола», оба брифа целиком - в разделе <a href="#notes">«Как делал»</a>. <b>Итерации:</b> десять - пять на исходные экраны, четыре на расширение и одна на постраничный вид в светлой теме со сверкой по живым флоу в Mobbin; по итогам разбора референсов праймер геолокации сведён к одной кнопке по HIG, таймлайн переведён на реальные даты, а напоминание сдвинуто на два дня до списания.</p>
+    <p><b>Референсы:</b> прямой конкурент Localize и подписочные приложения с картой и взрослой аудиторией - AllTrails, Fishbrain, onX Hunt, PictureThis, плюс Blinkist как первоисточник честного таймлайна триала и Too Good To Go как ближайший аналог по местной еде; живые флоу смотрел в Mobbin (онбординги Blinkist, AllTrails, Too Good To Go и Yuka, пейвол Givingli с тем же 3-дневным триалом), остальное - по записям screensdesign и скриншотам paywallscreens. <b>Почему они:</b> в 930 отзывах из App Store категорию больше всего злит оплата вслепую, без показа своего района (31% отзывов с 1-2 звёздами), поэтому у референсов брал только то, что показывает ценность до денег и снимает страх списания: фермы рядом до пейвола (Localize, Fishbrain, Too Good To Go), лоадер с чек-листом реальных шагов (Blinkist), таймлайн с датами и напоминанием (AllTrails, onX, Blinkist, у которого он дал +23% стартов триала и -55% жалоб), честный якорь от реального месячного плана (Fishbrain) и экран «триал начался» (PictureThis). <b>Инструменты:</b> Claude Code на Claude Opus - пять промптов из папки prompts (PRD, работы по отзывам, конкуренты, отстройка, тренды) и разбор референсов прогнаны параллельными агентами с веб-поиском, экраны свёрстаны в HTML, карты и иконки нарисованы в SVG без стоков и дизайнера, Playwright снимал скриншоты для правок. <b>Постановка:</b> брифом с экранами, референсами и ограничениями, например: «Собери в одном HTML пять экранов iPhone 393×852 для Farm to Table… Тексты на английском, без таймеров и зачёркнутых цен, годовая цена крупнее пересчёта в месяц. Выбор продуктов на шаге 2 подставь в экран 4 и в текст пейвола», оба брифа целиком - в разделе <a href="#notes">«Как делал»</a>. <b>Итерации:</b> одиннадцать - пять на исходные экраны, четыре на расширение, одна на постраничный вид в светлой теме со сверкой по живым флоу в Mobbin и одна по ответам команды; по итогам референсов праймер геолокации сведён к одной кнопке по HIG, таймлайн переведён на реальные даты, а напоминание сдвинуто на два дня до конца триала, после ответов команды первый тест меряет старт триала, а с карточек ферм ушли часы и способы оплаты, которых нет в базе.</p>
   </div>
 </section>
 
@@ -967,7 +967,7 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
       <div class="homebar"></div>
     </div></div>
     <div class="note">
-      <p><b>Зачем.</b> Пока база считает фермы по радиусу и продуктам, человек видит, что именно проверяется: его продукты по очереди, потом часы работы и даты проверки. Числа совпадут с экраном 4, потому что посчитаны тем же запросом.</p>
+      <p><b>Зачем.</b> Пока база считает фермы по радиусу и продуктам, человек видит, что именно проверяется: его продукты по очереди, потом сезон работы и даты проверки. Числа совпадут с экраном 4, потому что посчитаны тем же запросом.</p>
       <p><b>Около трёх секунд</b> и дальше сам, без кнопки. Так же устроен лоадер Blinkist перед пейволом: чек-лист реальных шагов, а не абстрактный процент. Искусственно не растягиваем и не добавляем «анализирую ваш профиль».</p>
       <p><b>Метрика:</b> время до экрана 4, доля отвалов на загрузке.</p>
     </div>
@@ -1056,7 +1056,7 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
           <p class="lfs-sub">Phone and directions unlock with membership.</p>
           <div class="lfs js-lfs"></div>
           <div class="lf-more js-lfmore">+ 228 more within 30 miles</div>
-          <div class="trialline"><span class="tld"><svg><use href="#i-bell"/></svg></span><span>Free for 3 days. We remind you <b>2 days before</b> you pay.</span></div>
+          <div class="trialline"><span class="tld"><svg><use href="#i-bell"/></svg></span><span>Free for 3 days. Get a reminder <b>2 days before</b> the trial ends.</span></div>
           <div class="plan">
             <span class="radio"><svg><use href="#i-check"/></svg></span>
             <div class="pn"><b>Annual membership</b><span>Free for 3 days</span></div>
@@ -1106,7 +1106,7 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
               <span class="pp"><b>$7.99</b><span>per month</span></span>
             </button>
           </div>
-          <div class="trialline js-planline"><span class="tld"><svg><use href="#i-bell"/></svg></span><span class="js-planlinet">We remind you <b>2 days before</b> the trial ends.</span></div>
+          <div class="trialline js-planline"><span class="tld"><svg><use href="#i-bell"/></svg></span><span class="js-planlinet">Get a reminder <b>2 days before</b> the trial ends.</span></div>
         </div>
       </div>
       <button class="cta js-plancta" data-go="5e" data-ov="sk" style="bottom:102px">Start my free trial</button>
@@ -1142,7 +1142,7 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
           <div class="tl">
             <div class="tl-h">How your membership works</div>
             <div class="tl-row first"><span class="tl-dot"><svg><use href="#i-unlock"/></svg></span><span class="tl-t"><b>Today:</b> full farm map, $39.99 a year</span></div>
-            <div class="tl-row"><span class="tl-dot"><svg><use href="#i-bell"/></svg></span><span class="tl-t"><b>Before it renews:</b> we remind you</span></div>
+            <div class="tl-row"><span class="tl-dot"><svg><use href="#i-bell"/></svg></span><span class="tl-t"><b>Before it renews:</b> get a reminder</span></div>
             <div class="tl-row"><span class="tl-dot"><svg><use href="#i-card"/></svg></span><span class="tl-t"><b>Anytime:</b> cancel in Settings</span></div>
           </div>
           <div class="plan">
@@ -1225,8 +1225,8 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
         <div class="handle"></div>
         <div class="sheet-in">
           <div class="farm-h"><span class="fi js-f-ic"><svg><use href="#ic-milk"/></svg></span><div><h1 class="js-f-name">Sunny Acres Family Farm</h1><div class="farm-meta js-f-meta">Family dairy · 6.2 mi · 14 min drive</div></div></div>
-          <div class="fstat"><span class="open"><i></i><span class="js-f-hours">Open today · 8 AM - 6 PM</span></span><span class="ver"><span class="vi"><svg><use href="#i-check"/></svg></span><span class="js-f-ver">Verified 6 days ago</span></span></div>
-          <div class="fbuy"><svg><use href="#i-store"/></svg><span class="js-f-buy">Farm store on site · cash or card</span></div>
+          <div class="fstat"><span class="open"><i></i><span class="js-f-hours">Open May to November</span></span><span class="ver"><span class="vi"><svg><use href="#i-check"/></svg></span><span class="js-f-ver">Verified 6 days ago</span></span></div>
+          <div class="fbuy"><svg><use href="#i-store"/></svg><span class="js-f-buy">Farm store on site · call ahead</span></div>
           <div class="fchips js-f-chips"></div>
           <div class="acts">
             <button class="act pri js-f-call" data-toast="Calling Sunny Acres Family Farm"><svg><use href="#i-phone"/></svg>Call</button>
@@ -1239,8 +1239,8 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
       <div class="homebar"></div>
     </div></div>
     <div class="note">
-      <p><b>Зачем.</b> По данным RevenueCat, около 55% отмен трёхдневного триала случаются в день оформления: решение принимается в первые минуты. Поэтому сразу после покупки человек видит ту ферму, которая на экране 4 была скрыта: название, часы работы, дату проверки и кнопку звонка.</p>
-      <p><b>Ферма подбирается по выбору на шаге 2</b> и расстоянию, плашка сверху показывает, до какого числа идёт триал, а строка «как купить» отвечает тем, кто ждал заказ в приложении (23 отзыва). Оценку в App Store просим только после первого звонка ферме: 13 отзывов злятся на просьбу оценить до пользы. Похожий ход у Yuka: сразу после онбординга - первое сканирование, а не обзор функций.</p>
+      <p><b>Зачем.</b> По данным RevenueCat, около 55% отмен трёхдневного триала случаются в день оформления: решение принимается в первые минуты. Поэтому сразу после покупки человек видит ту ферму, которая на экране 4 была скрыта: название, сезон работы из описания, дату проверки и кнопку звонка.</p>
+      <p><b>Ферма подбирается по выбору на шаге 2</b> и расстоянию, плашка сверху показывает, до какого числа идёт триал, а строка «как купить» отвечает тем, кто ждал заказ в приложении (23 отзыва): заказов в приложении нет, а точных часов и способов оплаты нет в базе, поэтому строка советует позвонить заранее, как и просит описание в App Store. Оценку в App Store просим только после первого звонка ферме: 13 отзывов злятся на просьбу оценить до пользы. Похожий ход у Yuka: сразу после онбординга - первое сканирование, а не обзор функций.</p>
       <p><b>Метрика:</b> first_farm_action в первый день; trial → paid у сделавших действие против остальных.</p>
     </div>
   </section>
@@ -1263,7 +1263,7 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
       <div class="homebar"></div>
     </div></div>
     <div class="note">
-      <p><b>Зачем.</b> Обещание с пейвола, выполненное буквально: за два дня до списания, с суммой и точным сроком отмены. Apple снимает оплату за сутки до конца триала, поэтому напоминание «за день» уже опаздывает. Кто нашёл свою ферму, остаётся, а кто не нашёл, отменяет сам, вместо рефанда и отзыва в одну звезду.</p>
+      <p><b>Зачем.</b> Обещание с пейвола, выполненное буквально: за два дня до конца триала, с суммой и точным сроком отмены. Apple снимает оплату в последние сутки триала, поэтому напоминание в последний день уже опаздывает. Кто нашёл свою ферму, остаётся, а кто не нашёл, отменяет сам, вместо рефанда и отзыва в одну звезду.</p>
       <p><b>Тап ведёт в приложение,</b> на экран подписки с датой продления и кнопкой отмены (системный лист управления подпиской), а не в поиск по настройкам.</p>
       <p><b>Метрика:</b> отмены после напоминания, рефанды за 30 дней, trial → paid.</p>
     </div>
@@ -1409,7 +1409,7 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
           <rect x="40" y="580" width="290" height="46" rx="12" class="n2"/><text x="54" y="599" class="t1b">05e App Store sheet</text><text x="54" y="616" class="t2b">3 дня бесплатно, затем $39.99 в год</text>
           <rect x="40" y="650" width="290" height="46" rx="12" class="n2"/><text x="54" y="669" class="t1b">06 Trial started</text><text x="54" y="686" class="t2b">просим разрешение на напоминание</text>
           <rect x="40" y="720" width="290" height="46" rx="12" class="n2"/><text x="54" y="739" class="t1b">07 First farm</text><text x="54" y="756" class="t2b">звонок, маршрут, сохранить</text>
-          <rect x="40" y="790" width="290" height="46" rx="12" class="n2"/><text x="54" y="809" class="t1b">08 Day 2 reminder</text><text x="54" y="826" class="t2b">за 2 дня до списания, сумма и срок</text>
+          <rect x="40" y="790" width="290" height="46" rx="12" class="n2"/><text x="54" y="809" class="t1b">08 Day 2 reminder</text><text x="54" y="826" class="t2b">за 2 дня до конца триала, сумма и срок</text>
           <rect x="40" y="860" width="290" height="46" rx="12" class="n2"/><text x="54" y="879" class="t1b">Day 3: продление или отмена</text><text x="54" y="896" class="ev">renewal · trial_cancel · refund</text>
 
           <rect x="470" y="230" width="250" height="46" rx="12" class="n2"/><text x="484" y="249" class="t1b">03b ZIP code</text><text x="484" y="266" class="t2b">город виден сразу под полем</text>
@@ -1450,15 +1450,15 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
 
   <div class="card">
     <h2>Порядок тестов</h2>
-    <p>Сначала то, что дешевле и быстрее даёт деньги: пейвол в Adapty без релиза. Онбординг целиком - только на крупный эффект, мелкие правки экранов на таком трафике не различить. Расчёт объёмов - в PRD, альфа 0.05, мощность 80%.</p>
+    <p>Порядок пересобран по цифрам воронки от команды: после триала платят заметно чаще медианы RevenueCat, а стартов триала с установки меньше, чем нужно для ориентира 10.7% установка → оплата. Значит, деньги теряются до триала: первые тесты меряют старт триала, а trial → paid становится guardrail. Сначала то, что дешевле и быстрее: пейвол в Adapty без релиза. Онбординг целиком - только на крупный эффект, мелкие правки экранов на таком трафике не различить. Альфа 0.05, мощность 80%.</p>
     <div class="twrap"><table class="tbl">
       <thead><tr><th>Тест</th><th>Гипотеза</th><th>Метрика и guardrails</th><th>Объём</th></tr></thead>
       <tbody>
-        <tr><td><b>1. Пейвол A против V1</b> внутри текущего V2</td><td>Прозрачный пейвол без зачёркнутой цены не проигрывает по выручке и снижает рефанды</td><td>trial → paid, выручка на установку за 30 дней; рефанды, отзывы 1-2 звезды</td><td>1.2-2.1 тыс. триалов на вариант при trial → paid 25.5% (бенчмарк RevenueCat)</td></tr>
-        <tr><td><b>2. B и C против победителя</b></td><td>B: конкретные фермы продают лучше буллетов. C: реальный месячный якорь поднимает долю годовых</td><td>B: trial → paid. C: выручка на установку и доля годовых; доля месячных</td><td>тот же расчёт; C решаем по выручке, а не по конверсии; ветка C2 - месячный за «See all plans»</td></tr>
+        <tr><td><b>1. Пейвол A против V1</b> внутри текущего V2</td><td>Прозрачный пейвол с таймлайном поднимает старт триала и не роняет выручку</td><td>старт триала с показа пейвола, выручка на установку за 30 дней; guardrails: trial → paid, рефанды, отзывы 1-2 звезды</td><td>2-4 тыс. установок на вариант для эффекта +15-20% по старту триала</td></tr>
+        <tr><td><b>2. B и C против победителя</b></td><td>B: конкретные фермы продают лучше буллетов. C: реальный месячный якорь поднимает долю годовых</td><td>B: старт триала и выручка на установку. C: выручка на установку и доля годовых; доля месячных</td><td>тот же расчёт; C решаем по выручке, а не по конверсии; ветка C2 - месячный за «See all plans»</td></tr>
         <tr><td><b>3. Короткий онбординг против V2</b></td><td>Пять экранов с реальным покрытием дают install → paid не ниже 29 экранов</td><td>install → paid, выручка на установку; рефанды</td><td>только эффект от +20%: 3.6-10.3 тыс. установок на вариант</td></tr>
         <tr><td><b>4. Опрос и карта после крестика</b></td><td>Повторный показ пейвола в момент интереса добирает конверсию без скидок</td><td>install → trial к 7-му дню, trial → paid</td><td>после двух недель сбора ответов опроса</td></tr>
-        <tr><td><b>5. Триал 3 дня против 7</b></td><td>Между закупками у фермы проходит неделя-полторы, за 3 дня человек не успевает доехать до фермы и отменяет, не получив пользы</td><td>выручка на установку за 30 дней, trial → paid; отмены в день 0. По RevenueCat медиана trial → paid у триалов до 4 дней 25.5%, у 5-9 дней 37.4%</td><td>как тест 1; первые деньги на 4 дня позже, это учитываем в окупаемости рекламы</td></tr>
+        <tr><td><b>5. Триал 3 дня против 7</b></td><td>Между закупками у фермы проходит неделя-полторы, и за 3 дня человек может не успеть доехать до фермы. Но после 3-дневного триала у вас и так платят чаще бенчмарка, поэтому тест в конце списка</td><td>выручка на установку за 30 дней, trial → paid; отмены в день 0. По RevenueCat медиана trial → paid у триалов до 4 дней 25.5%, у 5-9 дней 37.4%</td><td>как тест 1; первые деньги на 4 дня позже, это учитываем в окупаемости рекламы</td></tr>
         <tr><td><b>6. Пустые районы без пейвола</b></td><td>Правило, а не тест: не продаём пустую карту</td><td>доля 04c и рефанды по гео, CAC по плотным и тонким районам</td><td>тест не нужен</td></tr>
       </tbody>
     </table></div>
@@ -1474,7 +1474,7 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
       <li><b>Референсы.</b> <a href="https://apps.apple.com/us/app/localize-farmers-market/id6756440767">Localize</a> - прямой конкурент и пример, как не надо: пейвол после анкеты без показа ферм, сезонная распродажа и зачёркнутая цена, которой нет в его списке покупок; 82% его негатива - про деньги. AllTrails, onX Hunt и Blinkist - таймлайн триала с напоминанием и «Cancel anytime» под кнопкой; у Blinkist он дал +23% стартов триала и -55% жалоб. Fishbrain - пины «near you» на пейволе и честный якорь 12 × $12.99 от реального месячного плана. PictureThis - та же цена $39.99 с пересчётом $3.33 и экран «триал начался». Yuka - польза до оплаты и пейвол в момент нажатия. Живые флоу смотрел в Mobbin: онбординг <a href="https://mobbin.com/apps/blinkist-ios-fdae09ec-9695-4a73-9981-84f1bd3538bf/c1a883aa-e28c-46a5-ba41-b3ca828a1371/flows">Blinkist</a> с лоадером-чек-листом и пейволом на датах, онбординг <a href="https://mobbin.com/apps/all-trails-ios-66ac61f7-f9ea-4c45-b512-b2fadf7e027b/caf6da24-bc01-47b9-a571-0f4db9d55dfe/flows">AllTrails</a> с таймлайном внутри выбранного плана, онбординг <a href="https://mobbin.com/apps/too-good-to-go-ios-d544c59a-6284-499f-ba07-92ca14f91002/00967c9c-7821-467b-8c31-7052fcd944b5/flows">Too Good To Go</a> (местная еда: вопрос о целях, праймеры пушей и геолокации, сразу выдача рядом), онбординг Yuka с первым действием сразу после входа и пейвол Givingli с тем же 3-дневным триалом. Fishbrain, PictureThis, onX и Localize в Mobbin нет, их смотрел по записям <a href="https://screensdesign.com">screensdesign</a> и скриншотам <a href="https://paywallscreens.com">paywallscreens</a>; факты сверены с документацией Apple, правилами FTC и отчётом RevenueCat 2026.</li>
       <li><b>Инструменты.</b> Всё в Claude Code на Claude Opus: исследование шло параллельными агентами с веб-поиском по промптам из папки, экраны свёрстаны в одном HTML, карта и иконки продуктов нарисованы в SVG без стоков и дизайнера, английские тексты писались с ним с упором на тон для американцев 35-65. Playwright снимал скриншоты каждого экрана для правок и PNG в 3x.</li>
       <li><b>Постановка.</b> Первый заход - подробным брифом, он ниже. Второй - одной фразой: «изучи промпты из папки, прогони нужные для тестового и сделай в прототипе больше, чем описано»; план расширения Claude собрал сам по итогам исследования, он ниже вторым блоком. Дальше правил по скриншотам каждого экрана.</li>
-      <li><b>Итерации.</b> Десять. Пять в первый день: структура и тексты; наложения по скриншотам; баг с пустыми строками на экране 4 и новая иконка курицы; полировка и экспорт PNG в 3x; правки после исследования. Четыре во второй: ветки, варианты пейвола, первые минуты триала, схема и события; правки по скриншотам; правки по 930 отзывам (названия ферм в варианте B, способ покупки, льготный доступ, подпись под числом ферм); правки по разбору референсов (одна кнопка на праймере по HIG, даты в таймлайне, напоминание за два дня до списания, текст листа App Store, 80,000+ ферм из версии 1.4.0). Десятая - постраничный вид в светлой теме и сверка паттернов с живыми флоу в Mobbin.</li>
+      <li><b>Итерации.</b> Одиннадцать. Пять в первый день: структура и тексты; наложения по скриншотам; баг с пустыми строками на экране 4 и новая иконка курицы; полировка и экспорт PNG в 3x; правки после исследования. Четыре во второй: ветки, варианты пейвола, первые минуты триала, схема и события; правки по скриншотам; правки по 930 отзывам (названия ферм в варианте B, способ покупки, льготный доступ, подпись под числом ферм); правки по разбору референсов (одна кнопка на праймере по HIG, даты в таймлайне, напоминание за два дня до конца триала, текст листа App Store, 80,000+ ферм из версии 1.4.0). Десятая - постраничный вид в светлой теме и сверка паттернов с живыми флоу в Mobbin. Одиннадцатая - по ответам команды: первый тест меряет старт триала, раз после триала платят чаще бенчмарка; с карточек ферм убраны часы и способы оплаты, которых нет в базе; напоминание стало опцией «get a reminder»; поправлен срок напоминания в тексте варианта B.</li>
     </ul>
     <div class="prompt">Собери в одном HTML пять экранов iPhone 393×852 для Farm to Table: карта ферм и фермерских рынков в США, ЦА 35-65, подписка $39.99 в год с 3 днями бесплатно. Экраны: приветствие, выбор продуктов, праймер геолокации с запасным ZIP-кодом, «231 ферма рядом» с карточкой ближайшей фермы, где название скрыто, и пейвол. Референсы: пейволы AllTrails (карта сверху, таймлайн триала), Fishbrain (пины рядом с пользователем), PictureThis (та же цена, напоминание до конца триала). Стиль: тёплый кремовый фон, тёмно-зелёный бренд как в текущем приложении, заголовки serif, текст от 16 px, кнопки от 56 px. Иллюстрации карты и иконки продуктов нарисуй сам в SVG, без стоков. Тексты на английском, без таймеров и зачёркнутых цен, годовая цена крупнее пересчёта в месяц. Выбор продуктов на шаге 2 подставь в экран 4 и в текст пейвола.</div>
     <div class="prompt">План расширения: опираться на файлы исследования - PRD, отзывы v2, конкурентов, отстройку, тренды и разбор референсов. До пейвола: системное окно геолокации, ввод ZIP с цифровой клавиатурой, сборка карты на три секунды, состояние «ферм нет в 100 милях» без пейвола. Пейвол: вариант B с тремя ближайшими фермами, вариант C с годовым и реальным месячным планом вместо зачёркнутой цены, пейвол для тех, у кого триал уже был, лист App Store с датой списания. После оплаты: праймер пуш-напоминания с превью, первая ферма со звонком и маршрутом, напоминание за два дня до списания на экране блокировки. После крестика: опрос из одного вопроса и карта с замками. Под каждым экраном: зачем, на какие цифры из отзывов опирается, какая метрика. В конце: схема воронки с событиями и порядок тестов.</div>
@@ -1486,7 +1486,8 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
       <li>В пейволе V1 до сих пор плашка <b>Labor Day Sale</b>, хотя День труда был 7 сентября. Распродажа после праздника выглядит как ненастоящая скидка, особенно для аудитории 35-65.</li>
       <li><b>Зачёркнутая $79.98 в V1 - это $39.99 × 2</b> из remote config: по такой цене подписку никто не покупал. По правилам FTC (16 CFR 233.1) скидка от цены, по которой товар не продавали, считается ложной, в Калифорнии то же закреплено в BPC 17501, а в отзывах на конкурентов 76 человек уже обвиняют категорию в bait and switch. Честная альтернатива - вариант C с реальным месячным планом.</li>
       <li><b>Цифры расходятся между экранами:</b> 23,000+ ферм в хуке V2 и в пейволе, 30,000+ в веб-хуке и 80,000+ в заметках к версии 1.4.0 от 26 сентября; 40,000+ семей в соцдоказательстве против 300,000+ участников в пейволе.</li>
-      <li><b>Онбординг обещает сделки</b> и экономию $1,500 в год, а в списке того, что входит в подписку, сделок нет. Такой разрыв ожиданий бьёт по отменам триала и по отзывам, в App Store уже есть: «you have to be better than google search near me».</li>
+      <li><b>Онбординг обещает сделки</b> и экономию $1,500 в год, а в приложении, по словам команды, только доступ к адресам ферм, и в списке того, что входит в подписку, сделок нет. Такой разрыв ожиданий бьёт по отменам триала и по отзывам, в App Store уже есть: «you have to be better than google search near me».</li>
+      <li><b>«Order direct» в App Store.</b> Описание обещает «order direct», а один из скриншотов называется «Order directly», хотя заказов в приложении нет. 23 отзыва в категории ждали заказ в приложении; на экране первой фермы вместо этого честное «call ahead».</li>
       <li><b>29 экранов до цены.</b> У конкурентов 45 отзывов жалуются на длинную анкету перед пейволом и 62 - на цену, которую не показали заранее. Короткий флоу и цена крупно на самом пейволе отвечают на это напрямую.</li>
       <li><b>«Nobody left behind» по email</b> - правильная идея в неудобной форме: у Localize льготный доступ в самом приложении дал 60 отзывов на 4-5 звёзд из 72. В макете это одна кнопка на экране после крестика.</li>
     </ul>
@@ -1494,8 +1495,8 @@ body.proto .group-head,body.proto .about,body.overview .about,body.shotmode .abo
   <div class="card">
     <h2>С чего бы начал</h2>
     <ul>
-      <li><b>Проверить, считается ли число 231 из базы.</b> Если это фиксированная цифра, жалобы вида «после оплаты одна ферма на округ» будут повторяться при любом пейволе.</li>
-      <li><b>Первым тестом - пейвол в Adapty</b> внутри текущего онбординга: без релиза, метрика trial → paid, при бенчмарке RevenueCat 25.5% нужно 1.2-2.1 тыс. триалов на вариант. Онбординг тестировать целиком и только на крупный эффект.</li>
+      <li><b>Посмотреть конверсию пейвола в Adapty</b> из показа в старт триала. Деньги теряются до триала, и эта цифра покажет где: в квизе из 29 экранов, если до пейвола доходят немногие, или на самом пейволе, если доходят почти все. От этого зависит, что первым: пейвол или короткий онбординг.</li>
+      <li><b>Первым тестом - пейвол в Adapty</b> внутри текущего онбординга: без релиза, метрика - старт триала с показа пейвола, trial → paid держим как guardrail; для эффекта +15-20% нужно 2-4 тыс. установок на вариант. Онбординг тестировать целиком и только на крупный эффект.</li>
       <li><b>Сразу включить опрос при закрытии пейвола.</b> Две недели ответов покажут, что ставить вторым тестом: вариант B, если не верят в покрытие, или C, если упираются в цену.</li>
       <li><b>Закупать рекламу по плотности покрытия.</b> Где рядом мало ферм с нужным продуктом, онбординг не перевесит бесплатный Google Maps, а рефанды приходят как раз оттуда. Разделить кампании на плотные и тонкие районы и сравнить trial → paid и рефанды за 30 дней.</li>
     </ul>
@@ -1526,13 +1527,13 @@ const AREAS = {
 const ZIPS = {'33602':'dense','94901':'sparse','89801':'none'};
 const DENSE_ALL = 231, SPARSE_ALL = 24;
 const FARMS = [
-  {name:'Sunny Acres Family Farm',kind:'Family dairy',mi:6.2,far:18.4,items:['milk','eggs','cheese'],ver:'Verified 6 days ago',hours:'Open today · 8 AM - 6 PM',buy:'Farm store on site · cash or card'},
-  {name:'Old Mill Farm Stand',kind:'Farm stand',mi:7.4,far:23.9,items:['veg','honey','eggs'],ver:'Verified 3 days ago',hours:'Open today · 9 AM - 5 PM',buy:'Roadside stand · cash or Venmo'},
-  {name:'Whitfield Creek Ranch',kind:'Cattle ranch',mi:8.9,far:27.5,items:['beef','bulk'],ver:'Verified 12 days ago',hours:'Open Saturday · 9 AM - 2 PM',buy:'Order by phone · pickup on Saturday'},
-  {name:'Green Pastures Poultry',kind:'Pasture poultry',mi:9.7,far:34.2,items:['chicken','eggs'],ver:'Updated 2 weeks ago',hours:'Open today · 10 AM - 4 PM',buy:'Farm store on site · card'},
-  {name:'Twin Oaks Apiary',kind:'Honey farm',mi:11.3,far:41.6,items:['honey'],ver:'Updated 3 weeks ago',hours:'Open Saturday · 8 AM - 12 PM',buy:'Honor box stand · cash'},
-  {name:'Bluebird Hill Creamery',kind:'Creamery',mi:12.6,far:47.8,items:['cheese','milk'],ver:'Verified 9 days ago',hours:'Open Thu to Sun · 10 AM - 6 PM',buy:'Creamery shop · card'},
-  {name:'Cedar Run Beef Co.',kind:'Grass-fed ranch',mi:14.1,far:52.3,items:['beef','bulk','chicken'],ver:'Verified 5 days ago',hours:'Open Friday · 12 PM - 6 PM',buy:'Order ahead · quarter and half shares'}
+  {name:'Sunny Acres Family Farm',kind:'Family dairy',mi:6.2,far:18.4,items:['milk','eggs','cheese'],ver:'Verified 6 days ago',hours:'Open May to November',buy:'Farm store on site · call ahead'},
+  {name:'Old Mill Farm Stand',kind:'Farm stand',mi:7.4,far:23.9,items:['veg','honey','eggs'],ver:'Verified 3 days ago',hours:'Open June to October',buy:'Roadside stand · call ahead'},
+  {name:'Whitfield Creek Ranch',kind:'Cattle ranch',mi:8.9,far:27.5,items:['beef','bulk'],ver:'Verified 12 days ago',hours:'Open year-round',buy:'Order by phone · pickup at the ranch'},
+  {name:'Green Pastures Poultry',kind:'Pasture poultry',mi:9.7,far:34.2,items:['chicken','eggs'],ver:'Updated 2 weeks ago',hours:'Open year-round',buy:'Farm store on site · call ahead'},
+  {name:'Twin Oaks Apiary',kind:'Honey farm',mi:11.3,far:41.6,items:['honey'],ver:'Updated 3 weeks ago',hours:'Open April to October',buy:'Honor box stand · call ahead'},
+  {name:'Bluebird Hill Creamery',kind:'Creamery',mi:12.6,far:47.8,items:['cheese','milk'],ver:'Verified 9 days ago',hours:'Open year-round',buy:'Creamery shop · call ahead'},
+  {name:'Cedar Run Beef Co.',kind:'Grass-fed ranch',mi:14.1,far:52.3,items:['beef','bulk','chicken'],ver:'Verified 5 days ago',hours:'Open year-round',buy:'Order ahead · quarter and half shares'}
 ];
 const OPTS = ['I’m not sure there’s a farm I’d use','It costs more than I want to pay','I don’t want another subscription','I’m just looking around','Something else'];
 const st = {cov:'dense',pw:'A',trial:true,plan:'annual',reason:0,label:null,draft:'33602',load:2};
@@ -1662,7 +1663,7 @@ function renderTiles() {
 function renderLoading() {
   const counts = active().slice(0, 3).map(k => [k, st.cov === 'dense' ? ITEMS[k].count : st.cov === 'sparse' ? ITEMS[k].low : 0]);
   const rows = counts.map(([k, n]) => `<div class="row lrow${n ? '' : ' muted'}"><span class="ri">${icon(k)}</span><span class="rl">${ITEMS[k].name}</span><span class="st"><i class="spin"></i><span class="rc">${n ? n + ' farms' : 'None yet'}</span></span></div>`);
-  rows.push('<div class="row lrow"><span class="ri clk"><svg><use href="#i-clock"/></svg></span><span class="rl">Hours and last checks</span><span class="st"><i class="spin"></i><span class="rc">Done</span></span></div>');
+  rows.push('<div class="row lrow"><span class="ri clk"><svg><use href="#i-clock"/></svg></span><span class="rl">Seasons and last checks</span><span class="st"><i class="spin"></i><span class="rc">Done</span></span></div>');
   setH('.js-lrows', rows.join(''));
   $$('.js-lrows').forEach(c => [...c.children].forEach((r, i) => r.classList.toggle('done', i < st.load)));
   $$('.js-pbar').forEach(b => { b.style.width = Math.max(6, Math.round(st.load / rows.length * 100)) + '%'; });
@@ -1703,7 +1704,7 @@ function render() {
   $$('[data-plan]').forEach(b => b.classList.toggle('on', b.dataset.plan === st.plan));
   setT('.js-plancta', monthly ? 'Continue for $7.99/month' : 'Start my free trial');
   setT('.js-planfine', monthly ? 'Billed monthly. Cancel anytime in Settings.' : 'No payment today. Cancel anytime in Settings.');
-  setH('.js-planlinet', monthly ? 'Switch to annual anytime and <b>save 58%</b>.' : 'We remind you <b>2 days before</b> the trial ends.');
+  setH('.js-planlinet', monthly ? 'Switch to annual anytime and <b>save 58%</b>.' : 'Get a reminder <b>2 days before</b> the trial ends.');
 
   if (hasTrial()) {
     setT('.js-s6eye', 'Free trial started');
@@ -1748,7 +1749,7 @@ function render() {
   const reasons = [
     ['Take a look around first', 'Tap any pin to see what the farm sells and how far it is. Names, phone numbers and directions unlock with membership.'],
     ['Your map will be here', st.trial ? 'It’s $3.33 a month, less than a dozen farm eggs, billed $39.99 a year. Start with 3 free days whenever you’re ready.' : 'It’s $3.33 a month, less than a dozen farm eggs, billed $39.99 a year.'],
-    ['No surprise charges', st.trial ? 'Try it free for 3 days. We remind you 2 days before you pay, and you can cancel in Settings in a few taps.' : 'We remind you before your membership renews, and you can cancel in Settings in a few taps.'],
+    ['No surprise charges', st.trial ? 'Try it free for 3 days. Get a reminder 2 days before the trial ends, and cancel in Settings in a few taps.' : 'Get a reminder before your membership renews, and cancel in Settings in a few taps.'],
     ['Look around your map', 'Tap any pin to see what the farm sells. Names and directions unlock when you’re ready.'],
     ['Look around your map', 'Tap any pin to see what the farm sells. Names and directions unlock when you’re ready.']
   ][r];
